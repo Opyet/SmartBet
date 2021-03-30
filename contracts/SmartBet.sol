@@ -17,18 +17,25 @@ contract SmartBet {
     // contract owner adress
     address private owner;
 
-    // incremented id for matches
-    uint256 private uid;
+    // incremented for match id generation
+    uint256 private idCounter;
 
     // incremented id for NFT minting
     uint256 private uTokenId;
 
+    // flag to determine if contracts core functionalities can be performed
+    bool circuitBreaker;
+
     enum MatchState {NOT_STARTED, STARTED, FINISHED };
 
+    uint8 private constant TEAM_A = 0;
+    uint8 private constant TEAM_B = 1;
 
     struct Match {
         address creator;
-
+        uint256 sportApiMatchId;
+        uint256 totalPayoutTeamA;
+        uint256 totalPayoutTeamB;
     }
 
     // NFT issued to winner
@@ -38,8 +45,17 @@ contract SmartBet {
         uint256 value;
     }
 
+    struct Bet {
+        address better;
+        uint256 amount;
+    }
+
     // holds all NFTs issued to winners
     mapping(address => SmartAsset[]) assets;
+
+    // holds all bets on a match
+    // mapping(matchId => mapping(team => mapping(address => amount[]))) matchBets;
+    mapping(uint256 => mapping(uint8 => mapping(address => uint256[]))) matchBets;
 
 
     ////////////////////////////////////////
@@ -85,8 +101,10 @@ contract SmartBet {
     //                                    //      
     ////////////////////////////////////////
 
-    event LogMatchAdded(address indexed creator, uint128 matchId);
-    event LogBetAdded(address indexed bettor, uint128 indexed matchId, uint256 amount);
+    //Can be used by the clients to get all matches in a particular time
+    event LogMatchAdded(address indexed creator, uint128 matchId, uint256 indexed startAt);
+    //Can be used by the clients to get all bets placed by a better in a particular time
+    event LogBetAdded(address indexed bettor, uint128 indexed matchId, uint256 amount, uint256 indexed betAt);
     event LogCloseMatch(address indexed by, uint128 indexed matchId);
     event LogSetResult(uint128 indexed matchId, uint8 winner);
     event LogWithdrawal(address indexed by, uint128 indexed matchId, uint256 amount);
@@ -142,8 +160,37 @@ contract SmartBet {
     modifier matchFinished(_matchId){
         
     }
-    
 
+    /*
+    *  @notice Checks if core functionalities can be performed
+    *  @dev Checks if the circuitBreaker state variable is false
+    */
+    modifier isCircuitBreakOff() {
+
+    }
+
+    /*
+    *  @notice Checks if the NFT is valid
+    *  @dev Validates NFT
+    */
+    modifier validateNFT(_tokenId) {
+
+    }
+    
+    /*
+    *  @notice  Ensure token belongs to the caller
+    */
+    modifier isAssetOwner(_tokenId) {
+
+    }
+
+    /*
+    *  @notice  Ensures bets are allowed on the match
+    *  @dev     The totalCollected on the match must be greater than the total payout on the team the bettor wants to bet on. The incoming bet is inclusive in the calculation
+    */
+    modifier isBetAllowed(_matchId) {
+        
+    }
 
 
 
@@ -171,7 +218,7 @@ contract SmartBet {
     
     /*
     *  @notice  New match creation
-    *  @dev   
+    *  @dev     
     *  @param   
     *  @return  success success status
     */
@@ -195,8 +242,10 @@ contract SmartBet {
     */
     function placeBet(uint128 _matchId)
         public 
+        payable
         matchExists(_matchId) 
         matchNotStarted(_matchId) 
+        isBetAllowed(_matchId)
         returns(bool success)
     {
         //code
@@ -213,6 +262,7 @@ contract SmartBet {
     */
     function closeMatch(uint128 _matchId)
         public 
+        onlyOwner
         matchExists(_matchId) 
         matchStarted(_matchId) 
         returns(bool success)
@@ -232,6 +282,7 @@ contract SmartBet {
     function withdraw(uint128 _tokenId)
         public 
         payable
+        validateNFT(_tokenId)
         matchExists(_matchId) 
         matchStarted(_matchId) 
         returns(bool success)
@@ -239,37 +290,6 @@ contract SmartBet {
         //code
 
         emit LogWithdrawal(by, matchId, amount);
-    }
-
-
-    /*
-    *  @notice  Fetch daily matches
-    *  @dev         
-    *  @return  matches An array of all matches created for today
-    */
-    function getMatchesToday()
-        public 
-        view
-        returns(uint128[] matches)
-    {
-        //code
-        
-        
-    }
-
-    /*
-    *  @notice  Fetch daily bets of caller
-    *  @dev         
-    *  @return  matches An array of all bets placed for today
-    */
-    function getBetsToday()
-        public 
-        view
-        returns(uint128[] bets)
-    {
-        //code
-        
-        
     }
 
 
@@ -313,6 +333,7 @@ contract SmartBet {
     function getSmartAsset(_tokenId)
         public 
         view
+        IsAssetOwner(_tokenId)
         returns(SmartAsset asset)
     {
         //code        
