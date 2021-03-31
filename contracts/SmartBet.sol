@@ -1,12 +1,13 @@
 pragma solidity ^0.8.0;
 
-//import SafeMath (if not already inherited)
-//import erc1155
+import "@chainlink/contracts/src/v0.7/ChainlinkClient.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 /*
  * @notice SmartBet core smart contract. Handles matches, bets and farming
  */
-contract SmartBet {
+contract SmartBet is ERC721, ChainlinkClient {
 
 
     ////////////////////////////////////////
@@ -36,13 +37,15 @@ contract SmartBet {
         uint256 sportApiMatchId;
         uint256 totalPayoutTeamA;
         uint256 totalPayoutTeamB;
+        uint256 totalCollected;
     }
 
     // NFT issued to winner
     struct SmartAsset {
         uint256 tokenId;
         address owner;
-        uint256 value;
+        uint256 initialValue;
+        uint8 accruedInterest;
     }
 
     struct Bet {
@@ -333,7 +336,7 @@ contract SmartBet {
     function getSmartAsset(_tokenId)
         public 
         view
-        IsAssetOwner(_tokenId)
+        isAssetOwner(_tokenId)
         returns(SmartAsset asset)
     {
         //code        
