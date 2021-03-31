@@ -31,7 +31,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     uint256 public totalTreasury;
 
     // flag to determine if contracts core functionalities can be performed
-    bool circuitBreaker;
+    bool circuitBreaker = false;
 
     enum MatchState {NOT_STARTED, STARTED, FINISHED };
 
@@ -62,6 +62,9 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     // holds all NFTs issued to winners
     mapping(address => SmartAsset[]) assets;
+
+    // holds all created matches (key: idCounter)
+    mapping(uint256 => Match) matches;
 
     // holds all bets on a match
     // mapping(matchId => mapping(team => mapping(address => amount[]))) matchBets;
