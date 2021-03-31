@@ -3,12 +3,15 @@ pragma solidity ^0.8.0;
 import "@chainlink/contracts/src/v0.7/ChainlinkClient.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
+import "@openzeppelin/contracts/utils/Counters.sol"
 
 /*
  * @notice SmartBet core smart contract. Handles matches, bets and farming
  */
 contract SmartBet is ERC721, ChainlinkClient {
 
+    using Counters for Counters.Counter;
+    //using SafeMath for uint256;
 
     ////////////////////////////////////////
     //                                    //
@@ -22,7 +25,10 @@ contract SmartBet is ERC721, ChainlinkClient {
     uint256 private idCounter;
 
     // incremented id for NFT minting
-    uint256 private uTokenId;
+    Counters.Counter private uTokenIds;
+
+    // total funds available
+    uint256 public totalTreasury;
 
     // flag to determine if contracts core functionalities can be performed
     bool circuitBreaker;
@@ -38,6 +44,7 @@ contract SmartBet is ERC721, ChainlinkClient {
         uint256 totalPayoutTeamA;
         uint256 totalPayoutTeamB;
         uint256 totalCollected;
+        MatchState status;
     }
 
     // NFT issued to winner
@@ -48,10 +55,10 @@ contract SmartBet is ERC721, ChainlinkClient {
         uint8 accruedInterest;
     }
 
-    struct Bet {
-        address better;
-        uint256 amount;
-    }
+    //struct Bet {
+    //    address better;
+    //    uint256 amount;
+    //}
 
     // holds all NFTs issued to winners
     mapping(address => SmartAsset[]) assets;
@@ -238,7 +245,7 @@ contract SmartBet is ERC721, ChainlinkClient {
 
 
     /*
-    *  @notice  New match creation
+    *  @notice  New bet creation. Mint NFT to bettor
     *  @dev   
     *  @param  
     *  @return  success success status
@@ -258,7 +265,7 @@ contract SmartBet is ERC721, ChainlinkClient {
 
 
     /*
-    *  @notice  Match manual close by admin
+    *  @notice  Match manual close by admin. Trigger "getResult()" 
     *  @dev   
     *  @param  
     *  @return  success success status
@@ -293,6 +300,23 @@ contract SmartBet is ERC721, ChainlinkClient {
         //code
 
         emit LogWithdrawal(by, matchId, amount);
+    }
+
+
+    /*
+    *  @notice  Fetch match result with a call through ChainlinkClient.
+    *  @dev     ChainlinkClient Oracle. Callback function "setResult()"
+    *  @oaram   _matchId
+    *  @return match match details
+    */
+    function getResult(_matchId)
+        public 
+        view
+        matchFinished(_matchId)
+        returns(Match match)
+    {
+        //code        
+        
     }
 
 
