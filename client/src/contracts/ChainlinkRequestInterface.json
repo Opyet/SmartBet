@@ -1,0 +1,957 @@
+{
+  "contractName": "ChainlinkRequestInterface",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "requestPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "serviceAgreementID",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "callbackAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes4",
+          "name": "callbackFunctionId",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "uint256",
+          "name": "nonce",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "dataVersion",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "oracleRequest",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "requestId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "payment",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes4",
+          "name": "callbackFunctionId",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "uint256",
+          "name": "expiration",
+          "type": "uint256"
+        }
+      ],
+      "name": "cancelOracleRequest",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"payment\",\"type\":\"uint256\"},{\"internalType\":\"bytes4\",\"name\":\"callbackFunctionId\",\"type\":\"bytes4\"},{\"internalType\":\"uint256\",\"name\":\"expiration\",\"type\":\"uint256\"}],\"name\":\"cancelOracleRequest\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"requestPrice\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"serviceAgreementID\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"callbackAddress\",\"type\":\"address\"},{\"internalType\":\"bytes4\",\"name\":\"callbackFunctionId\",\"type\":\"bytes4\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"dataVersion\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"oracleRequest\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"@chainlink/contracts/src/v0.6/interfaces/ChainlinkRequestInterface.sol\":\"ChainlinkRequestInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.6/interfaces/ChainlinkRequestInterface.sol\":{\"keccak256\":\"0xe513c0f60edf13da7d82625489cf2008c7b66170f3b1ed1606b84c73f95b17ad\",\"urls\":[\"bzz-raw://78e083ef252b80bb63a5aa126bc7283cd9b88767dfdf0190d46802bc32756ecf\",\"dweb:/ipfs/QmdTyEQwX5ecoXR1rBh8DLDJpCYVDM85JjjR2sEJdE9wAA\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.6.0;\n\ninterface ChainlinkRequestInterface {\n  function oracleRequest(\n    address sender,\n    uint256 requestPrice,\n    bytes32 serviceAgreementID,\n    address callbackAddress,\n    bytes4 callbackFunctionId,\n    uint256 nonce,\n    uint256 dataVersion,\n    bytes calldata data\n  ) external;\n\n  function cancelOracleRequest(\n    bytes32 requestId,\n    uint256 payment,\n    bytes4 callbackFunctionId,\n    uint256 expiration\n  ) external;\n}\n",
+  "sourcePath": "@chainlink\\contracts\\src\\v0.6\\interfaces\\ChainlinkRequestInterface.sol",
+  "ast": {
+    "absolutePath": "@chainlink/contracts/src/v0.6/interfaces/ChainlinkRequestInterface.sol",
+    "exportedSymbols": {
+      "ChainlinkRequestInterface": [
+        1916
+      ]
+    },
+    "id": 1917,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1885,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1916,
+        "linearizedBaseContracts": [
+          1916
+        ],
+        "name": "ChainlinkRequestInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "40429946",
+            "id": 1904,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "oracleRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1902,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1887,
+                  "name": "sender",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "125:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1889,
+                  "name": "requestPrice",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "145:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1891,
+                  "name": "serviceAgreementID",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "171:26:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1890,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "171:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1893,
+                  "name": "callbackAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "203:23:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1892,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "203:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1895,
+                  "name": "callbackFunctionId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "232:25:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1894,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "232:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1897,
+                  "name": "nonce",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "263:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1896,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "263:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1899,
+                  "name": "dataVersion",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "282:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1898,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "282:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1901,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "307:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1900,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "307:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "119:211:6"
+            },
+            "returnParameters": {
+              "id": 1903,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "339:0:6"
+            },
+            "scope": 1916,
+            "src": "97:243:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "6ee4d553",
+            "id": 1915,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelOracleRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1913,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1906,
+                  "name": "requestId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1915,
+                  "src": "378:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1905,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1908,
+                  "name": "payment",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1915,
+                  "src": "401:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1907,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "401:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1910,
+                  "name": "callbackFunctionId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1915,
+                  "src": "422:25:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1909,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "422:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1912,
+                  "name": "expiration",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1915,
+                  "src": "453:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1911,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "453:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "372:103:6"
+            },
+            "returnParameters": {
+              "id": 1914,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "484:0:6"
+            },
+            "scope": 1916,
+            "src": "344:141:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1917,
+        "src": "57:430:6"
+      }
+    ],
+    "src": "32:456:6"
+  },
+  "legacyAST": {
+    "absolutePath": "@chainlink/contracts/src/v0.6/interfaces/ChainlinkRequestInterface.sol",
+    "exportedSymbols": {
+      "ChainlinkRequestInterface": [
+        1916
+      ]
+    },
+    "id": 1917,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1885,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1916,
+        "linearizedBaseContracts": [
+          1916
+        ],
+        "name": "ChainlinkRequestInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "40429946",
+            "id": 1904,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "oracleRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1902,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1887,
+                  "name": "sender",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "125:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1889,
+                  "name": "requestPrice",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "145:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1891,
+                  "name": "serviceAgreementID",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "171:26:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1890,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "171:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1893,
+                  "name": "callbackAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "203:23:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1892,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "203:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1895,
+                  "name": "callbackFunctionId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "232:25:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1894,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "232:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1897,
+                  "name": "nonce",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "263:13:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1896,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "263:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1899,
+                  "name": "dataVersion",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "282:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1898,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "282:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1901,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1904,
+                  "src": "307:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1900,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "307:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "119:211:6"
+            },
+            "returnParameters": {
+              "id": 1903,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "339:0:6"
+            },
+            "scope": 1916,
+            "src": "97:243:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "6ee4d553",
+            "id": 1915,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelOracleRequest",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1913,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1906,
+                  "name": "requestId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1915,
+                  "src": "378:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1905,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1908,
+                  "name": "payment",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1915,
+                  "src": "401:15:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1907,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "401:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1910,
+                  "name": "callbackFunctionId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1915,
+                  "src": "422:25:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1909,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "422:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1912,
+                  "name": "expiration",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1915,
+                  "src": "453:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1911,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "453:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "372:103:6"
+            },
+            "returnParameters": {
+              "id": 1914,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "484:0:6"
+            },
+            "scope": 1916,
+            "src": "344:141:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1917,
+        "src": "57:430:6"
+      }
+    ],
+    "src": "32:456:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.0+commit.26b70077.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2021-02-17T09:40:28.558Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

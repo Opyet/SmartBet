@@ -1,0 +1,787 @@
+{
+  "contractName": "Reputation",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "reputation",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.0+commit.26b70077\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"reputation\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{},\"title\":\"Reputation handles the reputation of bookies\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/AnshuJalan/Documents/Ethereum/Etherpunk/chain-arena/contracts/Reputation.sol\":\"Reputation\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/AnshuJalan/Documents/Ethereum/Etherpunk/chain-arena/contracts/Reputation.sol\":{\"keccak256\":\"0xbeae51b0d69370f865914f2a4999ecb7d55cdfd26292f8de3738147714e94216\",\"urls\":[\"bzz-raw://d2727cfea4fcda1c9659362da94e7782eb7bf6f407b5f1f1b8cfca4f92ee0e3e\",\"dweb:/ipfs/QmS6HUyfXMyKrzqLiwNiYMWtsqX7TYKbHgHUKpi8wACTs6\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060d08061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063b9f7945114602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506082565b6040518082815260200191505060405180910390f35b6000602052806000526040600020600091509050548156fea2646970667358221220b155057d0b107a6d98e23d625befe984f43b3e088a165a59ffe2471acf08605364736f6c63430006000033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063b9f7945114602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506082565b6040518082815260200191505060405180910390f35b6000602052806000526040600020600091509050548156fea2646970667358221220b155057d0b107a6d98e23d625befe984f43b3e088a165a59ffe2471acf08605364736f6c63430006000033",
+  "sourceMap": "93:257:3:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;93:257:3;;;;;;;",
+  "deployedSourceMap": "93:257:3:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;93:257:3;;;;;;;;;;;;;;;;;;;118:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;118:44:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.6.0;\r\n\r\n/**\r\n * @title Reputation handles the reputation of bookies\r\n */\r\ncontract Reputation {\r\n  mapping(address => int256) public reputation;\r\n\r\n  function increaseRep(address _address) internal {\r\n    reputation[_address] += 1;\r\n  }\r\n\r\n  function decreaseRep(address _address) internal {\r\n    reputation[_address] -= 1;\r\n  }\r\n}",
+  "sourcePath": "C:\\Users\\AnshuJalan\\Documents\\Ethereum\\Etherpunk\\chain-arena\\contracts\\Reputation.sol",
+  "ast": {
+    "absolutePath": "/C/Users/AnshuJalan/Documents/Ethereum/Etherpunk/chain-arena/contracts/Reputation.sol",
+    "exportedSymbols": {
+      "Reputation": [
+        1199
+      ]
+    },
+    "id": 1200,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1170,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Reputation handles the reputation of bookies",
+        "fullyImplemented": true,
+        "id": 1199,
+        "linearizedBaseContracts": [
+          1199
+        ],
+        "name": "Reputation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "b9f79451",
+            "id": 1174,
+            "name": "reputation",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 1199,
+            "src": "118:44:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_int256_$",
+              "typeString": "mapping(address => int256)"
+            },
+            "typeName": {
+              "id": 1173,
+              "keyType": {
+                "id": 1171,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "126:7:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "118:26:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_int256_$",
+                "typeString": "mapping(address => int256)"
+              },
+              "valueType": {
+                "id": 1172,
+                "name": "int256",
+                "nodeType": "ElementaryTypeName",
+                "src": "137:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1185,
+              "nodeType": "Block",
+              "src": "217:38:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1183,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1179,
+                        "name": "reputation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1174,
+                        "src": "224:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_int256_$",
+                          "typeString": "mapping(address => int256)"
+                        }
+                      },
+                      "id": 1181,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1180,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1176,
+                        "src": "235:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "224:20:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 1182,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "248:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "224:25:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 1184,
+                  "nodeType": "ExpressionStatement",
+                  "src": "224:25:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1186,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increaseRep",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1177,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1176,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1186,
+                  "src": "190:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1175,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "190:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "189:18:3"
+            },
+            "returnParameters": {
+              "id": 1178,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "217:0:3"
+            },
+            "scope": 1199,
+            "src": "169:86:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1197,
+              "nodeType": "Block",
+              "src": "309:38:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1195,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1191,
+                        "name": "reputation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1174,
+                        "src": "316:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_int256_$",
+                          "typeString": "mapping(address => int256)"
+                        }
+                      },
+                      "id": 1193,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1192,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1188,
+                        "src": "327:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "316:20:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 1194,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "340:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "316:25:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 1196,
+                  "nodeType": "ExpressionStatement",
+                  "src": "316:25:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1198,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decreaseRep",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1188,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1198,
+                  "src": "282:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1187,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "282:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "281:18:3"
+            },
+            "returnParameters": {
+              "id": 1190,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "309:0:3"
+            },
+            "scope": 1199,
+            "src": "261:86:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1200,
+        "src": "93:257:3"
+      }
+    ],
+    "src": "0:350:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/AnshuJalan/Documents/Ethereum/Etherpunk/chain-arena/contracts/Reputation.sol",
+    "exportedSymbols": {
+      "Reputation": [
+        1199
+      ]
+    },
+    "id": 1200,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1170,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Reputation handles the reputation of bookies",
+        "fullyImplemented": true,
+        "id": 1199,
+        "linearizedBaseContracts": [
+          1199
+        ],
+        "name": "Reputation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "b9f79451",
+            "id": 1174,
+            "name": "reputation",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 1199,
+            "src": "118:44:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_int256_$",
+              "typeString": "mapping(address => int256)"
+            },
+            "typeName": {
+              "id": 1173,
+              "keyType": {
+                "id": 1171,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "126:7:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "118:26:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_int256_$",
+                "typeString": "mapping(address => int256)"
+              },
+              "valueType": {
+                "id": 1172,
+                "name": "int256",
+                "nodeType": "ElementaryTypeName",
+                "src": "137:6:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1185,
+              "nodeType": "Block",
+              "src": "217:38:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1183,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1179,
+                        "name": "reputation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1174,
+                        "src": "224:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_int256_$",
+                          "typeString": "mapping(address => int256)"
+                        }
+                      },
+                      "id": 1181,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1180,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1176,
+                        "src": "235:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "224:20:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 1182,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "248:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "224:25:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 1184,
+                  "nodeType": "ExpressionStatement",
+                  "src": "224:25:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1186,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increaseRep",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1177,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1176,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1186,
+                  "src": "190:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1175,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "190:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "189:18:3"
+            },
+            "returnParameters": {
+              "id": 1178,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "217:0:3"
+            },
+            "scope": 1199,
+            "src": "169:86:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1197,
+              "nodeType": "Block",
+              "src": "309:38:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1195,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 1191,
+                        "name": "reputation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1174,
+                        "src": "316:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_int256_$",
+                          "typeString": "mapping(address => int256)"
+                        }
+                      },
+                      "id": 1193,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 1192,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1188,
+                        "src": "327:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "316:20:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 1194,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "340:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "316:25:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 1196,
+                  "nodeType": "ExpressionStatement",
+                  "src": "316:25:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1198,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decreaseRep",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1188,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1198,
+                  "src": "282:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1187,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "282:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "281:18:3"
+            },
+            "returnParameters": {
+              "id": 1190,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "309:0:3"
+            },
+            "scope": 1199,
+            "src": "261:86:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1200,
+        "src": "93:257:3"
+      }
+    ],
+    "src": "0:350:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.0+commit.26b70077.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2021-02-27T09:21:58.087Z",
+  "devdoc": {
+    "methods": {},
+    "title": "Reputation handles the reputation of bookies"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
