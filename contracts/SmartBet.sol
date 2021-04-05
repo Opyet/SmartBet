@@ -52,7 +52,7 @@ contract SmartBet is ERC721, ChainlinkClient {
         address creator;
         uint8 oddsTeamA;
         uint8 oddsTeamB;
-        bytes32 matchResultLink;
+        string matchResultLink;
         uint256 totalPayoutTeamA;
         uint256 totalPayoutTeamB;
         uint256 totalCollected;
@@ -140,7 +140,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Ensure api match does not previously exist
     */
     modifier isNewAPIMatch(uint256 _api_matchId) {
-        require(api_matches[_api_matchId] > 0, "api match exists");
+        require(api_matches[_api_matchId] == 0, "api match exists");
         _;
     }
 
@@ -240,7 +240,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @param   
     *  @return  match Id
     */
-    function createMatch(uint256 _api_matchId, bytes32 _matchResultLink, uint8 _oddsTeamA, uint8 _oddsTeamB, uint256 _startAt)
+    function createMatch(uint256 _api_matchId, string memory _matchResultLink, uint8 _oddsTeamA, uint8 _oddsTeamB, uint256 _startAt)
         public 
         isNewAPIMatch(_api_matchId)
         onlyOwner
@@ -311,18 +311,21 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     /*
     *  @notice  Match manual close by admin. Trigger "getResult()" 
-    *  @dev   
+    *  @dev     [Real] ChainlinkClient API Request oracles gets match result of winning team. Then, match is closed.
+    *           [Temporary] (Implemented because there's no BSC testnet oracle node)
+    *                       Frontend gets result via result link and posts winning team. Then, match is closed.
     *  @param  
     *  @return  success success status
     */
-    function closeMatch(uint128 _matchId)
+    function closeMatch(uint128 _matchId, uint winner)
         public 
         onlyOwner
         matchExists(_matchId) 
         matchStarted(_matchId)
     {
         matches[_matchId].state = MatchState.FINISHED;
-        getMatchResult(_matchId);
+        
+        // getMatchResult(_matchId);
         
         emit LogCloseMatch(msg.sender, _matchId);
     }
