@@ -1,10 +1,14 @@
 pragma solidity ^0.7.0;
-pragma abicoder v2;
+pragma experimental ABIEncoderV2;
 
 import "@chainlink/contracts/src/v0.7/ChainlinkClient.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 // import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
+
+// import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/token/ERC721/ERC721.sol";
+// import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/utils/Counters.sol";
+
 
 /*
  * @notice SmartBet core smart contract. Handles matches, bets and farming
@@ -12,7 +16,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 contract SmartBet is ERC721, ChainlinkClient {
 
     using Counters for Counters.Counter;
-    //using SafeMath for uint256;
+    // using SafeMath for uint256;
 
     ////////////////////////////////////////
     //                                    //
@@ -70,6 +74,9 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     // holds all created matches (key: idCounter)
     mapping(uint256 => Match) matches;
+    
+    // holds all apiMatchId -> onChainMatchId to prevent duplicate entries
+    mapping(uint256 => uint256) api_matches;
 
     // holds all bets on a match
     // mapping(matchId => mapping(team => mapping(address => amount[]))) matchBets;
@@ -117,7 +124,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Restrict caller only owner
     */
     modifier onlyOwner() {
-        require(msg.sender == owner);
+        require(msg.sender == owner, "caller is not owner");
         _;
     }
 
@@ -125,7 +132,15 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Ensure match does not previously exist
     */
     modifier isNewMatch(uint256 _matchId) {
-        require(!matches[_matchId].exists);
+        require(!matches[_matchId].exists, "on chain match exists");
+        _;
+    }
+
+    /*
+    *  @notice  Ensure api match does not previously exist
+    */
+    modifier isNewAPIMatch(uint256 _api_matchId) {
+        require(api_matches[_api_matchId] > 0, "api match exists");
         _;
     }
 
@@ -133,7 +148,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Ensure match exists
     */
     modifier matchExists(uint256 _matchId){
-        require(matches[_matchId].exists);
+        require(matches[_matchId].exists, "on chain match does not exist");
         _;
     }
 
@@ -141,7 +156,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Ensure match has not started
     */
     modifier matchNotStarted(uint256 _matchId){
-        require(matches[_matchId].state == MatchState.NOT_STARTED);
+        require(matches[_matchId].state == MatchState.NOT_STARTED, "match started");
         _;
     }
 
@@ -149,7 +164,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Ensure match has started
     */
     modifier matchStarted(uint256 _matchId){
-        require(matches[_matchId].state == MatchState.STARTED);
+        require(matches[_matchId].state == MatchState.STARTED, "match not started");
         _;
     }
 
@@ -157,7 +172,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Ensure match has ended
     */
     modifier matchFinished(uint256 _matchId){
-        require(matches[_matchId].state == MatchState.FINISHED);
+        require(matches[_matchId].state == MatchState.FINISHED, "match not finished");
         _;
     }
 
@@ -225,14 +240,16 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @param   
     *  @return  match Id
     */
-    function createMatch(bytes32 _matchResultLink, uint8 _oddsTeamA, uint8 _oddsTeamB, uint256 _startAt)
+    function createMatch(uint256 _api_matchId, bytes32 _matchResultLink, uint8 _oddsTeamA, uint8 _oddsTeamB, uint256 _startAt)
         public 
+        isNewAPIMatch(_api_matchId)
         onlyOwner
         returns(uint)
     {
         matchIds.increment();
         uint256 matchId = matchIds.current();
         matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _matchResultLink, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, true); 
+        api_matches[_api_matchId] = matchId;
         emit LogMatchAdded(msg.sender, matchId, _startAt);
 
         return matchId;
@@ -274,20 +291,21 @@ contract SmartBet is ERC721, ChainlinkClient {
         //increase totalCollected on the match
         matches[_matchId].totalCollected += amountBet;
 
-        uint256 betSlipId = _awardBetSlip(bettor);
+        uint256 smartAssetId = awardSmartAsset(bettor);
         
         emit LogBetAdded(bettor, _matchId, amountBet, block.timestamp);
 
-        return betSlipId;
+        return smartAssetId;
     }
 
-    function _awardBetSlip(address bettor) internal returns (uint256) {
+
+    function awardSmartAsset(address bettor) internal returns (uint256) {
         tokenIds.increment();
 
-        uint256 newBetSlipId = tokenIds.current();
-        _mint(bettor, newBetSlipId);
+        uint256 smartAssetId = tokenIds.current();
+        _mint(bettor, smartAssetId);
 
-        return newBetSlipId;
+        return smartAssetId;
     }
 
 
