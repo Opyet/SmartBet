@@ -82,7 +82,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     mapping(uint256 => uint256) apiMatches;
 
     // holds all bets on a match
-    // mapping(matchId => mapping(gameResult => tokenIds[])) matchBets;
+    // mapping(matchId => mapping(gameResult => smartAssetId[])) matchBets;
     mapping(uint256 => mapping(MatchResult => uint256[])) matchBets;
 
     mapping(bytes32 => uint256) matchResultRequestIds;
