@@ -32,9 +32,6 @@ contract SmartBet is ERC721, ChainlinkClient {
     // incremented id for NFT minting
     Counters.Counter private tokenIds;
 
-    // total funds available
-    uint256 public totalTreasury;
-
     // flag to determine if contracts core functionalities can be performed
     bool circuitBreaker = false;
 
@@ -101,12 +98,12 @@ contract SmartBet is ERC721, ChainlinkClient {
     ////////////////////////////////////////
 
     //Can be used by the clients to get all matches in a particular time
-    event LogMatchAdded(address indexed creator, uint256 matchId, uint256 indexed startAt);
+    event MatchAddedEvent(address indexed creator, uint256 matchId, uint256 indexed startAt);
     //Can be used by the clients to get all bets placed by a better in a particular time
-    event LogBetAdded(address indexed bettor, uint256 indexed matchId, uint256 amount, uint256 indexed betAt);
-    event LogCloseMatch(address indexed by, uint256 indexed matchId);
-    event LogSetResult(uint256 indexed matchId, MatchResult result);
-    event LogWithdrawal(address indexed by, uint256 indexed matchId, uint256 amount);
+    event BetPlacedEvent(address indexed bettor, uint256 indexed matchId, uint256 amount, uint256 indexed betAt);
+    event MatchClosedEvent(address indexed by, uint256 indexed matchId);
+    event MatchResultSetEvent(uint256 indexed matchId, MatchResult result);
+    event AssetLiquidatedEvent(address indexed by, uint256 indexed matchId, uint256 amount);
 
 
     ////////////////////////////////////////
@@ -218,21 +215,6 @@ contract SmartBet is ERC721, ChainlinkClient {
     ////////////////////////////////////////
 
     /*
-    *  @notice  Contract Circuit Breaker
-    *  @dev     Admin can [de]activate core functons in contract
-    *  @param   
-    *  @return  success success status
-    */
-    function toggleCircuitBreaker()
-        public 
-        onlyOwner
-    {
-        //code
-        circuitBreaker = !circuitBreaker;
-    }
-    
-    
-    /*
     *  @notice  New match creation
     *  @dev     
     *  @param   
@@ -248,7 +230,7 @@ contract SmartBet is ERC721, ChainlinkClient {
         uint256 matchId = matchIds.current();
         matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _oddsDraw, _matchResultLink, 0, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, true); 
         apiMatches[_apiMatchId] = matchId;
-        emit LogMatchAdded(msg.sender, matchId, _startAt);
+        emit MatchAddedEvent(msg.sender, matchId, _startAt);
 
         return matchId;
     }
@@ -263,6 +245,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     function placeBet(uint128 _matchId, uint8 _resultBetOn)
         public 
         payable
+        isCircuitBreakOff
         matchExists(_matchId) 
         matchNotStarted(_matchId) 
         isBetAllowed(_matchId)
@@ -291,14 +274,14 @@ contract SmartBet is ERC721, ChainlinkClient {
         //increase totalCollected on the match
         matches[_matchId].totalCollected += amountBet;
 
-        uint256 tokenId = awardSmartAsset(bettor, assetValue, _matchId, matchResultBetOn);
+        uint256 smartAssetId = awardSmartAsset(bettor, assetValue, _matchId, matchResultBetOn);
         
         //Save bettor's bet
-        matchBets[_matchId][matchResultBetOn].push(tokenId);
+        matchBets[_matchId][matchResultBetOn].push(smartAssetId);
         
-        emit LogBetAdded(bettor, _matchId, amountBet, block.timestamp);
+        emit BetPlacedEvent(bettor, _matchId, amountBet, block.timestamp);
 
-        return tokenId;
+        return smartAssetId;
     }
 
 
@@ -358,44 +341,62 @@ contract SmartBet is ERC721, ChainlinkClient {
         }
         
         
-        emit LogCloseMatch(msg.sender, _matchId);
+        emit MatchClosedEvent(msg.sender, _matchId);
     }
     
     function setMatchResult(uint256 _matchId, MatchResult _matchResult) internal {
         matches[_matchId].result = _matchResult;
-        emit LogSetResult(_matchId, matches[_matchId].result);
+        emit MatchResultSetEvent(_matchId, matches[_matchId].result);
     }
     
     function invalidateAssets(uint256[] memory assets) internal {
         for (uint i = 0; i < assets.length; i++) {
-            _burn(assets[i]);
+            invalidateAsset(assets[i]);
         }
     }
 
+    function invalidateAsset(uint256 _smartAssetId) internal {
+        _burn(_smartAssetId);
+    }
+
     /*
-    *  @notice  Funds withdrawal by winner
+    *  @notice  Liquidate smart asset's value
     *  @dev     validated   NFT is burned and caller gets value funds in account
-    *  @param   _tokenId    NFT token id
-    *  @return  success success status
+    *  @param   _smartAssetId smart asset id
+    *  @return  success status
     */
-    function withdraw(uint128 _tokenId)
+    function liquidateAsset(uint128 _smartAssetId)
         public 
         payable
-        validateToken(_tokenId)
-        isTokenOwner(_tokenId)
+        isCircuitBreakOff
+        validateToken(_smartAssetId)
+        isTokenOwner(_smartAssetId)
         returns(bool)
     {
-        SmartAsset memory smartAsset = smartAssets[_tokenId];
+        SmartAsset memory smartAsset = smartAssets[_smartAssetId];
         
-        require(matches[smartAsset.matchId].state == MatchState.FINISHED, "Cannot withdraw until match is finished");
+        require(matches[smartAsset.matchId].state == MatchState.FINISHED, "Cannot liquidate asset until match is finished");
         
         require (address(this).balance >= smartAsset.initialValue, "Contract has insufficient funds");
         
-        _burn(_tokenId);
+        invalidateAsset(_smartAssetId);
         msg.sender.transfer(smartAsset.initialValue);
 
-        emit LogWithdrawal(msg.sender, smartAsset.matchId, smartAsset.initialValue);
+        emit AssetLiquidatedEvent(msg.sender, smartAsset.matchId, smartAsset.initialValue);
         return true;
+    }
+
+    /*
+    *  @notice  Contract Circuit Breaker
+    *  @dev     Admin can [de]activate core functons in contract
+    *  @param   
+    *  @return  success success status
+    */
+    function toggleCircuitBreaker()
+        public 
+        onlyOwner
+    {
+        circuitBreaker = !circuitBreaker;
     }
 
     /*
@@ -414,19 +415,19 @@ contract SmartBet is ERC721, ChainlinkClient {
     }
 
     /*
-    *  @notice  Fetch single NFT (SmartAsset)
+    *  @notice  Fetch single SmartAsset
     *  @dev          
-    *  @param   _tokenId
-    *  @return  asset NFT details
+    *  @param   _smartAssetId
+    *  @return  asset details
     */
-    function getSmartAsset(uint256 _tokenId)
+    function getSmartAsset(uint256 _smartAssetId)
         public 
         view
-        validateToken(_tokenId)
-        isTokenOwner(_tokenId)
+        validateToken(_smartAssetId)
+        isTokenOwner(_smartAssetId)
         returns(SmartAsset memory asset)
     {
-        return smartAssets[_tokenId];
+        return smartAssets[_smartAssetId];
     }
     
 }
