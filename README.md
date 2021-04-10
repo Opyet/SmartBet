@@ -24,7 +24,7 @@ SmartBet is a betting platform that besically allow users to place bets using cr
 When users place bets on live matches using exchanged stablecoins (BUSD), they are issues NFTs (ERC721) which both serve as the value of their bets as well as keep track of all accrued interests.
 Users can withdraw at will.
 
-Kindly read the FULL DOCUMENTATION ![HERE]()
+Kindly read the FULL DOCUMENTATION ![gitbook](https://app.gitbook.com/@bamuska/s/smartbet/~/drafts/-MXwAr9vdUUtvHzM3PJ7/)
 
 ### User Story
 
