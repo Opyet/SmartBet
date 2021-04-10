@@ -38,10 +38,6 @@ contract SmartBet is ERC721, ChainlinkClient {
     // flag to determine if contracts core functionalities can be performed
     bool circuitBreaker = false;
 
-    address private oracle;
-    bytes32 private jobId;
-    uint256 private fee;
-
     enum MatchResult {NOT_DETERMINED, DRAW, TEAM_A_WON, TEAM_B_WON}
     enum MatchState {NOT_STARTED, STARTED, FINISHED}
 
@@ -96,10 +92,6 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     constructor() ERC721("SmartBet", "SMBT") {
         owner = msg.sender;
-        // setPublicChainlinkToken();
-        oracle = 0x2f90A6D021db21e1B2A077c5a37B3C7E75D15b7e;
-        jobId = "29fa9aa13bf1468788b7cc4a500a45b8";
-        fee = 0.1 * 10 ** 18; // 0.1 LINK
     }
 
     ////////////////////////////////////////
@@ -219,8 +211,6 @@ contract SmartBet is ERC721, ChainlinkClient {
         _;
     }
 
-
-
     ////////////////////////////////////////
     //                                    //
     //              FUNCTIONS             //
@@ -312,7 +302,9 @@ contract SmartBet is ERC721, ChainlinkClient {
     }
 
 
-    function awardSmartAsset(address bettor, uint256 assetValue, uint256 _matchId, MatchResult _matchResultBetOn) internal returns (uint256) {
+    function awardSmartAsset(address bettor, uint256 assetValue, uint256 _matchId, MatchResult _matchResultBetOn) 
+        internal returns (uint256) 
+    {
         tokenIds.increment();
 
         uint256 smartAssetId = tokenIds.current();
@@ -380,7 +372,6 @@ contract SmartBet is ERC721, ChainlinkClient {
         }
     }
 
-
     /*
     *  @notice  Funds withdrawal by winner
     *  @dev     validated   NFT is burned and caller gets value funds in account
@@ -421,61 +412,6 @@ contract SmartBet is ERC721, ChainlinkClient {
     {
         return matches[_matchId];
     }
-
-
-    /*
-    *  @notice  Fetch match result with a call through ChainlinkClient.
-    *  @dev     ChainlinkClient Oracle. Callback function "setMatchResult()"
-    *  @oaram   _matchId
-    *  @return request ID
-    */
-    function getMatchResult(uint256 _matchId)
-        internal 
-        view
-        matchFinished(_matchId)
-    {
-        // Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.setMatchResult.selector);
-        
-        // // Set the URL to perform the GET request on
-        // request.add("get", matches[_matchId].matchResultLink);
-        
-        // // Set the path to find the desired data in the API response, where the response format is:
-        // request.add("path", "api.results.fixtures[0].goalsHomeTeam");
-        
-        // // Sends the request
-        // bytes32 requestId = sendChainlinkRequestTo(oracle, request, fee);
-        // matchResultRequestIds[requestId] = _matchId;
-    }
-
-     /*
-    *  @notice  Set Match results
-    *  @dev   
-    *  @param  
-    *  @return  success success status
-    */
-    // function setMatchResult(bytes32 _requestId, uint8 _matchResult)
-    //     public 
-    //     matchExists(matchResultRequestIds[_requestId]) 
-    //     matchFinished(matchResultRequestIds[_requestId])
-    // {
-    //     uint256 matchId = matchResultRequestIds[_requestId];
-    //     matches[matchId].result = MatchResult(_matchResult);
-    //     emit LogSetResult(matchId, matches[matchId].result);
-    // }
-    
-    /*
-    *  @notice  Fetch all NFTs (SmartAssets)
-    *  @dev             
-    *  @return  assets Array of all NFTs
-    */
-    // function allSmartAssets()
-    //     public 
-    //     view
-    //     returns(SmartAsset[] memory _assets)
-    // {
-    //     //code        
-    // }
-
 
     /*
     *  @notice  Fetch single NFT (SmartAsset)
