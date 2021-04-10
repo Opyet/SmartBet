@@ -12,55 +12,70 @@
 - [Description](#description)
 - [How To Use](#how-to-use)
 - [References](#references)
+- [Contributors](#contributors)
 - [License](#license)
-- [Contributors Info](#contributors-info)
+
 
 ---
 
 ## Description
 
-SmartBet is a betting platform that besically allow users to place bets using crypto. Users can select thier bets and place them by buying our tokens (ERC721) and staking them. For users to buy our tokens with their crypto currencies (native/standard), tthey will have to convert to BUSDs to obtain tokens(ERC721) and use them to place bets and stake.
-If the odds on a bet is 10x. staking 1 unit of our token will get the user 10 units if he wins the bet but if user lose the bet, his stake will be withdraw into the platform's wallet.
+SmartBet is a betting platform that besically allow users to place bets using crypto, and provide incentives as interests to winners who decide to keep their funds in the platform. These reserved funds are traded with by the platform on a DeFi lending protocol.
+When users place bets on live matches using exchanged stablecoins (BUSD), they are issues NFTs (ERC721) which both serve as the value of their bets as well as keep track of all accrued interests.
+Users can withdraw at will.
+
+Kindly read the FULL DOCUMENTATION ![HERE]()
+
+### User Story
+
+A bettor comes to the platform to place 100BUSD bet on a match whose odds is 4/1. He will be issued an NFT that represents his bet. If this bet wins, his NFT will remain valid and valued at `4 * 100BUSD = 400BUSD`. He can then decide to withdraw immediately or defer his withdraw till a later time. If he keeps his funds in the SmartBet platform, they will be traded with on a lending protocol and the user will receive dividends of the investment when withdrawals are made.
 
 ### Betting Odds and Probability
 
-Betting odds represent the probability of an event to happen and therefore enable you to work out how much money you will win if your bet wins. As an example, with the odds of 4/1, for every £1 you bet, you will win £4. There is a 20% chance of this happening, calculated by 1 / (4 + 1) = 0.20.
+Betting odds represent the probability of an event to happen and therefore enable you to work out how much money you will win if your bet wins. As an example, with the odds of `4/1`, for every £1 you bet, you will win £4. There is a 20% chance of this happening, calculated by `1 / (4 + 1) = 1/5 = 0.20`.
 
 Calculating the probability of staker winning and/or platform losing money:
-% = den / (den + num)
-
-For example, if the odds are 4 to 1, the probability equals 1 / (1 + 4) = 1/5 or 20%.
-A favourite horse might be quoted at odds of 2 to 1, which mathematically would represent a probability of 33.3%
-
+`% = den / (den + num)`
 
 
 ### Integrations
 
-- Pancake
-- Metamask Wallet
-- Farming/Lending Aggregator for BUSDs --- Venus on BSC (https://github.com/VenusProtocol/venus-protocol)
-- Biconomy (https://docs.biconomy.io/)
-- Rapid API - API Sports
-- Sport Oracles for live scores
+- PancakeSwap: Decentralized Exchange platform for swapping user funds into BUSD stablecoins.
+- Metamask Wallet: User wallet
+- ![Venus](https://github.com/VenusProtocol/venus-protocol): Farming/Lending Aggregator for BUSD stablecoins
+- ![Biconomy](https://docs.biconomy.io/): Gasless transactions and better user experience. Also serves as incentive in user onboarding
+- ![RapidAPI](https://rapidapi.com/api-sports/api/api-football) - Live data for matches, odds and margins
+- Chainlink - Sport Oracles for live scores (available for mainnet deployment).
 
 ### Advantages
 
 - Anonymous betting
 - User-centered design
-- Better can earn more funds in the pool. 
-- More incentives for NFT holders. We invest in farming protocols with BUSDs reserved pool, Gains will be shared (35% - 65%).
+- Gasless transactions for early adopters
+- Quick cashout at will
+- Bettors can earn more funds by supplying BUSD liquidity in the pool. Liquidity providers all get 60% of the interest.
+- No auto-liquidation: Limitless incentives for NFT holding bettors.
 
-### Calculations 
+### Key Calculations 
 
-Team share = 5% of InvestmentReturn
-Back to Reserve = 20% of InvestmentReturn
-Farmers' share = 75% of InvestmentReturn
+#### Safe Bet
+Smart Contract ensures that bets can only be placed when there's enough funds to pay out for that bet winning.
 
-Incentive (Bettor RoI) = (initialValue / totalReserveOfPreviousCycle) * farmersShare
+`TotalPayOut_TeamA/B/Draw = TotalPayOut_TeamA/B/Draw + (betAmount * odds)`
 
-Accrued Interest = (incentive / initialValue) * 100
+`Match_TotalCollectedFunds > TotalPayOut_TeamA/B/Draw`
 
-BettorNFTValue = initialValue + ((accruedInterest / 100) * initialValue)
+#### Investment Returns
+
+Team share = 10% of InvestmentReturn
+Back to Reserve = 30% of InvestmentReturn
+Farmers' share = 60% of InvestmentReturn
+
+`Incentive (Bettor RoI) = (initialValue / totalReserveOfPreviousCycle) * farmersShare`
+
+`Accrued Interest = (incentive / initialValue) * 100`
+
+`BettorNFTValue = initialValue + ((accruedInterest / 100) * initialValue)`
 
 [Back To The Top](#SmartBet)
 
@@ -75,7 +90,44 @@ BettorNFTValue = initialValue + ((accruedInterest / 100) * initialValue)
 - User can view his/her slips (NFT) and its value in BUSD
 - User can withdraw payout on each slip(NFT)
 
-#### Installation
+### Installation
+
+#### SMART CONTRACTS
+At the project folder root,
+
+Install Dependencies
+> `> npm install`
+
+Compile contracts
+> `> truffle compile`
+
+Run tests
+> `> truffle test`
+
+Deploy on BSC Testnet
+> `> truffle migrate --network bsc_testnet`
+
+Deploy on local network (ganache-cli)
+> `> ganache-cli`
+> `> truffle migrate --network ganache`
+
+
+#### FRONTEND
+At the project folder root,
+
+Navigate into the `client` folder
+> `> cd client`
+
+Install Dependencies
+> `> npm install`
+
+To Build React App
+> `> npm run build`
+
+To Start App on Development Server
+> `> npm run start`
+
+
 
 [Back To The Top](#SmartBet)
 
@@ -106,6 +158,19 @@ https://rapidapi.com/api-sports/api/api-football?endpoint=apiendpoint_5c14c3d5-6
 
 ---
 
+## Contributors
+
+- Opeyemi Olabode: Team Lead
+- Damilola: Smart Contract
+- Idris Musa Usman: Documentation
+- Patrick Asu: Frontend
+- Mekuleyi Michael
+- Oyemade
+
+[Back To The Top](#SmartBet)
+
+----
+
 ## License
 
 The MIT License (MIT)
@@ -133,13 +198,3 @@ SOFTWARE.
 [Back To The Top](#SmartBet)
 
 ---
-
-## Contributors Info
-
-- eopeyemie@gmail.com
-- ajibigad@gmail.com
-- bndoyeauthentic@gmail.com
-- mekuleyimichael@gmail.com
-- idrismusausman@gmail.com
-
-[Back To The Top](#SmartBet)
