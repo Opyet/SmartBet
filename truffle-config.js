@@ -1,7 +1,8 @@
 const path = require("path");
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 const bscTestnetURL = 'https://data-seed-prebsc-1-s1.binance.org:8545';
-const HDWalletProvider = require('@truffle/hdwallet-provider');
+
 
 const fs = require('fs');
 const mnemonic = fs.readFileSync(".secret").toString().trim();

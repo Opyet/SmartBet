@@ -81,9 +81,10 @@ contract SmartInvestV1 {
         require(vToken.redeemUnderlying(amount) == 0, "something went wrong");
     }
     
-    function getBalance() public {
+    function getBalance() public returns (uint256){
         VToken vToken = VToken(vTOKEN_ADDRESS);
         uint tokens = vToken.balanceOfUnderlying(msg.sender);
+        return tokens;
     }
     
     // function exchangeRateCurrent() public {
