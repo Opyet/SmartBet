@@ -1,9 +1,8 @@
 const path = require("path");
-
-const bscTestnetURL = 'https://data-seed-prebsc-1-s1.binance.org:8545';
-const HDWalletProvider = require('@truffle/hdwallet-provider');
-
 const fs = require('fs');
+
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+const bscTestnetURL = 'https://data-seed-prebsc-1-s1.binance.org:8545';
 const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
@@ -18,8 +17,8 @@ module.exports = {
   networks: {
     ganache: {
       host: "localhost",
-      port: 8545,
-      gas: 5000000,
+      port: 7545,
+      // gas: 5000000,
       network_id: "*"
     },
     bsc_testnet: {
