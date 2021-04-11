@@ -98,12 +98,13 @@ contract SmartBet is ERC721, ChainlinkClient {
     ////////////////////////////////////////
 
     //Can be used by the clients to get all matches in a particular time
-    event MatchAddedEvent(address indexed creator, uint256 matchId, uint256 indexed startAt);
+    event MatchCreatedEvent(address indexed creator, uint256 matchId, uint256 indexed createdAt);
     //Can be used by the clients to get all bets placed by a better in a particular time
-    event BetPlacedEvent(address indexed bettor, uint256 indexed matchId, uint256 amount, uint256 indexed betAt);
-    event MatchClosedEvent(address indexed by, uint256 indexed matchId);
-    event MatchResultSetEvent(uint256 indexed matchId, MatchResult result);
-    event AssetLiquidatedEvent(address indexed by, uint256 indexed matchId, uint256 amount);
+    event BetPlacedEvent(address indexed bettor, uint256 indexed matchId, uint256 amount, uint256 indexed betPlacedAt);
+    event SmartAssetAwardedEvent(address indexed awardee, uint256 smartAssetId, uint256 awardedAt);
+    event MatchClosedEvent(address indexed by, uint256 indexed matchId, uint256 closedAt);
+    event MatchResultSetEvent(uint256 indexed matchId, MatchResult result, uint256 setAt);
+    event AssetLiquidatedEvent(address indexed by, uint256 indexed matchId, uint256 amount, uint256 liquidatedAt);
 
 
     ////////////////////////////////////////
@@ -132,7 +133,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Ensure api match does not previously exist
     */
     modifier isNewAPIMatch(uint256 _api_matchId) {
-        require(apiMatches[_api_matchId] == 0, "api match exists");
+        require(apiMatches[_api_matchId] == 0, "api match ID exists");
         _;
     }
 
@@ -220,7 +221,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @param   
     *  @return  match Id
     */
-    function createMatch(uint256 _apiMatchId, string memory _matchResultLink, uint8 _oddsTeamA, uint8 _oddsTeamB, uint8 _oddsDraw, uint256 _startAt)
+    function createMatch(uint256 _apiMatchId, string calldata _matchResultLink, uint8 _oddsTeamA, uint8 _oddsTeamB, uint8 _oddsDraw, uint256 _startAt)
         public 
         isNewAPIMatch(_apiMatchId)
         onlyOwner
@@ -230,7 +231,7 @@ contract SmartBet is ERC721, ChainlinkClient {
         uint256 matchId = matchIds.current();
         matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _oddsDraw, _matchResultLink, 0, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, true); 
         apiMatches[_apiMatchId] = matchId;
-        emit MatchAddedEvent(msg.sender, matchId, _startAt);
+        emit MatchCreatedEvent(msg.sender, matchId, _startAt);
 
         return matchId;
     }
@@ -295,6 +296,8 @@ contract SmartBet is ERC721, ChainlinkClient {
         
         smartAssets[smartAssetId] = SmartAsset(msg.sender, _matchId, _matchResultBetOn, assetValue, 0);
 
+        emit SmartAssetAwardedEvent(bettor, smartAssetId, block.timestamp);
+
         return smartAssetId;
     }
     
@@ -341,12 +344,12 @@ contract SmartBet is ERC721, ChainlinkClient {
         }
         
         
-        emit MatchClosedEvent(msg.sender, _matchId);
+        emit MatchClosedEvent(msg.sender, _matchId, block.timestamp);
     }
     
     function setMatchResult(uint256 _matchId, MatchResult _matchResult) internal {
         matches[_matchId].result = _matchResult;
-        emit MatchResultSetEvent(_matchId, matches[_matchId].result);
+        emit MatchResultSetEvent(_matchId, matches[_matchId].result, block.timestamp);
     }
     
     function invalidateAssets(uint256[] memory assets) internal {
@@ -382,7 +385,7 @@ contract SmartBet is ERC721, ChainlinkClient {
         invalidateAsset(_smartAssetId);
         msg.sender.transfer(smartAsset.initialValue);
 
-        emit AssetLiquidatedEvent(msg.sender, smartAsset.matchId, smartAsset.initialValue);
+        emit AssetLiquidatedEvent(msg.sender, smartAsset.matchId, smartAsset.initialValue, block.timestamp);
         return true;
     }
 

@@ -2,12 +2,8 @@ const path = require("path");
 const fs = require('fs');
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-
-function getBSCTestNetHDWalletProvider() {
-  const bscTestnetURL = 'https://data-seed-prebsc-1-s1.binance.org:8545';
-  const mnemonic = fs.readFileSync(".secret").toString().trim();
-  return new HDWalletProvider(mnemonic, bscTestnetURL);
-}
+const bscTestnetURL = 'https://data-seed-prebsc-1-s1.binance.org:8545';
+const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
@@ -26,7 +22,7 @@ module.exports = {
       network_id: "*"
     },
     bsc_testnet: {
-      provider: () => getBSCTestNetHDWalletProvider(),
+      provider: () => new HDWalletProvider(mnemonic, bscTestnetURL),
       network_id: 97,
       confirmations: 10,
       timeoutBlocks: 200,
