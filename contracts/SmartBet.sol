@@ -3,8 +3,8 @@ pragma experimental ABIEncoderV2;
 
 import "@chainlink/contracts/src/v0.7/ChainlinkClient.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-// import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
+// import "@openzeppelin/contracts/math/SafeMath.sol";
 
 // import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/token/ERC721/ERC721.sol";
 // import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/utils/Counters.sol";
@@ -32,15 +32,8 @@ contract SmartBet is ERC721, ChainlinkClient {
     // incremented id for NFT minting
     Counters.Counter private tokenIds;
 
-    // total funds available
-    uint256 public totalTreasury;
-
     // flag to determine if contracts core functionalities can be performed
     bool circuitBreaker = false;
-
-    address private oracle;
-    bytes32 private jobId;
-    uint256 private fee;
 
     enum MatchResult {NOT_DETERMINED, DRAW, TEAM_A_WON, TEAM_B_WON}
     enum MatchState {NOT_STARTED, STARTED, FINISHED}
@@ -52,9 +45,11 @@ contract SmartBet is ERC721, ChainlinkClient {
         address creator;
         uint8 oddsTeamA;
         uint8 oddsTeamB;
+        uint8 oddsDraw;
         string matchResultLink;
         uint256 totalPayoutTeamA;
         uint256 totalPayoutTeamB;
+        uint256 totalPayoutDraw;
         uint256 totalCollected;
         MatchResult result;
         MatchState state;
@@ -63,24 +58,25 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     // NFT issued to winner
     struct SmartAsset {
-        uint256 tokenId;
         address owner;
+        uint256 matchId;
+        MatchResult matchResult;
         uint256 initialValue;
         uint8 accruedInterest;
     }
 
     // holds all NFTs issued to winners
-    mapping(address => SmartAsset[]) assets;
+    mapping(uint256 => SmartAsset) smartAssets;
 
     // holds all created matches (key: idCounter)
     mapping(uint256 => Match) matches;
     
     // holds all apiMatchId -> onChainMatchId to prevent duplicate entries
-    mapping(uint256 => uint256) api_matches;
+    mapping(uint256 => uint256) apiMatches;
 
     // holds all bets on a match
-    // mapping(matchId => mapping(team => mapping(address => amount[]))) matchBets;
-    mapping(uint256 => mapping(uint8 => mapping(address => uint256))) matchBets;
+    // mapping(matchId => mapping(gameResult => smartAssetId[])) matchBets;
+    mapping(uint256 => mapping(MatchResult => uint256[])) matchBets;
 
     mapping(bytes32 => uint256) matchResultRequestIds;
 
@@ -93,10 +89,6 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     constructor() ERC721("SmartBet", "SMBT") {
         owner = msg.sender;
-        // setPublicChainlinkToken();
-        oracle = 0x2f90A6D021db21e1B2A077c5a37B3C7E75D15b7e;
-        jobId = "29fa9aa13bf1468788b7cc4a500a45b8";
-        fee = 0.1 * 10 ** 18; // 0.1 LINK
     }
 
     ////////////////////////////////////////
@@ -106,12 +98,13 @@ contract SmartBet is ERC721, ChainlinkClient {
     ////////////////////////////////////////
 
     //Can be used by the clients to get all matches in a particular time
-    event LogMatchAdded(address indexed creator, uint256 matchId, uint256 indexed startAt);
+    event MatchCreatedEvent(address indexed creator, uint256 matchId, uint256 indexed startAt, uint256 indexed createdOn);
     //Can be used by the clients to get all bets placed by a better in a particular time
-    event LogBetAdded(address indexed bettor, uint256 indexed matchId, uint256 amount, uint256 indexed betAt);
-    event LogCloseMatch(address indexed by, uint256 indexed matchId);
-    event LogSetResult(uint256 indexed matchId, MatchResult result);
-    event LogWithdrawal(address indexed by, uint256 indexed matchId, uint256 amount);
+    event BetPlacedEvent(address indexed bettor, uint256 indexed matchId, uint256 amount, uint256 indexed betPlacedAt);
+    event SmartAssetAwardedEvent(address indexed awardee, uint256 smartAssetId, uint256 awardedAt);
+    event MatchClosedEvent(address indexed by, uint256 indexed matchId, uint256 closedAt);
+    event MatchResultSetEvent(uint256 indexed matchId, MatchResult result, uint256 setAt);
+    event AssetLiquidatedEvent(address indexed by, uint256 indexed matchId, uint256 amount, uint256 liquidatedAt);
 
 
     ////////////////////////////////////////
@@ -140,7 +133,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Ensure api match does not previously exist
     */
     modifier isNewAPIMatch(uint256 _api_matchId) {
-        require(api_matches[_api_matchId] == 0, "api match exists");
+        require(apiMatches[_api_matchId] == 0, "api match ID exists");
         _;
     }
 
@@ -181,7 +174,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @dev Checks if the circuitBreaker state variable is false
     */
     modifier isCircuitBreakOff() {
-        require(!circuitBreaker);
+        require(!circuitBreaker, "Circuit breaker is on");
         _;
     }
 
@@ -190,7 +183,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @dev Validates NFT
     */
     modifier validateToken(uint256 _tokenId) {
-        require(_exists(_tokenId));
+        require(_exists(_tokenId), "Invalid token");
         _;
     }
     
@@ -198,7 +191,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  Ensure token belongs to the caller
     */
     modifier isTokenOwner(uint256 _tokenId) {
-        require(ownerOf(_tokenId) == msg.sender);
+        require(ownerOf(_tokenId) == msg.sender , "caller is not token owner");
         _;
     }
 
@@ -207,11 +200,14 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @dev     The totalCollected on the match must be greater than the total payout on the team the bettor wants to bet on. The incoming bet is inclusive in the calculation
     */
     modifier isBetAllowed(uint256 _matchId) {
-        require(true);
+        require(true, "Bet is not allowed");
         _;
     }
-
-
+    
+    modifier validateMatchResult(uint8 _matchResult) {
+        require(MatchResult(_matchResult) == MatchResult.TEAM_A_WON || MatchResult(_matchResult) == MatchResult.TEAM_B_WON || MatchResult(_matchResult) == MatchResult.DRAW, "Invalid match result");
+        _;
+    }
 
     ////////////////////////////////////////
     //                                    //
@@ -220,37 +216,22 @@ contract SmartBet is ERC721, ChainlinkClient {
     ////////////////////////////////////////
 
     /*
-    *  @notice  Contract Circuit Breaker
-    *  @dev     Admin can [de]activate core functons in contract
-    *  @param   
-    *  @return  success success status
-    */
-    function toggleCircuitBreaker()
-        public 
-        onlyOwner
-    {
-        //code
-        circuitBreaker = !circuitBreaker;
-    }
-    
-    
-    /*
     *  @notice  New match creation
     *  @dev     
     *  @param   
     *  @return  match Id
     */
-    function createMatch(uint256 _api_matchId, string memory _matchResultLink, uint8 _oddsTeamA, uint8 _oddsTeamB, uint256 _startAt)
+    function createMatch(uint256 _apiMatchId, string calldata _matchResultLink, uint8 _oddsTeamA, uint8 _oddsTeamB, uint8 _oddsDraw, uint256 _startAt)
         public 
-        isNewAPIMatch(_api_matchId)
+        isNewAPIMatch(_apiMatchId)
         onlyOwner
         returns(uint)
     {
         matchIds.increment();
         uint256 matchId = matchIds.current();
-        matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _matchResultLink, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, true); 
-        api_matches[_api_matchId] = matchId;
-        emit LogMatchAdded(msg.sender, matchId, _startAt);
+        matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _oddsDraw, _matchResultLink, 0, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, true); 
+        apiMatches[_apiMatchId] = matchId;
+        emit MatchCreatedEvent(msg.sender, matchId, _startAt, block.timestamp);
 
         return matchId;
     }
@@ -260,52 +241,73 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @notice  New bet creation. Mint NFT to bettor
     *  @dev   
     *  @param  
-    *  @return  success success status
+    *  @return  token id
     */
-    function placeBet(uint128 _matchId, uint8 _teamBetOn)
+    function placeBet(uint128 _matchId, uint8 _resultBetOn)
         public 
         payable
+        isCircuitBreakOff
         matchExists(_matchId) 
         matchNotStarted(_matchId) 
         isBetAllowed(_matchId)
+        validateMatchResult(_resultBetOn)
         returns(uint256)
     {
-        require(_teamBetOn == TEAM_A || _teamBetOn == TEAM_B, "Invalid team bet on");
         require(msg.value != 0, "Invalid amount bet");
-        //TODO confirm if we want to allow users bet multiple times on the same bet
-        require(matchBets[_matchId][_teamBetOn][msg.sender] != 0, "Not allowed to bet on same match more than once");
 
         address bettor = msg.sender;
         uint256 amountBet = msg.value;
-        
-        //Save bettor's bet
-        matchBets[_matchId][_teamBetOn][bettor] = amountBet;
+        uint256 assetValue = 0;
+        MatchResult matchResultBetOn = MatchResult(_resultBetOn);
         
         //update team's total payout
-        if (_teamBetOn == TEAM_A) {
-            matches[_matchId].totalPayoutTeamA += amountBet;
+        if (matchResultBetOn == MatchResult.TEAM_A_WON) {
+            assetValue = amountBet * matches[_matchId].oddsTeamA;
+            matches[_matchId].totalPayoutTeamA += assetValue;
+        } else if(matchResultBetOn == MatchResult.TEAM_B_WON) {
+            assetValue = amountBet * matches[_matchId].oddsTeamB;
+            matches[_matchId].totalPayoutTeamB += assetValue;
         } else {
-            matches[_matchId].totalPayoutTeamB += amountBet;
+            assetValue = amountBet * matches[_matchId].oddsDraw;
+            matches[_matchId].totalPayoutDraw += assetValue;
         }
 
         //increase totalCollected on the match
         matches[_matchId].totalCollected += amountBet;
 
-        uint256 smartAssetId = awardSmartAsset(bettor);
+        uint256 smartAssetId = awardSmartAsset(bettor, assetValue, _matchId, matchResultBetOn);
         
-        emit LogBetAdded(bettor, _matchId, amountBet, block.timestamp);
+        //Save bettor's bet
+        matchBets[_matchId][matchResultBetOn].push(smartAssetId);
+        
+        emit BetPlacedEvent(bettor, _matchId, amountBet, block.timestamp);
 
         return smartAssetId;
     }
 
 
-    function awardSmartAsset(address bettor) internal returns (uint256) {
+    function awardSmartAsset(address bettor, uint256 assetValue, uint256 _matchId, MatchResult _matchResultBetOn) 
+        internal returns (uint256) 
+    {
         tokenIds.increment();
 
         uint256 smartAssetId = tokenIds.current();
         _mint(bettor, smartAssetId);
+        
+        smartAssets[smartAssetId] = SmartAsset(msg.sender, _matchId, _matchResultBetOn, assetValue, 0);
+
+        emit SmartAssetAwardedEvent(bettor, smartAssetId, block.timestamp);
 
         return smartAssetId;
+    }
+    
+    function startMatch(uint128 _matchId) 
+        public
+        onlyOwner
+        matchExists(_matchId) 
+        matchNotStarted(_matchId)
+    {
+        matches[_matchId].state = MatchState.STARTED;
     }
 
 
@@ -317,36 +319,87 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @param  
     *  @return  success success status
     */
-    function closeMatch(uint128 _matchId, uint winner)
+    function closeMatch(uint128 _matchId, uint8 _matchResult)
         public 
         onlyOwner
         matchExists(_matchId) 
         matchStarted(_matchId)
+        validateMatchResult(_matchResult)
     {
         matches[_matchId].state = MatchState.FINISHED;
         
         // getMatchResult(_matchId);
+        MatchResult matchResult = MatchResult(_matchResult);
+        setMatchResult(_matchId, matchResult);
         
-        emit LogCloseMatch(msg.sender, _matchId);
+        if (matchResult == MatchResult.TEAM_A_WON) {
+            invalidateAssets(matchBets[_matchId][MatchResult.TEAM_B_WON]);
+            invalidateAssets(matchBets[_matchId][MatchResult.DRAW]);
+        } else if (matchResult == MatchResult.TEAM_B_WON) {
+            invalidateAssets(matchBets[_matchId][MatchResult.TEAM_A_WON]);
+            invalidateAssets(matchBets[_matchId][MatchResult.DRAW]);
+        } else {
+            invalidateAssets(matchBets[_matchId][MatchResult.TEAM_A_WON]);
+            invalidateAssets(matchBets[_matchId][MatchResult.TEAM_B_WON]);
+        }
+        
+        
+        emit MatchClosedEvent(msg.sender, _matchId, block.timestamp);
+    }
+    
+    function setMatchResult(uint256 _matchId, MatchResult _matchResult) internal {
+        matches[_matchId].result = _matchResult;
+        emit MatchResultSetEvent(_matchId, matches[_matchId].result, block.timestamp);
+    }
+    
+    function invalidateAssets(uint256[] memory assets) internal {
+        for (uint i = 0; i < assets.length; i++) {
+            invalidateAsset(assets[i]);
+        }
     }
 
+    function invalidateAsset(uint256 _smartAssetId) internal {
+        _burn(_smartAssetId);
+    }
 
     /*
-    *  @notice  Funds withdrawal by winner
+    *  @notice  Liquidate smart asset's value
     *  @dev     validated   NFT is burned and caller gets value funds in account
-    *  @param   _tokenId    NFT token id
-    *  @return  success success status
+    *  @param   _smartAssetId smart asset id
+    *  @return  success status
     */
-    function withdraw(uint128 _tokenId)
+    function liquidateAsset(uint128 _smartAssetId)
         public 
         payable
-        validateToken(_tokenId)
-        returns(bool success)
+        isCircuitBreakOff
+        validateToken(_smartAssetId)
+        isTokenOwner(_smartAssetId)
+        returns(bool)
     {
-        //code
+        SmartAsset memory smartAsset = smartAssets[_smartAssetId];
+        
+        require(matches[smartAsset.matchId].state == MatchState.FINISHED, "Cannot liquidate asset until match is finished");
+        
+        require (address(this).balance >= smartAsset.initialValue, "Contract has insufficient funds");
+        
+        invalidateAsset(_smartAssetId);
+        msg.sender.transfer(smartAsset.initialValue);
 
-        //emit LogWithdrawal(by, matchId, amount);
+        emit AssetLiquidatedEvent(msg.sender, smartAsset.matchId, smartAsset.initialValue, block.timestamp);
         return true;
+    }
+
+    /*
+    *  @notice  Contract Circuit Breaker
+    *  @dev     Admin can [de]activate core functons in contract
+    *  @param   
+    *  @return  success success status
+    */
+    function toggleCircuitBreaker()
+        public 
+        onlyOwner
+    {
+        circuitBreaker = !circuitBreaker;
     }
 
     /*
@@ -360,94 +413,24 @@ contract SmartBet is ERC721, ChainlinkClient {
         view
         matchExists(_matchId)
         returns(Match memory match_)
-    {       
-    //         struct Match {
-    //     address creator;
-    //     uint8 oddsTeamA;
-    //     uint8 oddsTeamB;
-    //     bytes32 matchResultLink;
-    //     uint256 totalPayoutTeamA;
-    //     uint256 totalPayoutTeamB;
-    //     uint256 totalCollected;
-    //     MatchResult result;
-    //     MatchState state;
-    //     bool exists;
-    // }
-    // uint8, uint8, bytes32, uint256, uint256, uint256, MatchResult, MatchState, bool
-        // return (matches[_matchId].oddsTeamA, matches[_matchId].oddsTeamB, matches[_matchId].matchResultLink, matches[_matchId].totalPayoutTeamA, 
-        // matches[_matchId].totalPayoutTeamB, matches[_matchId].totalCollected, matches[_matchId].result, matches[_matchId].state, matches[_matchId].exists);
+    {
         return matches[_matchId];
     }
 
-
     /*
-    *  @notice  Fetch match result with a call through ChainlinkClient.
-    *  @dev     ChainlinkClient Oracle. Callback function "setMatchResult()"
-    *  @oaram   _matchId
-    *  @return request ID
-    */
-    function getMatchResult(uint256 _matchId)
-        internal 
-        view
-        matchFinished(_matchId)
-    {
-        // Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.setMatchResult.selector);
-        
-        // // Set the URL to perform the GET request on
-        // request.add("get", matches[_matchId].matchResultLink);
-        
-        // // Set the path to find the desired data in the API response, where the response format is:
-        // request.add("path", "api.results.fixtures[0].goalsHomeTeam");
-        
-        // // Sends the request
-        // bytes32 requestId = sendChainlinkRequestTo(oracle, request, fee);
-        // matchResultRequestIds[requestId] = _matchId;
-    }
-
-     /*
-    *  @notice  Set Match results
-    *  @dev   
-    *  @param  
-    *  @return  success success status
-    */
-    function setMatchResult(bytes32 _requestId, uint8 _matchResult)
-        public 
-        matchExists(matchResultRequestIds[_requestId]) 
-        matchFinished(matchResultRequestIds[_requestId])
-    {
-        uint256 matchId = matchResultRequestIds[_requestId];
-        matches[matchId].result = MatchResult(_matchResult);
-        emit LogSetResult(matchId, matches[matchId].result);
-    }
-    
-    /*
-    *  @notice  Fetch all NFTs (SmartAssets)
-    *  @dev             
-    *  @return  assets Array of all NFTs
-    */
-    // function allSmartAssets()
-    //     public 
-    //     view
-    //     returns(SmartAsset[] memory _assets)
-    // {
-    //     //code        
-    // }
-
-
-    /*
-    *  @notice  Fetch single NFT (SmartAsset)
+    *  @notice  Fetch single SmartAsset
     *  @dev          
-    *  @param   _tokenId
-    *  @return  asset NFT details
+    *  @param   _smartAssetId
+    *  @return  asset details
     */
-    // function getSmartAsset(uint256 _tokenId)
-    //     public 
-    //     view
-    //     isAssetOwner(_tokenId)
-    //     returns(SmartAsset asset)
-    // {
-    //     //code        
-        
-    // }
+    function getSmartAsset(uint256 _smartAssetId)
+        public 
+        view
+        validateToken(_smartAssetId)
+        isTokenOwner(_smartAssetId)
+        returns(SmartAsset memory asset)
+    {
+        return smartAssets[_smartAssetId];
+    }
     
 }
