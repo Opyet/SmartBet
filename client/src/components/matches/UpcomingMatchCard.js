@@ -6,28 +6,40 @@ import Avt from "../layout/AvatarImg";
 import { Button, Paper } from "@material-ui/core";
 import MatchModal from "./MatchModal";
 import MatchInfo from "./MatchInfoModal";
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import ScheduleIcon from '@material-ui/icons/Schedule';
 
-export const UpcomingMatchCard = ({ match }) => {
+export const UpcomingMatchCard = ({ match, contract, account }) => {
+
   const [createModalOpen, setCreateModalOpen] = useState(false);
   const [createInfoModalOpen, setCreateInfoModalOpen] = useState(false);
 
-  const getDetails = (team) => {
-    const opp = match.opponents[team].opponent;
+  const getDetails = (teamIndex) => {
+    let team = null;
+
+    if(teamIndex === 0){
+      team = match.homeTeam;
+    }
+    if(teamIndex === 1){
+      team = match.awayTeam;
+    }
+    
 
     return (
       <div>
-        {opp.image_url ? (
-          <Avt link={opp.image_url} letter={null} index={team} />
+        {team.logo ? (
+          <Avt link={team.logo} letter={null} index={teamIndex} />
         ) : (
-          <Avt link={null} letter={opp.name[0]} index={team} />
+          <Avt link={null} letter={team.team_name} index={teamIndex} />
         )}
-        <span style={{ fontSize: "15px", fontWeight: "bold" }}>{opp.name}</span>
+        <div style={{width:'100%', textAlign: 'center', fontSize: "15px", fontWeight: "bold" }}>{team.team_name}</div>
       </div>
     );
   };
 
+  
   const getDateString = (ds) => {
-    const date = new Date(ds);
+    const date = new Date(ds * 1000);
 
     return (
       <div
@@ -41,7 +53,7 @@ export const UpcomingMatchCard = ({ match }) => {
           style={{ fontSize: "15px", marginRight: "3px" }}
           className="material-icons"
         >
-          calendar_today
+          <CalendarTodayIcon/>
         </span>
         <span>{`${date.getMonth() +
           1}-${date.getDate()}-${date.getFullYear()}`}</span>
@@ -49,9 +61,10 @@ export const UpcomingMatchCard = ({ match }) => {
           style={{ fontSize: "15px", marginRight: "3px", marginLeft: "15px" }}
           className="material-icons"
         >
-          schedule
+          <ScheduleIcon />
         </span>
-        <span>{`${date.getHours()}:${date.getMinutes()}`} UTC</span>
+        <span>{date.toLocaleTimeString()}</span>
+        {/* <span>{`${date.getHours()}:${date.getMinutes()}`} UTC</span> */}
       </div>
     );
   };
@@ -59,7 +72,7 @@ export const UpcomingMatchCard = ({ match }) => {
   return (
     <div>
       {/* <img src={match.league.image_url} alt='' style={{width:'60px',borderRadius:"50%"}}/> */}
-      <Grid container spacing={3} alignItems="center" justify="center">
+      <Grid style={{marginBottom: '20px'}} container spacing={3} alignItems="center" justify="center">
         <Grid item xs={5}>
           {getDetails(0)}
         </Grid>
@@ -79,47 +92,53 @@ export const UpcomingMatchCard = ({ match }) => {
             }}
             elevation={0}
           >
-            {getDateString(match.begin_at)}
+            {getDateString(match.firstHalfStart)}
           </Paper>
         </Grid>
-        <Grid item xs={12}>
-          <Button
-            style={{
-              backgroundColor: "#408cff",
-              color: "#ffffff",
-              fontWeight: "bold",
-            }}
-            onClick={() => setCreateInfoModalOpen(true)}
-            variant="contained"
-            fullWidth
-          >
-            SHOW MORE
-          </Button>
-        </Grid>
-        <Grid item xs={12}>
-          <Button
-            style={{
-              backgroundColor: "#e94560",
-              color: "#ffffff",
-              fontWeight: "bold",
-            }}
-            onClick={() => setCreateModalOpen(true)}
-            variant="contained"
-            fullWidth
-          >
-            CREATE MATCH
-          </Button>
+        <Grid container xs={12} spacing={4}>
+          <Grid item xs={12} md={6}>
+            <Button
+              style={{
+                backgroundColor: "#408cff",
+                color: "#ffffff",
+                fontWeight: "bold",
+              }}
+              onClick={() => setCreateInfoModalOpen(true)}
+              variant="contained"
+              fullWidth
+            >
+              DETAILS
+            </Button>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Button
+              style={{
+                backgroundColor: "#e94560",
+                color: "#ffffff",
+                fontWeight: "bold",
+              }}
+              onClick={() => setCreateModalOpen(true)}
+              variant="contained"
+              fullWidth
+            >
+              CREATE MATCH
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
       <MatchModal
         open={createModalOpen}
         setCreateModalOpen={setCreateModalOpen}
         match={match}
+        contract={contract}
+        account={account}
       />
       <MatchInfo
         open={createInfoModalOpen}
         setCreateModalOpen={setCreateInfoModalOpen}
         match={match}
+        contract={contract}
+        account={account}
       />
     </div>
   );

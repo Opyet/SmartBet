@@ -30,17 +30,24 @@ function MatchInfoModal({ open, setCreateModalOpen, match }) {
   const classes = useStyles();
   //   console.log(match);
 
-  const getImage = (team) => {
-    const opp = match.opponents[team].opponent;
+  const getImage = (teamIndex) => {
+    let team = null;
+
+    if(teamIndex === 0){
+      team = match.homeTeam;
+    }
+    if(teamIndex === 1){
+      team = match.awayTeam;
+    }
 
     return (
       <div>
-        {opp.image_url ? (
-          <Avt link={opp.image_url} letter={null} index={team} />
+        {team.logo ? (
+          <Avt link={team.logo} letter={null} index={teamIndex} />
         ) : (
-          <Avt link={null} letter={opp.name[0]} index={team} />
+          <Avt link={null} letter={team.team_name} index={teamIndex} />
         )}
-        <span style={{ fontSize: "15px", fontWeight: "bold" }}>{opp.name}</span>
+        <span style={{ fontSize: "15px", fontWeight: "bold" }}>{team.team_name}</span>
         {/* <Grid item xs={6} style={{ fontSize: "15px", fontWeight: "bold" , textAlign:"center"}}>
                     {opp.name}
                 </Grid> */}
@@ -65,23 +72,25 @@ function MatchInfoModal({ open, setCreateModalOpen, match }) {
               <TableCell style={{ fontWeight: "bold" }}>
                 Streaming URL
               </TableCell>
+              <TableCell style={{ fontWeight: "bold" }}>Score</TableCell>
               <TableCell style={{ fontWeight: "bold" }}>Type</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>{match.league.name}</TableCell>
+              <TableCell>{match.league.name} | {match.league.country} </TableCell>
               <TableCell>{match.league.id}</TableCell>
               <TableCell>
                 <a
-                  href={match.official_stream_url}
+                  href={''}
                   target="_blank"
                   style={{ color: "orangered" }}
                 >
                   Twitch Link
                 </a>
               </TableCell>
-              <TableCell>{match.match_type}</TableCell>
+              <TableCell>{match.score.halftime || match.score.fulltime || match.score.extratime}</TableCell>
+              <TableCell>{match.round}</TableCell>
             </TableRow>
           </TableBody>
         </Table>
@@ -114,7 +123,7 @@ function MatchInfoModal({ open, setCreateModalOpen, match }) {
                 color: "yellowgreen",
               }}
             >
-              {match.videogame.name}
+              {match.league.name} | {match.status}
             </Grid>
             <Grid item xs={5}>
               {getImage(0)}

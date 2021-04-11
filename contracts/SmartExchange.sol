@@ -64,6 +64,8 @@ contract SmartExchange {
         Bep20 wbnbContract = Bep20(wBNB);     // get a handle for the wBNB asset
         
         wbnbContract.deposit{value: amount}(); // deposit native BNB
+        
+        wbnbContract.approve(address(router), 0); // security: reset allowance
         wbnbContract.approve(address(router), amount); // allow pancakeswap router to access wBNB
 
         uint256 amountIn = amount;

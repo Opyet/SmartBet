@@ -17,6 +17,7 @@ contract SmartInvestV1 {
         
         Bep20 underlying = Bep20(BASE_BEP20);     // get a handle for the underlying asset
         VToken vToken = VToken(vTOKEN_ADDRESS);   // get a handle for the corresponding vToken Contract
+        underlying.approve(address(vToken), 0);     // security: reset allowance
         underlying.approve(address(vToken), amount); // approve the transfer
         assert(vToken.mint(amount) == 0);            // mint the vTokens and assert there is no error
     }
