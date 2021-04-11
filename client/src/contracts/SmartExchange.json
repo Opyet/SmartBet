@@ -65,9 +65,19 @@
       "type": "function"
     }
   ],
+<<<<<<< HEAD
   "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"BUSD\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pROUTER\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"swap\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"wBNB\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/SmartExchange.sol\":\"SmartExchange\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/Bep20.sol\":{\"keccak256\":\"0x193b23d6594f93f686dd9dd66269f1c3bb8cc2bc333c30e6551cd28e98750409\",\"urls\":[\"bzz-raw://27cea4a0a15831002f1e82417bc9396b2d2fae967f2839c0e31af948fdc1b15f\",\"dweb:/ipfs/QmQk9xS1WG3YsgBtrf8PapKeyD5EvKZFwyPErLRqyCsJYw\"]},\"/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/SmartExchange.sol\":{\"keccak256\":\"0x3cbc553577fc832006d26700f9f0556c044626cf47db9c6c23de0f5262a62b88\",\"urls\":[\"bzz-raw://df7cf8b8ca9442b6ba49b8a0ad24f596d391bc87bd1b10eb6754a3074a4e47a7\",\"dweb:/ipfs/QmPYWpuhJJyuhW8zKbFGZhwAaXQKp3EgirmLxbNM29WGbH\"]}},\"version\":1}",
   "bytecode": "0x608060405234801561001057600080fd5b506109e2806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063484f4ea914610051578063d02eb3f41461006f578063d3986f081461008d578063e71efd95146100bd575b600080fd5b6100596100db565b6040516100669190610753565b60405180910390f35b6100776100f3565b6040516100849190610753565b60405180910390f35b6100a760048036038101906100a291906105e0565b61010b565b6040516100b491906107c0565b60405180910390f35b6100c5610474565b6040516100d29190610753565b60405180910390f35b738301f2213c0eed49a7e28ae4c3e91722919b8b4781565b73ae13d989dac2f0debff460ac112a837c89baa7cd81565b6060600073d99d1c33f9fc3444f8101754abc46c52416550d190506000738301f2213c0eed49a7e28ae4c3e91722919b8b479050600073ae13d989dac2f0debff460ac112a837c89baa7cd90508073ffffffffffffffffffffffffffffffffffffffff1663d0e30db0876040518263ffffffff1660e01b81526004016000604051808303818588803b1580156101a057600080fd5b505af11580156101b4573d6000803e3d6000fd5b50505050508073ffffffffffffffffffffffffffffffffffffffff1663095ea7b38460006040518363ffffffff1660e01b81526004016101f592919061076e565b602060405180830381600087803b15801561020f57600080fd5b505af1158015610223573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061024791906105b7565b508073ffffffffffffffffffffffffffffffffffffffff1663095ea7b384886040518363ffffffff1660e01b8152600401610283929190610797565b602060405180830381600087803b15801561029d57600080fd5b505af11580156102b1573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102d591906105b7565b506000869050600080600267ffffffffffffffff811180156102f657600080fd5b506040519080825280602002602001820160405280156103255781602001602082028036833780820191505090505b509050838160008151811061033657fe5b602002602001019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff1681525050848160018151811061037e57fe5b602002602001019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff1681525050600088905060006102584201905060008873ffffffffffffffffffffffffffffffffffffffff166338ed173987878787876040518663ffffffff1660e01b81526004016104099594939291906107e2565b600060405180830381600087803b15801561042357600080fd5b505af1158015610437573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906104609190610576565b905080995050505050505050505092915050565b73d99d1c33f9fc3444f8101754abc46c52416550d181565b600061049f61049a8461086d565b61083c565b905080838252602082019050828560208602820111156104be57600080fd5b60005b858110156104ee57816104d48882610561565b8452602084019350602083019250506001810190506104c1565b5050509392505050565b60008135905061050781610967565b92915050565b600082601f83011261051e57600080fd5b815161052e84826020860161048c565b91505092915050565b6000815190506105468161097e565b92915050565b60008135905061055b81610995565b92915050565b60008151905061057081610995565b92915050565b60006020828403121561058857600080fd5b600082015167ffffffffffffffff8111156105a257600080fd5b6105ae8482850161050d565b91505092915050565b6000602082840312156105c957600080fd5b60006105d784828501610537565b91505092915050565b600080604083850312156105f357600080fd5b60006106018582860161054c565b9250506020610612858286016104f8565b9150509250929050565b6000610628838361064c565b60208301905092915050565b60006106408383610735565b60208301905092915050565b6106558161090b565b82525050565b6106648161090b565b82525050565b6000610675826108b9565b61067f81856108e9565b935061068a83610899565b8060005b838110156106bb5781516106a2888261061c565b97506106ad836108cf565b92505060018101905061068e565b5085935050505092915050565b60006106d3826108c4565b6106dd81856108fa565b93506106e8836108a9565b8060005b838110156107195781516107008882610634565b975061070b836108dc565b9250506001810190506106ec565b5085935050505092915050565b61072f81610953565b82525050565b61073e81610949565b82525050565b61074d81610949565b82525050565b6000602082019050610768600083018461065b565b92915050565b6000604082019050610783600083018561065b565b6107906020830184610726565b9392505050565b60006040820190506107ac600083018561065b565b6107b96020830184610744565b9392505050565b600060208201905081810360008301526107da81846106c8565b905092915050565b600060a0820190506107f76000830188610744565b6108046020830187610744565b8181036040830152610816818661066a565b9050610825606083018561065b565b6108326080830184610744565b9695505050505050565b6000604051905081810181811067ffffffffffffffff8211171561086357610862610965565b5b8060405250919050565b600067ffffffffffffffff82111561088857610887610965565b5b602082029050602081019050919050565b6000819050602082019050919050565b6000819050602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b6000602082019050919050565b600082825260208201905092915050565b600082825260208201905092915050565b600061091682610929565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600061095e82610949565b9050919050565bfe5b6109708161090b565b811461097b57600080fd5b50565b6109878161091d565b811461099257600080fd5b50565b61099e81610949565b81146109a957600080fd5b5056fea26469706673582212209cf7d53d457e2c39cca0def75485bd1215d22f049f2b6301c53b80478a078e4b64736f6c63430007060033",
   "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063484f4ea914610051578063d02eb3f41461006f578063d3986f081461008d578063e71efd95146100bd575b600080fd5b6100596100db565b6040516100669190610753565b60405180910390f35b6100776100f3565b6040516100849190610753565b60405180910390f35b6100a760048036038101906100a291906105e0565b61010b565b6040516100b491906107c0565b60405180910390f35b6100c5610474565b6040516100d29190610753565b60405180910390f35b738301f2213c0eed49a7e28ae4c3e91722919b8b4781565b73ae13d989dac2f0debff460ac112a837c89baa7cd81565b6060600073d99d1c33f9fc3444f8101754abc46c52416550d190506000738301f2213c0eed49a7e28ae4c3e91722919b8b479050600073ae13d989dac2f0debff460ac112a837c89baa7cd90508073ffffffffffffffffffffffffffffffffffffffff1663d0e30db0876040518263ffffffff1660e01b81526004016000604051808303818588803b1580156101a057600080fd5b505af11580156101b4573d6000803e3d6000fd5b50505050508073ffffffffffffffffffffffffffffffffffffffff1663095ea7b38460006040518363ffffffff1660e01b81526004016101f592919061076e565b602060405180830381600087803b15801561020f57600080fd5b505af1158015610223573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061024791906105b7565b508073ffffffffffffffffffffffffffffffffffffffff1663095ea7b384886040518363ffffffff1660e01b8152600401610283929190610797565b602060405180830381600087803b15801561029d57600080fd5b505af11580156102b1573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102d591906105b7565b506000869050600080600267ffffffffffffffff811180156102f657600080fd5b506040519080825280602002602001820160405280156103255781602001602082028036833780820191505090505b509050838160008151811061033657fe5b602002602001019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff1681525050848160018151811061037e57fe5b602002602001019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff1681525050600088905060006102584201905060008873ffffffffffffffffffffffffffffffffffffffff166338ed173987878787876040518663ffffffff1660e01b81526004016104099594939291906107e2565b600060405180830381600087803b15801561042357600080fd5b505af1158015610437573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f820116820180604052508101906104609190610576565b905080995050505050505050505092915050565b73d99d1c33f9fc3444f8101754abc46c52416550d181565b600061049f61049a8461086d565b61083c565b905080838252602082019050828560208602820111156104be57600080fd5b60005b858110156104ee57816104d48882610561565b8452602084019350602083019250506001810190506104c1565b5050509392505050565b60008135905061050781610967565b92915050565b600082601f83011261051e57600080fd5b815161052e84826020860161048c565b91505092915050565b6000815190506105468161097e565b92915050565b60008135905061055b81610995565b92915050565b60008151905061057081610995565b92915050565b60006020828403121561058857600080fd5b600082015167ffffffffffffffff8111156105a257600080fd5b6105ae8482850161050d565b91505092915050565b6000602082840312156105c957600080fd5b60006105d784828501610537565b91505092915050565b600080604083850312156105f357600080fd5b60006106018582860161054c565b9250506020610612858286016104f8565b9150509250929050565b6000610628838361064c565b60208301905092915050565b60006106408383610735565b60208301905092915050565b6106558161090b565b82525050565b6106648161090b565b82525050565b6000610675826108b9565b61067f81856108e9565b935061068a83610899565b8060005b838110156106bb5781516106a2888261061c565b97506106ad836108cf565b92505060018101905061068e565b5085935050505092915050565b60006106d3826108c4565b6106dd81856108fa565b93506106e8836108a9565b8060005b838110156107195781516107008882610634565b975061070b836108dc565b9250506001810190506106ec565b5085935050505092915050565b61072f81610953565b82525050565b61073e81610949565b82525050565b61074d81610949565b82525050565b6000602082019050610768600083018461065b565b92915050565b6000604082019050610783600083018561065b565b6107906020830184610726565b9392505050565b60006040820190506107ac600083018561065b565b6107b96020830184610744565b9392505050565b600060208201905081810360008301526107da81846106c8565b905092915050565b600060a0820190506107f76000830188610744565b6108046020830187610744565b8181036040830152610816818661066a565b9050610825606083018561065b565b6108326080830184610744565b9695505050505050565b6000604051905081810181811067ffffffffffffffff8211171561086357610862610965565b5b8060405250919050565b600067ffffffffffffffff82111561088857610887610965565b5b602082029050602081019050919050565b6000819050602082019050919050565b6000819050602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b6000602082019050919050565b600082825260208201905092915050565b600082825260208201905092915050565b600061091682610929565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600061095e82610949565b9050919050565bfe5b6109708161090b565b811461097b57600080fd5b50565b6109878161091d565b811461099257600080fd5b50565b61099e81610949565b81146109a957600080fd5b5056fea26469706673582212209cf7d53d457e2c39cca0def75485bd1215d22f049f2b6301c53b80478a078e4b64736f6c63430007060033",
+||||||| merged common ancestors
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"invest\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pFACTORY\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pROUTER\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalTreasury\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/SmartExchange.sol\":\"SmartExchange\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/SmartExchange.sol\":{\"keccak256\":\"0xbc2a07b4d6e1fbf1990e0015b7a1f9ed95e9576587beac59377cc5efd7492b9e\",\"urls\":[\"bzz-raw://dc907a629d4673fc455daf860f4012c504c2bbeb6959e587388b566c991e4338\",\"dweb:/ipfs/Qmf7Gsr4X7C9ssxRje2c8bUCSVJtceWqS7yz41xEXWkuUg\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610235806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80632afcf48014610051578063897534a91461006d578063990cc0581461008b578063e71efd95146100a9575b600080fd5b61006b6004803603810190610066919061012f565b6100c7565b005b6100756100e4565b6040516100829190610191565b60405180910390f35b6100936100ea565b6040516100a09190610176565b60405180910390f35b6100b1610102565b6040516100be9190610176565b60405180910390f35b6000736725f303b657a9451d8ba641348b6761a6cc7a1790505050565b60005481565b736725f303b657a9451d8ba641348b6761a6cc7a1781565b73d99d1c33f9fc3444f8101754abc46c52416550d181565b600081359050610129816101e8565b92915050565b60006020828403121561014157600080fd5b600061014f8482850161011a565b91505092915050565b610161816101ac565b82525050565b610170816101de565b82525050565b600060208201905061018b6000830184610158565b92915050565b60006020820190506101a66000830184610167565b92915050565b60006101b7826101be565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6101f1816101de565b81146101fc57600080fd5b5056fea2646970667358221220b05e5c074b8ad48426743fca758a7d672f2a77c6c52e307b2c15734c59944bbd64736f6c63430007060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80632afcf48014610051578063897534a91461006d578063990cc0581461008b578063e71efd95146100a9575b600080fd5b61006b6004803603810190610066919061012f565b6100c7565b005b6100756100e4565b6040516100829190610191565b60405180910390f35b6100936100ea565b6040516100a09190610176565b60405180910390f35b6100b1610102565b6040516100be9190610176565b60405180910390f35b6000736725f303b657a9451d8ba641348b6761a6cc7a1790505050565b60005481565b736725f303b657a9451d8ba641348b6761a6cc7a1781565b73d99d1c33f9fc3444f8101754abc46c52416550d181565b600081359050610129816101e8565b92915050565b60006020828403121561014157600080fd5b600061014f8482850161011a565b91505092915050565b610161816101ac565b82525050565b610170816101de565b82525050565b600060208201905061018b6000830184610158565b92915050565b60006020820190506101a66000830184610167565b92915050565b60006101b7826101be565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6101f1816101de565b81146101fc57600080fd5b5056fea2646970667358221220b05e5c074b8ad48426743fca758a7d672f2a77c6c52e307b2c15734c59944bbd64736f6c63430007060033",
+=======
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"invest\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pFACTORY\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pROUTER\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalTreasury\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ajibigad/crytoproject/SmartBet/contracts/SmartExchange.sol\":\"SmartExchange\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ajibigad/crytoproject/SmartBet/contracts/SmartExchange.sol\":{\"keccak256\":\"0xeae9f6246d0e7c40dff818337b8d60a910a72f153c11480fedfe60e194069556\",\"urls\":[\"bzz-raw://f8409525e4b46bd6ede2cbd69dcf51f5125c9a4e9c5708ed93b2f6218308ee4c\",\"dweb:/ipfs/QmcHNmZ2pXWekMV9moJD3kXe4TRkEa65ARJhHNJ2KyAMQd\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610235806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80632afcf48014610051578063897534a91461006d578063990cc0581461008b578063e71efd95146100a9575b600080fd5b61006b6004803603810190610066919061012f565b6100c7565b005b6100756100e4565b6040516100829190610191565b60405180910390f35b6100936100ea565b6040516100a09190610176565b60405180910390f35b6100b1610102565b6040516100be9190610176565b60405180910390f35b6000736725f303b657a9451d8ba641348b6761a6cc7a1790505050565b60005481565b736725f303b657a9451d8ba641348b6761a6cc7a1781565b73d99d1c33f9fc3444f8101754abc46c52416550d181565b600081359050610129816101e8565b92915050565b60006020828403121561014157600080fd5b600061014f8482850161011a565b91505092915050565b610161816101ac565b82525050565b610170816101de565b82525050565b600060208201905061018b6000830184610158565b92915050565b60006020820190506101a66000830184610167565b92915050565b60006101b7826101be565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6101f1816101de565b81146101fc57600080fd5b5056fea264697066735822122026aaad132a0a3d5dfec7fb65102f4db8a25c44b5b83fb70f69d5d8b9321f297964736f6c63430007060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80632afcf48014610051578063897534a91461006d578063990cc0581461008b578063e71efd95146100a9575b600080fd5b61006b6004803603810190610066919061012f565b6100c7565b005b6100756100e4565b6040516100829190610191565b60405180910390f35b6100936100ea565b6040516100a09190610176565b60405180910390f35b6100b1610102565b6040516100be9190610176565b60405180910390f35b6000736725f303b657a9451d8ba641348b6761a6cc7a1790505050565b60005481565b736725f303b657a9451d8ba641348b6761a6cc7a1781565b73d99d1c33f9fc3444f8101754abc46c52416550d181565b600081359050610129816101e8565b92915050565b60006020828403121561014157600080fd5b600061014f8482850161011a565b91505092915050565b610161816101ac565b82525050565b610170816101de565b82525050565b600060208201905061018b6000830184610158565b92915050565b60006020820190506101a66000830184610167565b92915050565b60006101b7826101be565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6101f1816101de565b81146101fc57600080fd5b5056fea264697066735822122026aaad132a0a3d5dfec7fb65102f4db8a25c44b5b83fb70f69d5d8b9321f297964736f6c63430007060033",
+>>>>>>> origin/ajibigad-dev
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [
@@ -1342,6 +1352,7 @@
                 "nodeType": "YulTypedName",
                 "src": "1669:9:30",
                 "type": ""
+<<<<<<< HEAD
               },
               {
                 "name": "dataEnd",
@@ -1360,12 +1371,280 @@
             ],
             "src": "1597:420:30"
           },
+||||||| merged common ancestors
+              }
+            ],
+            "src": "1441:122:29"
+          }
+        ]
+      },
+      "contents": "{\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n}\n",
+      "id": 29,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "2294:794:3:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "2294:794:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2611:468;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;2330:28;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2484:77;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2365:76;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2611:468;2671:35;2519:42;2671:72;;2611:468;;:::o;2330:28::-;;;;:::o;2484:77::-;2519:42;2484:77;:::o;2365:76::-;2399:42;2365:76;:::o;7:139:29:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:262::-;;260:2;248:9;239:7;235:23;231:32;228:2;;;276:1;273;266:12;228:2;319:1;344:53;389:7;380:6;369:9;365:22;344:53;:::i;:::-;334:63;;290:117;218:196;;;;:::o;420:118::-;507:24;525:5;507:24;:::i;:::-;502:3;495:37;485:53;;:::o;544:118::-;631:24;649:5;631:24;:::i;:::-;626:3;619:37;609:53;;:::o;668:222::-;;799:2;788:9;784:18;776:26;;812:71;880:1;869:9;865:17;856:6;812:71;:::i;:::-;766:124;;;;:::o;896:222::-;;1027:2;1016:9;1012:18;1004:26;;1040:71;1108:1;1097:9;1093:17;1084:6;1040:71;:::i;:::-;994:124;;;;:::o;1124:96::-;;1190:24;1208:5;1190:24;:::i;:::-;1179:35;;1169:51;;;:::o;1226:126::-;;1303:42;1296:5;1292:54;1281:65;;1271:81;;;:::o;1358:77::-;;1424:5;1413:16;;1403:32;;;:::o;1441:122::-;1514:24;1532:5;1514:24;:::i;:::-;1507:5;1504:35;1494:2;;1553:1;1550;1543:12;1494:2;1484:79;:::o",
+  "source": "pragma solidity ^0.7.0;\r\npragma experimental ABIEncoderV2;\r\n\r\n\r\n//TODO: move to HelperPancakeSwap_ROUTER.sol\r\ncontract HelperPancakeSwap_ROUTER {\r\n    // No implementation, just the function signature. This is just so Solidity can work out how to call it.\r\n    \r\n    /*\r\n    * @notice   Swaps an exact amount of input tokens for as many output tokens as possible, \r\n    *           along the route determined by the path. The first element of path is the input token, \r\n    *           the last is the output token, and any intermediate elements represent intermediate pairs \r\n    *           to trade through (if, for example, a direct pair does not exist). \r\n    *           ``msg.sender`` should have already given the router an allowance of at least amountIn on the input token.\r\n    * @param    amountIn    The amount of input tokens to send.\r\n    * @param    amountOutMin    The minimum amount of output tokens that must be received for the transaction not to revert.\r\n    * @param    path    An array of token addresses. ``path.length`` must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity.\r\n    * @param    to      Recipient of the output tokens.\r\n    * @param    deadline    \tUnix timestamp after which the transaction will revert.\r\n    * @return    amounts    \tThe input token amount and all subsequent output token amounts.\r\n    */\r\n    function swapExactTokensForTokens(\r\n        uint amountIn,\r\n        uint amountOutMin,\r\n        address[] calldata path,\r\n        address to,\r\n        uint deadline\r\n    ) external returns (uint[] memory amounts) {}\r\n    \r\n\r\n    /*\r\n    * @notice   Same as \r\n    *           Succeeds for tokens that take a fee on transfer.* and the market's available liquidity.\r\n    *           ``msg.sender`` should have already given the router an allowance of at least amountIn on the input token.\r\n    * @param    redeemAmount The amount of underlying to be redeemed.\r\n    * @return   status 0 on success, otherwise an Error code\r\n    */\r\n    function swapExactTokensForTokensSupportingFeeOnTransferTokens(\r\n        uint amountIn,\r\n        uint amountOutMin,\r\n        address[] calldata path,\r\n        address to,\r\n        uint deadline\r\n    ) external {}\r\n    \r\n}\r\n\r\n\r\n/*\r\n* @notice Integrates with Pancakeswap DEX\r\n*/\r\ncontract SmartExchange {\r\n    \r\n    uint256 public totalTreasury;\r\n    address public constant pROUTER = 0xD99D1c33F9fC3444f8101754aBC46c52416550D1; // Pancakeswap Router (BSC Testnet)\r\n    address public constant pFACTORY = 0x6725F303b657a9451d8BA641348b6761A6CC7a17; // Pancakeswap factory (BSC Testnet)\r\n    \r\n    function invest(uint256 amount) public {\r\n        \r\n        HelperPancakeSwap_ROUTER underlying = HelperPancakeSwap_ROUTER(pFACTORY);     // get a handle for the exchange router\r\n        // VToken vToken = VToken(pROUTER);   // get a handle for the corresponding dex factory\r\n        // underlying.approve(address(vToken), amount); // approve the transfer\r\n        // assert(vToken.mint(amount) == 0);            // mint the vTokens and assert there is no error\r\n    }\r\n    \r\n}",
+  "sourcePath": "C:/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/SmartExchange.sol",
+  "ast": {
+    "absolutePath": "/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/SmartExchange.sol",
+    "exportedSymbols": {
+      "HelperPancakeSwap_ROUTER": [
+        781
+      ],
+      "SmartExchange": [
+        802
+      ]
+    },
+    "id": 803,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 746,
+        "literals": [
+          "solidity",
+          "^",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "id": 747,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 781,
+        "linearizedBaseContracts": [
+          781
+        ],
+        "name": "HelperPancakeSwap_ROUTER",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+=======
+              }
+            ],
+            "src": "1441:122:29"
+          }
+        ]
+      },
+      "contents": "{\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n}\n",
+      "id": 29,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "2243:780:3:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "2243:780:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2554:462;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;2277:28;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2429:77;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2311:76;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;2554:462;2612:35;2464:42;2612:72;;2554:462;;:::o;2277:28::-;;;;:::o;2429:77::-;2464:42;2429:77;:::o;2311:76::-;2345:42;2311:76;:::o;7:139:29:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:262::-;;260:2;248:9;239:7;235:23;231:32;228:2;;;276:1;273;266:12;228:2;319:1;344:53;389:7;380:6;369:9;365:22;344:53;:::i;:::-;334:63;;290:117;218:196;;;;:::o;420:118::-;507:24;525:5;507:24;:::i;:::-;502:3;495:37;485:53;;:::o;544:118::-;631:24;649:5;631:24;:::i;:::-;626:3;619:37;609:53;;:::o;668:222::-;;799:2;788:9;784:18;776:26;;812:71;880:1;869:9;865:17;856:6;812:71;:::i;:::-;766:124;;;;:::o;896:222::-;;1027:2;1016:9;1012:18;1004:26;;1040:71;1108:1;1097:9;1093:17;1084:6;1040:71;:::i;:::-;994:124;;;;:::o;1124:96::-;;1190:24;1208:5;1190:24;:::i;:::-;1179:35;;1169:51;;;:::o;1226:126::-;;1303:42;1296:5;1292:54;1281:65;;1271:81;;;:::o;1358:77::-;;1424:5;1413:16;;1403:32;;;:::o;1441:122::-;1514:24;1532:5;1514:24;:::i;:::-;1507:5;1504:35;1494:2;;1553:1;1550;1543:12;1494:2;1484:79;:::o",
+  "source": "pragma solidity ^0.7.0;\npragma experimental ABIEncoderV2;\n\n\n//TODO: move to HelperPancakeSwap_ROUTER.sol\ncontract HelperPancakeSwap_ROUTER {\n    // No implementation, just the function signature. This is just so Solidity can work out how to call it.\n    \n    /*\n    * @notice   Swaps an exact amount of input tokens for as many output tokens as possible, \n    *           along the route determined by the path. The first element of path is the input token, \n    *           the last is the output token, and any intermediate elements represent intermediate pairs \n    *           to trade through (if, for example, a direct pair does not exist). \n    *           ``msg.sender`` should have already given the router an allowance of at least amountIn on the input token.\n    * @param    amountIn    The amount of input tokens to send.\n    * @param    amountOutMin    The minimum amount of output tokens that must be received for the transaction not to revert.\n    * @param    path    An array of token addresses. ``path.length`` must be >= 2. Pools for each consecutive pair of addresses must exist and have liquidity.\n    * @param    to      Recipient of the output tokens.\n    * @param    deadline    \tUnix timestamp after which the transaction will revert.\n    * @return    amounts    \tThe input token amount and all subsequent output token amounts.\n    */\n    function swapExactTokensForTokens(\n        uint amountIn,\n        uint amountOutMin,\n        address[] calldata path,\n        address to,\n        uint deadline\n    ) external returns (uint[] memory amounts) {}\n    \n\n    /*\n    * @notice   Same as \n    *           Succeeds for tokens that take a fee on transfer.* and the market's available liquidity.\n    *           ``msg.sender`` should have already given the router an allowance of at least amountIn on the input token.\n    * @param    redeemAmount The amount of underlying to be redeemed.\n    * @return   status 0 on success, otherwise an Error code\n    */\n    function swapExactTokensForTokensSupportingFeeOnTransferTokens(\n        uint amountIn,\n        uint amountOutMin,\n        address[] calldata path,\n        address to,\n        uint deadline\n    ) external {}\n    \n}\n\n\n/*\n* @notice Integrates with Pancakeswap DEX\n*/\ncontract SmartExchange {\n    \n    uint256 public totalTreasury;\n    address public constant pROUTER = 0xD99D1c33F9fC3444f8101754aBC46c52416550D1; // Pancakeswap Router (BSC Testnet)\n    address public constant pFACTORY = 0x6725F303b657a9451d8BA641348b6761A6CC7a17; // Pancakeswap factory (BSC Testnet)\n    \n    function invest(uint256 amount) public {\n        \n        HelperPancakeSwap_ROUTER underlying = HelperPancakeSwap_ROUTER(pFACTORY);     // get a handle for the exchange router\n        // VToken vToken = VToken(pROUTER);   // get a handle for the corresponding dex factory\n        // underlying.approve(address(vToken), amount); // approve the transfer\n        // assert(vToken.mint(amount) == 0);            // mint the vTokens and assert there is no error\n    }\n    \n}",
+  "sourcePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/SmartExchange.sol",
+  "ast": {
+    "absolutePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/SmartExchange.sol",
+    "exportedSymbols": {
+      "HelperPancakeSwap_ROUTER": [
+        1038
+      ],
+      "SmartExchange": [
+        1059
+      ]
+    },
+    "id": 1060,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1003,
+        "literals": [
+          "solidity",
+          "^",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "id": 1004,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "24:33:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1038,
+        "linearizedBaseContracts": [
+          1038
+        ],
+        "name": "HelperPancakeSwap_ROUTER",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+>>>>>>> origin/ajibigad-dev
           {
             "body": {
+<<<<<<< HEAD
               "nodeType": "YulBlock",
               "src": "2097:204:30",
               "statements": [
+||||||| merged common ancestors
+              "id": 764,
+              "nodeType": "Block",
+              "src": "1597:2:3",
+              "statements": []
+            },
+            "functionSelector": "38ed1739",
+            "id": 765,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swapExactTokensForTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 759,
+              "nodeType": "ParameterList",
+              "parameters": [
                 {
+                  "constant": false,
+                  "id": 749,
+                  "mutability": "mutable",
+                  "name": "amountIn",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 765,
+                  "src": "1428:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 748,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1428:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 751,
+                  "mutability": "mutable",
+                  "name": "amountOutMin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 765,
+                  "src": "1452:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 750,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1452:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+=======
+              "id": 1021,
+              "nodeType": "Block",
+              "src": "1570:2:3",
+              "statements": []
+            },
+            "functionSelector": "38ed1739",
+            "id": 1022,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swapExactTokensForTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1016,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1006,
+                  "mutability": "mutable",
+                  "name": "amountIn",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1022,
+                  "src": "1406:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1005,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1406:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1008,
+                  "mutability": "mutable",
+                  "name": "amountOutMin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1022,
+                  "src": "1429:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1007,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1429:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+>>>>>>> origin/ajibigad-dev
+                {
+<<<<<<< HEAD
                   "body": {
                     "nodeType": "YulBlock",
                     "src": "2143:16:30",
@@ -1400,7 +1679,35 @@
                         "src": "2145:12:30"
                       }
                     ]
+||||||| merged common ancestors
+                  "constant": false,
+                  "id": 754,
+                  "mutability": "mutable",
+                  "name": "path",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 765,
+                  "src": "1480:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+=======
+                  "constant": false,
+                  "id": 1011,
+                  "mutability": "mutable",
+                  "name": "path",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1022,
+                  "src": "1456:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+>>>>>>> origin/ajibigad-dev
                   },
+<<<<<<< HEAD
                   "condition": {
                     "arguments": [
                       {
@@ -1430,6 +1737,29 @@
                         "src": "2139:2:30",
                         "type": "",
                         "value": "32"
+||||||| merged common ancestors
+                  "typeName": {
+                    "baseType": {
+                      "id": 752,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1480:7:3",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+=======
+                  "typeName": {
+                    "baseType": {
+                      "id": 1009,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1456:7:3",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
                     "functionName": {
@@ -1437,13 +1767,86 @@
                       "nodeType": "YulIdentifier",
                       "src": "2110:3:30"
                     },
+<<<<<<< HEAD
                     "nodeType": "YulFunctionCall",
                     "src": "2110:32:30"
+||||||| merged common ancestors
+                    "id": 753,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1480:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 756,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 765,
+                  "src": "1514:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 755,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1514:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+=======
+                    "id": 1010,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1456:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1013,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1022,
+                  "src": "1489:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1012,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1489:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+>>>>>>> origin/ajibigad-dev
                   },
                   "nodeType": "YulIf",
                   "src": "2107:2:30"
                 },
                 {
+<<<<<<< HEAD
                   "nodeType": "YulBlock",
                   "src": "2169:125:30",
                   "statements": [
@@ -1465,7 +1868,123 @@
                           "type": ""
                         }
                       ]
+||||||| merged common ancestors
+                  "constant": false,
+                  "id": 758,
+                  "mutability": "mutable",
+                  "name": "deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 765,
+                  "src": "1535:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 757,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1535:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1417:138:3"
+            },
+            "returnParameters": {
+              "id": 763,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 762,
+                  "mutability": "mutable",
+                  "name": "amounts",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 765,
+                  "src": "1574:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 760,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1574:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+=======
+                  "constant": false,
+                  "id": 1015,
+                  "mutability": "mutable",
+                  "name": "deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1022,
+                  "src": "1509:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1014,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1509:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1396:132:3"
+            },
+            "returnParameters": {
+              "id": 1020,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1019,
+                  "mutability": "mutable",
+                  "name": "amounts",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1022,
+                  "src": "1547:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1017,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1547:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+>>>>>>> origin/ajibigad-dev
                     },
+<<<<<<< HEAD
                     {
                       "nodeType": "YulAssignment",
                       "src": "2213:71:30",
@@ -1513,11 +2032,35 @@
                           "src": "2213:6:30"
                         }
                       ]
+||||||| merged common ancestors
+                    "id": 761,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1574:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+=======
+                    "id": 1018,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1547:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+>>>>>>> origin/ajibigad-dev
                     }
                   ]
                 }
+<<<<<<< HEAD
               ]
+||||||| merged common ancestors
+              ],
+              "src": "1573:23:3"
+=======
+              ],
+              "src": "1546:23:3"
+>>>>>>> origin/ajibigad-dev
             },
+<<<<<<< HEAD
             "name": "abi_decode_tuple_t_bool_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
@@ -1543,13 +2086,167 @@
               }
             ],
             "src": "2023:278:30"
+||||||| merged common ancestors
+            "scope": 781,
+            "src": "1384:215:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+=======
+            "scope": 1038,
+            "src": "1363:209:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+>>>>>>> origin/ajibigad-dev
           },
           {
             "body": {
+<<<<<<< HEAD
               "nodeType": "YulBlock",
               "src": "2390:324:30",
               "statements": [
+||||||| merged common ancestors
+              "id": 779,
+              "nodeType": "Block",
+              "src": "2226:2:3",
+              "statements": []
+            },
+            "functionSelector": "5c11d795",
+            "id": 780,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swapExactTokensForTokensSupportingFeeOnTransferTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 777,
+              "nodeType": "ParameterList",
+              "parameters": [
                 {
+                  "constant": false,
+                  "id": 767,
+                  "mutability": "mutable",
+                  "name": "amountIn",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 780,
+                  "src": "2089:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 766,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2089:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 769,
+                  "mutability": "mutable",
+                  "name": "amountOutMin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 780,
+                  "src": "2113:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 768,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2113:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+=======
+              "id": 1036,
+              "nodeType": "Block",
+              "src": "2183:2:3",
+              "statements": []
+            },
+            "functionSelector": "5c11d795",
+            "id": 1037,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swapExactTokensForTokensSupportingFeeOnTransferTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1034,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1024,
+                  "mutability": "mutable",
+                  "name": "amountIn",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1037,
+                  "src": "2051:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1023,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2051:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1026,
+                  "mutability": "mutable",
+                  "name": "amountOutMin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1037,
+                  "src": "2074:17:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1025,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2074:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+>>>>>>> origin/ajibigad-dev
+                {
+<<<<<<< HEAD
                   "body": {
                     "nodeType": "YulBlock",
                     "src": "2436:16:30",
@@ -1584,7 +2281,35 @@
                         "src": "2438:12:30"
                       }
                     ]
+||||||| merged common ancestors
+                  "constant": false,
+                  "id": 772,
+                  "mutability": "mutable",
+                  "name": "path",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 780,
+                  "src": "2141:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+=======
+                  "constant": false,
+                  "id": 1029,
+                  "mutability": "mutable",
+                  "name": "path",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1037,
+                  "src": "2101:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+>>>>>>> origin/ajibigad-dev
                   },
+<<<<<<< HEAD
                   "condition": {
                     "arguments": [
                       {
@@ -1614,6 +2339,29 @@
                         "src": "2432:2:30",
                         "type": "",
                         "value": "64"
+||||||| merged common ancestors
+                  "typeName": {
+                    "baseType": {
+                      "id": 770,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2141:7:3",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+=======
+                  "typeName": {
+                    "baseType": {
+                      "id": 1027,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2101:7:3",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
                     "functionName": {
@@ -1621,13 +2369,32 @@
                       "nodeType": "YulIdentifier",
                       "src": "2403:3:30"
                     },
+<<<<<<< HEAD
                     "nodeType": "YulFunctionCall",
                     "src": "2403:32:30"
+||||||| merged common ancestors
+                    "id": 771,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2141:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+=======
+                    "id": 1028,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2101:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+>>>>>>> origin/ajibigad-dev
                   },
                   "nodeType": "YulIf",
                   "src": "2400:2:30"
                 },
                 {
+<<<<<<< HEAD
                   "nodeType": "YulBlock",
                   "src": "2462:117:30",
                   "statements": [
@@ -1699,8 +2466,62 @@
                       ]
                     }
                   ]
+||||||| merged common ancestors
+                  "constant": false,
+                  "id": 774,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 780,
+                  "src": "2175:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 773,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2175:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+=======
+                  "constant": false,
+                  "id": 1031,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1037,
+                  "src": "2134:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1030,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2134:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+>>>>>>> origin/ajibigad-dev
                 },
                 {
+<<<<<<< HEAD
                   "nodeType": "YulBlock",
                   "src": "2589:118:30",
                   "statements": [
@@ -1770,11 +2591,229 @@
                           "src": "2634:6:30"
                         }
                       ]
+||||||| merged common ancestors
+                  "constant": false,
+                  "id": 776,
+                  "mutability": "mutable",
+                  "name": "deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 780,
+                  "src": "2196:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 775,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2196:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+=======
+                  "constant": false,
+                  "id": 1033,
+                  "mutability": "mutable",
+                  "name": "deadline",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1037,
+                  "src": "2154:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1032,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2154:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+>>>>>>> origin/ajibigad-dev
                     }
                   ]
                 }
+<<<<<<< HEAD
               ]
+||||||| merged common ancestors
+              ],
+              "src": "2078:138:3"
             },
+            "returnParameters": {
+              "id": 778,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2226:0:3"
+            },
+            "scope": 781,
+            "src": "2016:212:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 803,
+        "src": "110:2127:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 802,
+        "linearizedBaseContracts": [
+          802
+        ],
+        "name": "SmartExchange",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "897534a9",
+            "id": 783,
+            "mutability": "mutable",
+            "name": "totalTreasury",
+            "nodeType": "VariableDeclaration",
+            "scope": 802,
+            "src": "2330:28:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 782,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2330:7:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "functionSelector": "e71efd95",
+            "id": 786,
+            "mutability": "constant",
+            "name": "pROUTER",
+            "nodeType": "VariableDeclaration",
+            "scope": 802,
+            "src": "2365:76:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 784,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2365:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+=======
+              ],
+              "src": "2041:132:3"
+            },
+            "returnParameters": {
+              "id": 1035,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2183:0:3"
+            },
+            "scope": 1038,
+            "src": "1979:206:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1060,
+        "src": "105:2087:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1059,
+        "linearizedBaseContracts": [
+          1059
+        ],
+        "name": "SmartExchange",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "897534a9",
+            "id": 1040,
+            "mutability": "mutable",
+            "name": "totalTreasury",
+            "nodeType": "VariableDeclaration",
+            "scope": 1059,
+            "src": "2277:28:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1039,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "2277:7:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "functionSelector": "e71efd95",
+            "id": 1043,
+            "mutability": "constant",
+            "name": "pROUTER",
+            "nodeType": "VariableDeclaration",
+            "scope": 1059,
+            "src": "2311:76:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1041,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2311:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+>>>>>>> origin/ajibigad-dev
+            },
+<<<<<<< HEAD
             "name": "abi_decode_tuple_t_uint256t_address",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
@@ -1783,13 +2822,103 @@
                 "nodeType": "YulTypedName",
                 "src": "2352:9:30",
                 "type": ""
+||||||| merged common ancestors
+            "value": {
+              "hexValue": "307844393944316333334639664333343434663831303137353461424334366335323431363535304431",
+              "id": 785,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2399:42:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+=======
+            "value": {
+              "hexValue": "307844393944316333334639664333343434663831303137353461424334366335323431363535304431",
+              "id": 1042,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2345:42:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+>>>>>>> origin/ajibigad-dev
               },
+<<<<<<< HEAD
               {
                 "name": "dataEnd",
                 "nodeType": "YulTypedName",
                 "src": "2363:7:30",
                 "type": ""
+||||||| merged common ancestors
+              "value": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "functionSelector": "990cc058",
+            "id": 789,
+            "mutability": "constant",
+            "name": "pFACTORY",
+            "nodeType": "VariableDeclaration",
+            "scope": 802,
+            "src": "2484:77:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 787,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2484:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+=======
+              "value": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "functionSelector": "990cc058",
+            "id": 1046,
+            "mutability": "constant",
+            "name": "pFACTORY",
+            "nodeType": "VariableDeclaration",
+            "scope": 1059,
+            "src": "2429:77:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 1044,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2429:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+>>>>>>> origin/ajibigad-dev
               }
+<<<<<<< HEAD
             ],
             "returnVariables": [
               {
@@ -1797,6 +2926,37 @@
                 "nodeType": "YulTypedName",
                 "src": "2375:6:30",
                 "type": ""
+||||||| merged common ancestors
+            },
+            "value": {
+              "hexValue": "307836373235463330336236353761393435316438424136343133343862363736314136434337613137",
+              "id": 788,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2519:42:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+=======
+            },
+            "value": {
+              "hexValue": "307836373235463330336236353761393435316438424136343133343862363736314136434337613137",
+              "id": 1045,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2464:42:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+>>>>>>> origin/ajibigad-dev
               },
               {
                 "name": "value1",
@@ -1809,10 +2969,21 @@
           },
           {
             "body": {
+<<<<<<< HEAD
               "nodeType": "YulBlock",
               "src": "2800:99:30",
+||||||| merged common ancestors
+              "id": 800,
+              "nodeType": "Block",
+              "src": "2650:429:3",
+=======
+              "id": 1057,
+              "nodeType": "Block",
+              "src": "2593:423:3",
+>>>>>>> origin/ajibigad-dev
               "statements": [
                 {
+<<<<<<< HEAD
                   "expression": {
                     "arguments": [
                       {
@@ -1956,6 +3127,17 @@
                     "src": "3064:14:30"
                   },
                   "variableNames": [
+||||||| merged common ancestors
+                  "assignments": [
+                    795
+                  ],
+                  "declarations": [
+=======
+                  "assignments": [
+                    1052
+                  ],
+                  "declarations": [
+>>>>>>> origin/ajibigad-dev
                     {
                       "name": "updatedPos",
                       "nodeType": "YulIdentifier",
@@ -7944,16 +9126,83 @@
                   {
                     "attributes": {
                       "constant": false,
+<<<<<<< HEAD
+||||||| merged common ancestors
+                      "id": 795,
+=======
+                      "id": 1052,
+>>>>>>> origin/ajibigad-dev
                       "mutability": "mutable",
+<<<<<<< HEAD
                       "name": "to",
                       "scope": 792,
+||||||| merged common ancestors
+                      "name": "underlying",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 800,
+                      "src": "2671:35:3",
+=======
+                      "name": "underlying",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1057,
+                      "src": "2612:35:3",
+>>>>>>> origin/ajibigad-dev
                       "stateVariable": false,
                       "storageLocation": "default",
+<<<<<<< HEAD
                       "type": "address",
+||||||| merged common ancestors
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_HelperPancakeSwap_ROUTER_$781",
+                        "typeString": "contract HelperPancakeSwap_ROUTER"
+                      },
+                      "typeName": {
+                        "id": 794,
+                        "name": "HelperPancakeSwap_ROUTER",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 781,
+                        "src": "2671:24:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_HelperPancakeSwap_ROUTER_$781",
+                          "typeString": "contract HelperPancakeSwap_ROUTER"
+                        }
+                      },
+=======
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_HelperPancakeSwap_ROUTER_$1038",
+                        "typeString": "contract HelperPancakeSwap_ROUTER"
+                      },
+                      "typeName": {
+                        "id": 1051,
+                        "name": "HelperPancakeSwap_ROUTER",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 1038,
+                        "src": "2612:24:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_HelperPancakeSwap_ROUTER_$1038",
+                          "typeString": "contract HelperPancakeSwap_ROUTER"
+                        }
+                      },
+>>>>>>> origin/ajibigad-dev
                       "visibility": "internal"
+<<<<<<< HEAD
                     },
                     "children": [
+||||||| merged common ancestors
+                    }
+                  ],
+                  "id": 799,
+                  "initialValue": {
+                    "arguments": [
+=======
+                    }
+                  ],
+                  "id": 1056,
+                  "initialValue": {
+                    "arguments": [
+>>>>>>> origin/ajibigad-dev
                       {
+<<<<<<< HEAD
                         "attributes": {
                           "name": "address",
                           "stateMutability": "nonpayable",
@@ -7962,12 +9211,184 @@
                         "id": 785,
                         "name": "ElementaryTypeName",
                         "src": "2196:7:3"
+||||||| merged common ancestors
+                        "id": 797,
+                        "name": "pFACTORY",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 789,
+                        "src": "2734:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+=======
+                        "id": 1054,
+                        "name": "pFACTORY",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1046,
+                        "src": "2675:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 786,
                     "name": "VariableDeclaration",
                     "src": "2196:10:3"
+||||||| merged common ancestors
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 796,
+                      "name": "HelperPancakeSwap_ROUTER",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 781,
+                      "src": "2709:24:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_HelperPancakeSwap_ROUTER_$781_$",
+                        "typeString": "type(contract HelperPancakeSwap_ROUTER)"
+                      }
+                    },
+                    "id": 798,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2709:34:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_HelperPancakeSwap_ROUTER_$781",
+                      "typeString": "contract HelperPancakeSwap_ROUTER"
+                    }
                   },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2671:72:3"
+                }
+              ]
+            },
+            "functionSelector": "2afcf480",
+            "id": 801,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "invest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 792,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 791,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 801,
+                  "src": "2627:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 790,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2627:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+=======
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 1053,
+                      "name": "HelperPancakeSwap_ROUTER",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1038,
+                      "src": "2650:24:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_HelperPancakeSwap_ROUTER_$1038_$",
+                        "typeString": "type(contract HelperPancakeSwap_ROUTER)"
+                      }
+                    },
+                    "id": 1055,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2650:34:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_HelperPancakeSwap_ROUTER_$1038",
+                      "typeString": "contract HelperPancakeSwap_ROUTER"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2612:72:3"
+                }
+              ]
+            },
+            "functionSelector": "2afcf480",
+            "id": 1058,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "invest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1049,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1048,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1058,
+                  "src": "2570:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1047,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2570:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+>>>>>>> origin/ajibigad-dev
+                  },
+<<<<<<< HEAD
                   {
                     "attributes": {
                       "constant": false,
@@ -8025,11 +9446,134 @@
             "id": 792,
             "name": "FunctionDefinition",
             "src": "2037:212:3"
+||||||| merged common ancestors
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2626:16:3"
+            },
+            "returnParameters": {
+              "id": 793,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2650:0:3"
+            },
+            "scope": 802,
+            "src": "2611:468:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+=======
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2569:16:3"
+            },
+            "returnParameters": {
+              "id": 1050,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2593:0:3"
+            },
+            "scope": 1059,
+            "src": "2554:462:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+>>>>>>> origin/ajibigad-dev
           }
         ],
+<<<<<<< HEAD
         "id": 793,
         "name": "ContractDefinition",
         "src": "133:2125:3"
+||||||| merged common ancestors
+        "scope": 803,
+        "src": "2294:794:3"
+      }
+    ],
+    "src": "0:3088:3"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/SmartExchange.sol",
+      "exportedSymbols": {
+        "HelperPancakeSwap_ROUTER": [
+          781
+        ],
+        "SmartExchange": [
+          802
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 746,
+        "name": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 747,
+        "name": "PragmaDirective",
+        "src": "25:33:3"
+=======
+        "scope": 1060,
+        "src": "2243:780:3"
+      }
+    ],
+    "src": "0:3023:3"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/SmartExchange.sol",
+      "exportedSymbols": {
+        "HelperPancakeSwap_ROUTER": [
+          1038
+        ],
+        "SmartExchange": [
+          1059
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 1003,
+        "name": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 1004,
+        "name": "PragmaDirective",
+        "src": "24:33:3"
+>>>>>>> origin/ajibigad-dev
       },
       {
         "attributes": {
@@ -8043,10 +9587,24 @@
           "contractKind": "contract",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
+<<<<<<< HEAD
             923
+||||||| merged common ancestors
+            781
+=======
+            1038
+>>>>>>> origin/ajibigad-dev
           ],
+<<<<<<< HEAD
           "name": "SmartExchange",
           "scope": 924
+||||||| merged common ancestors
+          "name": "HelperPancakeSwap_ROUTER",
+          "scope": 803
+=======
+          "name": "HelperPancakeSwap_ROUTER",
+          "scope": 1060
+>>>>>>> origin/ajibigad-dev
         },
         "children": [
           {
@@ -8187,8 +9745,16 @@
               "modifiers": [
                 null
               ],
+<<<<<<< HEAD
               "name": "swap",
               "scope": 923,
+||||||| merged common ancestors
+              "name": "swapExactTokensForTokens",
+              "scope": 781,
+=======
+              "name": "swapExactTokensForTokens",
+              "scope": 1038,
+>>>>>>> origin/ajibigad-dev
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -8200,8 +9766,16 @@
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
+<<<<<<< HEAD
                       "name": "amount",
                       "scope": 922,
+||||||| merged common ancestors
+                      "name": "amountIn",
+                      "scope": 765,
+=======
+                      "name": "amountIn",
+                      "scope": 1022,
+>>>>>>> origin/ajibigad-dev
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -8213,21 +9787,53 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
+<<<<<<< HEAD
                         "id": 803,
+||||||| merged common ancestors
+                        "id": 748,
+=======
+                        "id": 1005,
+>>>>>>> origin/ajibigad-dev
                         "name": "ElementaryTypeName",
+<<<<<<< HEAD
                         "src": "2822:7:3"
+||||||| merged common ancestors
+                        "src": "1428:4:3"
+=======
+                        "src": "1406:4:3"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 804,
+||||||| merged common ancestors
+                    "id": 749,
+=======
+                    "id": 1006,
+>>>>>>> origin/ajibigad-dev
                     "name": "VariableDeclaration",
+<<<<<<< HEAD
                     "src": "2822:14:3"
+||||||| merged common ancestors
+                    "src": "1428:13:3"
+=======
+                    "src": "1406:13:3"
+>>>>>>> origin/ajibigad-dev
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
+<<<<<<< HEAD
                       "name": "to",
                       "scope": 922,
+||||||| merged common ancestors
+                      "name": "amountOutMin",
+                      "scope": 765,
+=======
+                      "name": "amountOutMin",
+                      "scope": 1022,
+>>>>>>> origin/ajibigad-dev
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -8240,13 +9846,32 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
+<<<<<<< HEAD
                         "id": 805,
+||||||| merged common ancestors
+                        "id": 750,
+=======
+                        "id": 1007,
+>>>>>>> origin/ajibigad-dev
                         "name": "ElementaryTypeName",
+<<<<<<< HEAD
                         "src": "2838:7:3"
+||||||| merged common ancestors
+                        "src": "1452:4:3"
+=======
+                        "src": "1429:4:3"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 806,
+||||||| merged common ancestors
+                    "id": 751,
+=======
+                    "id": 1008,
+>>>>>>> origin/ajibigad-dev
                     "name": "VariableDeclaration",
+<<<<<<< HEAD
                     "src": "2838:10:3"
                   }
                 ],
@@ -8256,12 +9881,27 @@
               },
               {
                 "children": [
+||||||| merged common ancestors
+                    "src": "1452:17:3"
+                  },
+=======
+                    "src": "1429:17:3"
+                  },
+>>>>>>> origin/ajibigad-dev
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
+<<<<<<< HEAD
                       "name": "",
                       "scope": 922,
+||||||| merged common ancestors
+                      "name": "path",
+                      "scope": 765,
+=======
+                      "name": "path",
+                      "scope": 1022,
+>>>>>>> origin/ajibigad-dev
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "uint256[]",
@@ -8545,6 +10185,7 @@
                               "type": "type(contract Bep20)",
                               "value": "Bep20"
                             },
+<<<<<<< HEAD
                             "id": 826,
                             "name": "Identifier",
                             "src": "3127:5:3"
@@ -8561,18 +10202,71 @@
                             "id": 827,
                             "name": "Identifier",
                             "src": "3133:4:3"
+||||||| merged common ancestors
+                            "id": 752,
+                            "name": "ElementaryTypeName",
+                            "src": "1480:7:3"
+=======
+                            "id": 1009,
+                            "name": "ElementaryTypeName",
+                            "src": "1456:7:3"
+>>>>>>> origin/ajibigad-dev
                           }
                         ],
+<<<<<<< HEAD
                         "id": 828,
                         "name": "FunctionCall",
                         "src": "3127:11:3"
+||||||| merged common ancestors
+                        "id": 753,
+                        "name": "ArrayTypeName",
+                        "src": "1480:9:3"
+=======
+                        "id": 1010,
+                        "name": "ArrayTypeName",
+                        "src": "1456:9:3"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 829,
                     "name": "VariableDeclarationStatement",
                     "src": "3106:32:3"
+||||||| merged common ancestors
+                    "id": 754,
+                    "name": "VariableDeclaration",
+                    "src": "1480:23:3"
+=======
+                    "id": 1011,
+                    "name": "VariableDeclaration",
+                    "src": "1456:23:3"
+>>>>>>> origin/ajibigad-dev
                   },
                   {
+<<<<<<< HEAD
+||||||| merged common ancestors
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "to",
+                      "scope": 765,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+=======
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "to",
+                      "scope": 1022,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+>>>>>>> origin/ajibigad-dev
                     "children": [
                       {
                         "attributes": {
@@ -8591,6 +10285,7 @@
                           "type": "tuple()",
                           "type_conversion": false
                         },
+<<<<<<< HEAD
                         "children": [
                           {
                             "attributes": {
@@ -8661,13 +10356,122 @@
                         "id": 835,
                         "name": "FunctionCall",
                         "src": "3198:37:3"
+||||||| merged common ancestors
+                        "id": 755,
+                        "name": "ElementaryTypeName",
+                        "src": "1514:7:3"
+=======
+                        "id": 1012,
+                        "name": "ElementaryTypeName",
+                        "src": "1489:7:3"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 836,
                     "name": "ExpressionStatement",
                     "src": "3198:37:3"
+||||||| merged common ancestors
+                    "id": 756,
+                    "name": "VariableDeclaration",
+                    "src": "1514:10:3"
+=======
+                    "id": 1013,
+                    "name": "VariableDeclaration",
+                    "src": "1489:10:3"
+>>>>>>> origin/ajibigad-dev
                   },
                   {
+<<<<<<< HEAD
+||||||| merged common ancestors
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "deadline",
+                      "scope": 765,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 757,
+                        "name": "ElementaryTypeName",
+                        "src": "1535:4:3"
+                      }
+                    ],
+                    "id": 758,
+                    "name": "VariableDeclaration",
+                    "src": "1535:13:3"
+                  }
+                ],
+                "id": 759,
+                "name": "ParameterList",
+                "src": "1417:138:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amounts",
+                      "scope": 765,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "uint256[]",
+                      "visibility": "internal"
+                    },
+=======
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "deadline",
+                      "scope": 1022,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1014,
+                        "name": "ElementaryTypeName",
+                        "src": "1509:4:3"
+                      }
+                    ],
+                    "id": 1015,
+                    "name": "VariableDeclaration",
+                    "src": "1509:13:3"
+                  }
+                ],
+                "id": 1016,
+                "name": "ParameterList",
+                "src": "1396:132:3"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amounts",
+                      "scope": 1022,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "uint256[]",
+                      "visibility": "internal"
+                    },
+>>>>>>> origin/ajibigad-dev
                     "children": [
                       {
                         "attributes": {
@@ -8704,6 +10508,7 @@
                               "referencedDeclaration": 13,
                               "type": "function (address,uint256) external returns (bool)"
                             },
+<<<<<<< HEAD
                             "children": [
                               {
                                 "attributes": {
@@ -8798,18 +10603,201 @@
                             "id": 844,
                             "name": "Literal",
                             "src": "3316:1:3"
+||||||| merged common ancestors
+                            "id": 760,
+                            "name": "ElementaryTypeName",
+                            "src": "1574:4:3"
+=======
+                            "id": 1017,
+                            "name": "ElementaryTypeName",
+                            "src": "1547:4:3"
+>>>>>>> origin/ajibigad-dev
                           }
                         ],
+<<<<<<< HEAD
                         "id": 845,
                         "name": "FunctionCall",
                         "src": "3278:40:3"
+||||||| merged common ancestors
+                        "id": 761,
+                        "name": "ArrayTypeName",
+                        "src": "1574:6:3"
                       }
                     ],
+                    "id": 762,
+                    "name": "VariableDeclaration",
+                    "src": "1574:21:3"
+                  }
+                ],
+                "id": 763,
+                "name": "ParameterList",
+                "src": "1573:23:3"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 764,
+                "name": "Block",
+                "src": "1597:2:3"
+              }
+            ],
+            "id": 765,
+            "name": "FunctionDefinition",
+            "src": "1384:215:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "5c11d795",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "swapExactTokensForTokensSupportingFeeOnTransferTokens",
+              "scope": 781,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amountIn",
+                      "scope": 780,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 766,
+                        "name": "ElementaryTypeName",
+                        "src": "2089:4:3"
+=======
+                        "id": 1018,
+                        "name": "ArrayTypeName",
+                        "src": "1547:6:3"
+                      }
+                    ],
+                    "id": 1019,
+                    "name": "VariableDeclaration",
+                    "src": "1547:21:3"
+                  }
+                ],
+                "id": 1020,
+                "name": "ParameterList",
+                "src": "1546:23:3"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1021,
+                "name": "Block",
+                "src": "1570:2:3"
+              }
+            ],
+            "id": 1022,
+            "name": "FunctionDefinition",
+            "src": "1363:209:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "5c11d795",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "swapExactTokensForTokensSupportingFeeOnTransferTokens",
+              "scope": 1038,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amountIn",
+                      "scope": 1037,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1023,
+                        "name": "ElementaryTypeName",
+                        "src": "2051:4:3"
+>>>>>>> origin/ajibigad-dev
+                      }
+                    ],
+<<<<<<< HEAD
                     "id": 846,
                     "name": "ExpressionStatement",
                     "src": "3278:40:3"
+||||||| merged common ancestors
+                    "id": 767,
+                    "name": "VariableDeclaration",
+                    "src": "2089:13:3"
+=======
+                    "id": 1024,
+                    "name": "VariableDeclaration",
+                    "src": "2051:13:3"
+>>>>>>> origin/ajibigad-dev
                   },
                   {
+<<<<<<< HEAD
+||||||| merged common ancestors
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amountOutMin",
+                      "scope": 780,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+=======
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amountOutMin",
+                      "scope": 1037,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+>>>>>>> origin/ajibigad-dev
                     "children": [
                       {
                         "attributes": {
@@ -8825,6 +10813,7 @@
                           "type": "bool",
                           "type_conversion": false
                         },
+<<<<<<< HEAD
                         "children": [
                           {
                             "attributes": {
@@ -8943,17 +10932,56 @@
                         "id": 855,
                         "name": "FunctionCall",
                         "src": "3358:45:3"
+||||||| merged common ancestors
+                        "id": 768,
+                        "name": "ElementaryTypeName",
+                        "src": "2113:4:3"
+=======
+                        "id": 1025,
+                        "name": "ElementaryTypeName",
+                        "src": "2074:4:3"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 856,
                     "name": "ExpressionStatement",
                     "src": "3358:45:3"
+||||||| merged common ancestors
+                    "id": 769,
+                    "name": "VariableDeclaration",
+                    "src": "2113:17:3"
+=======
+                    "id": 1026,
+                    "name": "VariableDeclaration",
+                    "src": "2074:17:3"
+>>>>>>> origin/ajibigad-dev
                   },
                   {
                     "attributes": {
+<<<<<<< HEAD
                       "assignments": [
                         858
                       ]
+||||||| merged common ancestors
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "path",
+                      "scope": 780,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "address[]",
+                      "visibility": "internal"
+=======
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "path",
+                      "scope": 1037,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "address[]",
+                      "visibility": "internal"
+>>>>>>> origin/ajibigad-dev
                     },
                     "children": [
                       {
@@ -8973,11 +11001,24 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
+<<<<<<< HEAD
                             "id": 857,
+||||||| merged common ancestors
+                            "id": 770,
+=======
+                            "id": 1027,
+>>>>>>> origin/ajibigad-dev
                             "name": "ElementaryTypeName",
+<<<<<<< HEAD
                             "src": "3459:7:3"
+||||||| merged common ancestors
+                            "src": "2141:7:3"
+=======
+                            "src": "2101:7:3"
+>>>>>>> origin/ajibigad-dev
                           }
                         ],
+<<<<<<< HEAD
                         "id": 858,
                         "name": "VariableDeclaration",
                         "src": "3459:16:3"
@@ -8994,17 +11035,56 @@
                         "id": 859,
                         "name": "Identifier",
                         "src": "3478:6:3"
+||||||| merged common ancestors
+                        "id": 771,
+                        "name": "ArrayTypeName",
+                        "src": "2141:9:3"
+=======
+                        "id": 1028,
+                        "name": "ArrayTypeName",
+                        "src": "2101:9:3"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 860,
                     "name": "VariableDeclarationStatement",
                     "src": "3459:25:3"
+||||||| merged common ancestors
+                    "id": 772,
+                    "name": "VariableDeclaration",
+                    "src": "2141:23:3"
+=======
+                    "id": 1029,
+                    "name": "VariableDeclaration",
+                    "src": "2101:23:3"
+>>>>>>> origin/ajibigad-dev
                   },
                   {
                     "attributes": {
+<<<<<<< HEAD
                       "assignments": [
                         862
                       ]
+||||||| merged common ancestors
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "to",
+                      "scope": 780,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+=======
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "to",
+                      "scope": 1037,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+>>>>>>> origin/ajibigad-dev
                     },
                     "children": [
                       {
@@ -9018,6 +11098,7 @@
                           "type": "uint256",
                           "visibility": "internal"
                         },
+<<<<<<< HEAD
                         "children": [
                           {
                             "attributes": {
@@ -9047,17 +11128,56 @@
                         "id": 863,
                         "name": "Literal",
                         "src": "3518:1:3"
+||||||| merged common ancestors
+                        "id": 773,
+                        "name": "ElementaryTypeName",
+                        "src": "2175:7:3"
+=======
+                        "id": 1030,
+                        "name": "ElementaryTypeName",
+                        "src": "2134:7:3"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 864,
                     "name": "VariableDeclarationStatement",
                     "src": "3495:24:3"
+||||||| merged common ancestors
+                    "id": 774,
+                    "name": "VariableDeclaration",
+                    "src": "2175:10:3"
+=======
+                    "id": 1031,
+                    "name": "VariableDeclaration",
+                    "src": "2134:10:3"
+>>>>>>> origin/ajibigad-dev
                   },
                   {
                     "attributes": {
+<<<<<<< HEAD
                       "assignments": [
                         869
                       ]
+||||||| merged common ancestors
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "deadline",
+                      "scope": 780,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+=======
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "deadline",
+                      "scope": 1037,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+>>>>>>> origin/ajibigad-dev
                     },
                     "children": [
                       {
@@ -9071,6 +11191,7 @@
                           "type": "address[]",
                           "visibility": "internal"
                         },
+<<<<<<< HEAD
                         "children": [
                           {
                             "attributes": {
@@ -9426,11 +11547,424 @@
                     "name": "ExpressionStatement",
                     "src": "3623:31:3"
                   },
+||||||| merged common ancestors
+                        "id": 775,
+                        "name": "ElementaryTypeName",
+                        "src": "2196:4:3"
+                      }
+                    ],
+                    "id": 776,
+                    "name": "VariableDeclaration",
+                    "src": "2196:13:3"
+                  }
+                ],
+                "id": 777,
+                "name": "ParameterList",
+                "src": "2078:138:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 778,
+                "name": "ParameterList",
+                "src": "2226:0:3"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 779,
+                "name": "Block",
+                "src": "2226:2:3"
+              }
+            ],
+            "id": 780,
+            "name": "FunctionDefinition",
+            "src": "2016:212:3"
+          }
+        ],
+        "id": 781,
+        "name": "ContractDefinition",
+        "src": "110:2127:3"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            802
+          ],
+          "name": "SmartExchange",
+          "scope": 803
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "897534a9",
+              "mutability": "mutable",
+              "name": "totalTreasury",
+              "scope": 802,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 782,
+                "name": "ElementaryTypeName",
+                "src": "2330:7:3"
+              }
+            ],
+            "id": 783,
+            "name": "VariableDeclaration",
+            "src": "2330:28:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "functionSelector": "e71efd95",
+              "mutability": "constant",
+              "name": "pROUTER",
+              "scope": 802,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 784,
+                "name": "ElementaryTypeName",
+                "src": "2365:7:3"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "307844393944316333334639664333343434663831303137353461424334366335323431363535304431",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "number",
+                  "type": "address payable",
+                  "value": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1"
+                },
+                "id": 785,
+                "name": "Literal",
+                "src": "2399:42:3"
+              }
+            ],
+            "id": 786,
+            "name": "VariableDeclaration",
+            "src": "2365:76:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "functionSelector": "990cc058",
+              "mutability": "constant",
+              "name": "pFACTORY",
+              "scope": 802,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 787,
+                "name": "ElementaryTypeName",
+                "src": "2484:7:3"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "307836373235463330336236353761393435316438424136343133343862363736314136434337613137",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "number",
+                  "type": "address payable",
+                  "value": "0x6725F303b657a9451d8BA641348b6761A6CC7a17"
+                },
+                "id": 788,
+                "name": "Literal",
+                "src": "2519:42:3"
+              }
+            ],
+            "id": 789,
+            "name": "VariableDeclaration",
+            "src": "2484:77:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "2afcf480",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "invest",
+              "scope": 802,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+=======
+                        "id": 1032,
+                        "name": "ElementaryTypeName",
+                        "src": "2154:4:3"
+                      }
+                    ],
+                    "id": 1033,
+                    "name": "VariableDeclaration",
+                    "src": "2154:13:3"
+                  }
+                ],
+                "id": 1034,
+                "name": "ParameterList",
+                "src": "2041:132:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1035,
+                "name": "ParameterList",
+                "src": "2183:0:3"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1036,
+                "name": "Block",
+                "src": "2183:2:3"
+              }
+            ],
+            "id": 1037,
+            "name": "FunctionDefinition",
+            "src": "1979:206:3"
+          }
+        ],
+        "id": 1038,
+        "name": "ContractDefinition",
+        "src": "105:2087:3"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1059
+          ],
+          "name": "SmartExchange",
+          "scope": 1060
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "897534a9",
+              "mutability": "mutable",
+              "name": "totalTreasury",
+              "scope": 1059,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 1039,
+                "name": "ElementaryTypeName",
+                "src": "2277:7:3"
+              }
+            ],
+            "id": 1040,
+            "name": "VariableDeclaration",
+            "src": "2277:28:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "functionSelector": "e71efd95",
+              "mutability": "constant",
+              "name": "pROUTER",
+              "scope": 1059,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 1041,
+                "name": "ElementaryTypeName",
+                "src": "2311:7:3"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "307844393944316333334639664333343434663831303137353461424334366335323431363535304431",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "number",
+                  "type": "address payable",
+                  "value": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1"
+                },
+                "id": 1042,
+                "name": "Literal",
+                "src": "2345:42:3"
+              }
+            ],
+            "id": 1043,
+            "name": "VariableDeclaration",
+            "src": "2311:76:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "functionSelector": "990cc058",
+              "mutability": "constant",
+              "name": "pFACTORY",
+              "scope": 1059,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 1044,
+                "name": "ElementaryTypeName",
+                "src": "2429:7:3"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "307836373235463330336236353761393435316438424136343133343862363736314136434337613137",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "number",
+                  "type": "address payable",
+                  "value": "0x6725F303b657a9451d8BA641348b6761A6CC7a17"
+                },
+                "id": 1045,
+                "name": "Literal",
+                "src": "2464:42:3"
+              }
+            ],
+            "id": 1046,
+            "name": "VariableDeclaration",
+            "src": "2429:77:3"
+          },
+          {
+            "attributes": {
+              "functionSelector": "2afcf480",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "invest",
+              "scope": 1059,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+>>>>>>> origin/ajibigad-dev
                   {
                     "attributes": {
+<<<<<<< HEAD
                       "assignments": [
                         895
                       ]
+||||||| merged common ancestors
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amount",
+                      "scope": 801,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+=======
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "amount",
+                      "scope": 1058,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+>>>>>>> origin/ajibigad-dev
                     },
                     "children": [
                       {
@@ -9444,6 +11978,7 @@
                           "type": "address",
                           "visibility": "internal"
                         },
+<<<<<<< HEAD
                         "children": [
                           {
                             "attributes": {
@@ -9472,16 +12007,79 @@
                         "id": 896,
                         "name": "Identifier",
                         "src": "3678:2:3"
+||||||| merged common ancestors
+                        "id": 790,
+                        "name": "ElementaryTypeName",
+                        "src": "2627:7:3"
+=======
+                        "id": 1047,
+                        "name": "ElementaryTypeName",
+                        "src": "2570:7:3"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 897,
                     "name": "VariableDeclarationStatement",
                     "src": "3665:15:3"
                   },
+||||||| merged common ancestors
+                    "id": 791,
+                    "name": "VariableDeclaration",
+                    "src": "2627:14:3"
+                  }
+                ],
+                "id": 792,
+                "name": "ParameterList",
+                "src": "2626:16:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 793,
+                "name": "ParameterList",
+                "src": "2650:0:3"
+              },
+              {
+                "children": [
+=======
+                    "id": 1048,
+                    "name": "VariableDeclaration",
+                    "src": "2570:14:3"
+                  }
+                ],
+                "id": 1049,
+                "name": "ParameterList",
+                "src": "2569:16:3"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1050,
+                "name": "ParameterList",
+                "src": "2593:0:3"
+              },
+              {
+                "children": [
+>>>>>>> origin/ajibigad-dev
                   {
                     "attributes": {
                       "assignments": [
+<<<<<<< HEAD
                         899
+||||||| merged common ancestors
+                        795
+=======
+                        1052
+>>>>>>> origin/ajibigad-dev
                       ]
                     },
                     "children": [
@@ -9489,8 +12087,16 @@
                         "attributes": {
                           "constant": false,
                           "mutability": "mutable",
+<<<<<<< HEAD
                           "name": "deadline",
                           "scope": 921,
+||||||| merged common ancestors
+                          "name": "underlying",
+                          "scope": 800,
+=======
+                          "name": "underlying",
+                          "scope": 1057,
+>>>>>>> origin/ajibigad-dev
                           "stateVariable": false,
                           "storageLocation": "default",
                           "type": "uint256",
@@ -9499,17 +12105,49 @@
                         "children": [
                           {
                             "attributes": {
+<<<<<<< HEAD
                               "name": "uint",
                               "type": "uint256"
+||||||| merged common ancestors
+                              "name": "HelperPancakeSwap_ROUTER",
+                              "referencedDeclaration": 781,
+                              "type": "contract HelperPancakeSwap_ROUTER"
+=======
+                              "name": "HelperPancakeSwap_ROUTER",
+                              "referencedDeclaration": 1038,
+                              "type": "contract HelperPancakeSwap_ROUTER"
+>>>>>>> origin/ajibigad-dev
                             },
+<<<<<<< HEAD
                             "id": 898,
                             "name": "ElementaryTypeName",
                             "src": "3691:4:3"
+||||||| merged common ancestors
+                            "id": 794,
+                            "name": "UserDefinedTypeName",
+                            "src": "2671:24:3"
+=======
+                            "id": 1051,
+                            "name": "UserDefinedTypeName",
+                            "src": "2612:24:3"
+>>>>>>> origin/ajibigad-dev
                           }
                         ],
+<<<<<<< HEAD
                         "id": 899,
+||||||| merged common ancestors
+                        "id": 795,
+=======
+                        "id": 1052,
+>>>>>>> origin/ajibigad-dev
                         "name": "VariableDeclaration",
+<<<<<<< HEAD
                         "src": "3691:13:3"
+||||||| merged common ancestors
+                        "src": "2671:35:3"
+=======
+                        "src": "2612:35:3"
+>>>>>>> origin/ajibigad-dev
                       },
                       {
                         "attributes": {
@@ -9693,6 +12331,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
+<<<<<<< HEAD
                               "referencedDeclaration": 858,
                               "type": "uint256",
                               "value": "amountIn"
@@ -9722,17 +12361,44 @@
                               "referencedDeclaration": 869,
                               "type": "address[] memory",
                               "value": "path"
+||||||| merged common ancestors
+                              "referencedDeclaration": 781,
+                              "type": "type(contract HelperPancakeSwap_ROUTER)",
+                              "value": "HelperPancakeSwap_ROUTER"
+=======
+                              "referencedDeclaration": 1038,
+                              "type": "type(contract HelperPancakeSwap_ROUTER)",
+                              "value": "HelperPancakeSwap_ROUTER"
+>>>>>>> origin/ajibigad-dev
                             },
+<<<<<<< HEAD
                             "id": 914,
+||||||| merged common ancestors
+                            "id": 796,
+=======
+                            "id": 1053,
+>>>>>>> origin/ajibigad-dev
                             "name": "Identifier",
+<<<<<<< HEAD
                             "src": "3850:4:3"
+||||||| merged common ancestors
+                            "src": "2709:24:3"
+=======
+                            "src": "2650:24:3"
+>>>>>>> origin/ajibigad-dev
                           },
                           {
                             "attributes": {
                               "overloadedDeclarations": [
                                 null
                               ],
+<<<<<<< HEAD
                               "referencedDeclaration": 895,
+||||||| merged common ancestors
+                              "referencedDeclaration": 789,
+=======
+                              "referencedDeclaration": 1046,
+>>>>>>> origin/ajibigad-dev
                               "type": "address",
                               "value": "to"
                             },
@@ -9749,18 +12415,49 @@
                               "type": "uint256",
                               "value": "deadline"
                             },
+<<<<<<< HEAD
                             "id": 916,
+||||||| merged common ancestors
+                            "id": 797,
+=======
+                            "id": 1054,
+>>>>>>> origin/ajibigad-dev
                             "name": "Identifier",
+<<<<<<< HEAD
                             "src": "3860:8:3"
+||||||| merged common ancestors
+                            "src": "2734:8:3"
+=======
+                            "src": "2675:8:3"
+>>>>>>> origin/ajibigad-dev
                           }
                         ],
+<<<<<<< HEAD
                         "id": 917,
+||||||| merged common ancestors
+                        "id": 798,
+=======
+                        "id": 1055,
+>>>>>>> origin/ajibigad-dev
                         "name": "FunctionCall",
+<<<<<<< HEAD
                         "src": "3794:75:3"
+||||||| merged common ancestors
+                        "src": "2709:34:3"
+=======
+                        "src": "2650:34:3"
+>>>>>>> origin/ajibigad-dev
                       }
                     ],
+<<<<<<< HEAD
                     "id": 918,
+||||||| merged common ancestors
+                    "id": 799,
+=======
+                    "id": 1056,
+>>>>>>> origin/ajibigad-dev
                     "name": "VariableDeclarationStatement",
+<<<<<<< HEAD
                     "src": "3768:101:3"
                   },
                   {
@@ -9785,26 +12482,79 @@
                     "id": 920,
                     "name": "Return",
                     "src": "3963:16:3"
+||||||| merged common ancestors
+                    "src": "2671:72:3"
+=======
+                    "src": "2612:72:3"
+>>>>>>> origin/ajibigad-dev
                   }
                 ],
+<<<<<<< HEAD
                 "id": 921,
+||||||| merged common ancestors
+                "id": 800,
+=======
+                "id": 1057,
+>>>>>>> origin/ajibigad-dev
                 "name": "Block",
+<<<<<<< HEAD
                 "src": "2881:1106:3"
+||||||| merged common ancestors
+                "src": "2650:429:3"
+=======
+                "src": "2593:423:3"
+>>>>>>> origin/ajibigad-dev
               }
             ],
+<<<<<<< HEAD
             "id": 922,
+||||||| merged common ancestors
+            "id": 801,
+=======
+            "id": 1058,
+>>>>>>> origin/ajibigad-dev
             "name": "FunctionDefinition",
+<<<<<<< HEAD
             "src": "2808:1179:3"
+||||||| merged common ancestors
+            "src": "2611:468:3"
+=======
+            "src": "2554:462:3"
+>>>>>>> origin/ajibigad-dev
           }
         ],
+<<<<<<< HEAD
         "id": 923,
+||||||| merged common ancestors
+        "id": 802,
+=======
+        "id": 1059,
+>>>>>>> origin/ajibigad-dev
         "name": "ContractDefinition",
+<<<<<<< HEAD
         "src": "2315:1681:3"
+||||||| merged common ancestors
+        "src": "2294:794:3"
+=======
+        "src": "2243:780:3"
+>>>>>>> origin/ajibigad-dev
       }
     ],
+<<<<<<< HEAD
     "id": 924,
+||||||| merged common ancestors
+    "id": 803,
+=======
+    "id": 1060,
+>>>>>>> origin/ajibigad-dev
     "name": "SourceUnit",
+<<<<<<< HEAD
     "src": "0:3996:3"
+||||||| merged common ancestors
+    "src": "0:3088:3"
+=======
+    "src": "0:3023:3"
+>>>>>>> origin/ajibigad-dev
   },
   "compiler": {
     "name": "solc",
@@ -9812,7 +12562,13 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
+<<<<<<< HEAD
   "updatedAt": "2021-04-11T12:56:10.567Z",
+||||||| merged common ancestors
+  "updatedAt": "2021-04-09T16:41:29.482Z",
+=======
+  "updatedAt": "2021-04-10T14:35:58.126Z",
+>>>>>>> origin/ajibigad-dev
   "devdoc": {
     "kind": "dev",
     "methods": {},
