@@ -1,7 +1,7 @@
 pragma solidity ^0.7.0;
 
-// import "@chainlink/contracts/src/v0.7/interfaces/AggregatorV3Interface.sol";
-import "https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.7/interfaces/AggregatorV3Interface.sol";
+import "@chainlink/contracts/src/v0.7/interfaces/AggregatorV3Interface.sol";
+// import "https://github.com/smartcontractkit/chainlink/blob/develop/evm-contracts/src/v0.7/interfaces/AggregatorV3Interface.sol";
 
 contract PriceConsumerV3 {
 

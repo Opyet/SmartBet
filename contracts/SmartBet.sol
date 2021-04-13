@@ -5,6 +5,8 @@ import "@chainlink/contracts/src/v0.7/ChainlinkClient.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 // import "@openzeppelin/contracts/math/SafeMath.sol";
+import "./BEP20.sol";
+import "./SmartExchange.sol";
 
 // import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/token/ERC721/ERC721.sol";
 // import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/utils/Counters.sol";
@@ -31,6 +33,10 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     // incremented id for NFT minting
     Counters.Counter private tokenIds;
+
+    SmartExchange private smartExchange;
+
+    BEP20 private bUSDToken;
 
     // flag to determine if contracts core functionalities can be performed
     bool circuitBreaker = false;
@@ -89,6 +95,8 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     constructor() ERC721("SmartBet", "SMBT") {
         owner = msg.sender;
+        smartExchange = new SmartExchange();
+        bUSDToken = BEP20(smartExchange.BUSD());
     }
 
     ////////////////////////////////////////
@@ -256,8 +264,11 @@ contract SmartBet is ERC721, ChainlinkClient {
         require(msg.value != 0, "Invalid amount bet");
 
         address bettor = msg.sender;
-        uint256 amountBet = msg.value;
         uint256 assetValue = 0;
+
+        uint[] memory amounts = smartExchange.swap(msg.value, address(this));
+        uint256 amountBet = amounts[1];
+
         MatchResult matchResultBetOn = MatchResult(_resultBetOn);
         
         //update team's total payout
@@ -380,10 +391,12 @@ contract SmartBet is ERC721, ChainlinkClient {
         
         require(matches[smartAsset.matchId].state == MatchState.FINISHED, "Cannot liquidate asset until match is finished");
         
-        require (address(this).balance >= smartAsset.initialValue, "Contract has insufficient funds");
+        require (bUSDToken.balanceOf(address(this)) >= smartAsset.initialValue, "Contract has insufficient funds");
+        // require (address(this).balance >= smartAsset.initialValue, "Contract has insufficient funds");
         
         invalidateAsset(_smartAssetId);
-        msg.sender.transfer(smartAsset.initialValue);
+        bUSDToken.transfer(msg.sender, smartAsset.initialValue);
+        // msg.sender.transfer(smartAsset.initialValue);
 
         emit AssetLiquidatedEvent(msg.sender, smartAsset.matchId, smartAsset.initialValue, block.timestamp);
         return true;
@@ -431,6 +444,15 @@ contract SmartBet is ERC721, ChainlinkClient {
         returns(SmartAsset memory asset)
     {
         return smartAssets[_smartAssetId];
+    }
+
+    /*
+    *  @notice  Tells of the msg.sender is the admin
+    *  @dev
+    *  @return  true if msg.sender is admin else false
+    */
+    function isAdmin() public view returns(bool) {
+        return msg.sender == owner;
     }
     
 }

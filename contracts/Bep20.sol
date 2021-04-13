@@ -1,7 +1,9 @@
 pragma solidity ^0.7.0;
 pragma experimental ABIEncoderV2;
 
-contract Bep20 {
+contract BEP20 {
+
+    mapping (address => uint) public  balanceOf;
     /**
     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
     *
@@ -20,4 +22,6 @@ contract Bep20 {
 
     // funds goes as `msg.value`
     function deposit() public payable {}
+
+    function transfer(address dst, uint amount) public returns (bool) {}
 }
