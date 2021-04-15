@@ -432,5 +432,16 @@ contract SmartBet is ERC721, ChainlinkClient {
     {
         return smartAssets[_smartAssetId];
     }
+
+    /*
+    *  @notice  Tells of the msg.sender is the admin
+    *  @dev
+    *  @return  true if msg.sender is admin else false
+    */
+    function isAdmin() public view returns(bool) {
+        return msg.sender == owner;
+    }
+
+    receive() external payable {}
     
 }
