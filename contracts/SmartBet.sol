@@ -59,6 +59,7 @@ contract SmartBet is ERC721, ChainlinkClient {
         uint256 totalCollected;
         MatchResult result;
         MatchState state;
+        uint256 startsAt;
         bool exists;
     }
 
@@ -237,7 +238,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     {
         matchIds.increment();
         uint256 matchId = matchIds.current();
-        matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _oddsDraw, _matchResultLink, 0, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, true); 
+        matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _oddsDraw, _matchResultLink, 0, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, _startAt, true); 
         apiMatches[_apiMatchId] = matchId;
         emit MatchCreatedEvent(msg.sender, matchId, _startAt, block.timestamp);
 
@@ -262,6 +263,10 @@ contract SmartBet is ERC721, ChainlinkClient {
         returns(uint256)
     {
         require(msg.value != 0, "Invalid amount bet");
+        if (matches[_matchId].startsAt < block.timestamp) {
+            matches[_matchId].state = MatchState.STARTED;
+            return 0;
+        }
 
         address bettor = msg.sender;
         uint256 assetValue = 0;
@@ -454,5 +459,10 @@ contract SmartBet is ERC721, ChainlinkClient {
     function isAdmin() public view returns(bool) {
         return msg.sender == owner;
     }
+<<<<<<< HEAD
+=======
+
+    receive() external payable {}
+>>>>>>> ajibigad-dev
     
 }

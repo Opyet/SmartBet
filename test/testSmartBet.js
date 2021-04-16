@@ -69,10 +69,18 @@ contract("SmartBet", async (accounts) => {
             "on chain match does not exist");
     });
 
-    it("should only allow bets on match that have started", async() => {
+    it("should only allow bets on match that have not started", async() => {
         await createTestMatch();
         await smartBetInstance.startMatch(1);
         await catchCustomError(smartBetInstance.placeBet(1, SmartBet.enums.MatchResult.TEAM_A_WON, 
+            {from: bettor, value: generateValue(1)}), 
+            "match started");
+
+        await smartBetInstance
+            .createMatch(2, MATCH_RESULT_API + 2, 1, 2, 3, Math.floor((Date.now() - 60000) /1000), {from: owner});
+        await smartBetInstance.placeBet(2, SmartBet.enums.MatchResult.TEAM_A_WON, 
+            {from: bettor, value: generateValue(1)});
+        await catchCustomError(smartBetInstance.placeBet(2, SmartBet.enums.MatchResult.TEAM_A_WON, 
             {from: bettor, value: generateValue(1)}), 
             "match started");
     });
@@ -516,6 +524,14 @@ contract("SmartBet", async (accounts) => {
         expect(smartAsset['initialValue']).to.equal(expectedAssetValue.toString(), "Incorrect asset value");
     });
 
+    it("#isAdmin() should return true if the msg.sender is the contract owner and false it's not", async() => {
+        let result = await smartBetInstance.isAdmin({from: owner});
+        expect(result).to.be.true;
+
+        result = await smartBetInstance.isAdmin({from: bettor});
+        expect(result).to.be.false;
+    });
+
     function getMatchIdFromResult(result) {
         let matchId = result.logs
             .filter(log => log.event && log.event == 'MatchCreatedEvent')
@@ -537,7 +553,7 @@ contract("SmartBet", async (accounts) => {
             oddsTeamA ? oddsTeamA : 1, 
             oddsTeamB ? oddsTeamB : 2, 
             oddsDraw ? oddsDraw : 3, 
-            Math.floor(Date.now() /1000), {from:    creator ? creator : owner});
+            Math.floor((Date.now() + 60000) / 1000), {from:    creator ? creator : owner});
     }
 
     function generateValue(transactionValue) {
