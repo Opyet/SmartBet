@@ -43,12 +43,20 @@ class MatchesShowAdmin extends Component {
       web3: null, 
       account: null, 
       contract: null,
+      match: null
     }
   }
 
   componentWillMount() {
-    this.setState({contract: this.props.baseAppState.contract});
-    this.setState({account: this.props.baseAppState.accounts[0]});
+    if(this.props.baseAppState){
+      this.setState({contract: this.props.baseAppState.contract});
+      this.setState({account: this.props.baseAppState.accounts[0]});
+    }
+    const url = window.location.href;
+    let n = url.lastIndexOf('/');
+    let payload = url.substring(n + 1);
+    let matchObj = JSON.parse(atob(payload));
+    this.setState({match: matchObj});
   }
 
   componentDidMount() {

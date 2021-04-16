@@ -15,6 +15,7 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
   const [loading, setLoading] = useState(false);
   const [oddsA, setOddsA] = useState();
   const [oddsB, setOddsB] = useState();
+  const [oddsDraw, setOddsDraw] = useState();
   const [margin, setMargin] = useState();
 
   const createMatch = async () => {
@@ -24,13 +25,15 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
     try {
       setLoading(true);
       // console.log('match details', JSON.stringify(match));
-      if(!match.fixture_id || !matchUrl || !oddsA || !oddsB || !match.firstHalfStart){
+      if(!match.fixture_id || !matchUrl || !oddsA || !oddsDraw || !oddsB || !match.firstHalfStart){
         alert('incomplete match details');
       }
+      if(!match.firstHalfStart) {match.firstHalfStart=1618169907;}
       console.log('add new match', parseInt(match.fixture_id),
         matchUrl,
         parseInt(oddsA * 100),
         parseInt(oddsB * 100),
+        parseInt(oddsDraw * 100),
         parseInt(match.firstHalfStart));
 
       await contract.methods.createMatch(
@@ -38,6 +41,7 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
           matchUrl,
           parseInt(oddsA * 100),
           parseInt(oddsB * 100),
+          parseInt(oddsDraw * 100),
           parseInt(match.firstHalfStart)
         )
         .send({
@@ -114,7 +118,7 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
             <Grid item xs={5}>
               {getImage(1)}
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={4}>
               <TextField
                 value={oddsA}
                 onChange={(e) => setOddsA(e.target.value)}
@@ -123,7 +127,16 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
                 label="Odds Team A"
               />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={4}>
+              <TextField
+                value={oddsDraw}
+                onChange={(e) => setOddsDraw(e.target.value)}
+                variant="outlined"
+                fullWidth
+                label="Odds Draw"
+              />
+            </Grid>
+            <Grid item xs={4}>
               <TextField
                 value={oddsB}
                 onChange={(e) => setOddsB(e.target.value)}

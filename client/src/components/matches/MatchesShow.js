@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { useParams } from "react-router-dom";
 import CusAvatar from "../layout/CustomizedAvatar";
+import APICall from '../../utils/APICall';
 import {
   Card,
   CardContent,
@@ -44,20 +45,52 @@ class MatchesShow extends Component {
       web3: null, 
       account: null, 
       contract: null,
+      match: null,
+      betAmount: 0, 
+      winTeamIndex: null,  //0-teamA  1-teamB 2-draw
+      teamSelected: null,
     }
   }
 
   componentWillMount() {
-    this.setState({contract: this.props.baseAppState.contract});
-    this.setState({account: this.props.baseAppState.accounts[0]});
+    if(this.props.baseAppState){
+      this.setState({contract: this.props.baseAppState.contract});
+      this.setState({account: this.props.baseAppState.accounts[0]});
+    }
+    
   }
 
   componentDidMount() {
-
+    let url = window.location.href;
+    let n = url.lastIndexOf('/');
+    let payload = url.substring(n + 1);
+    let matchId = atob(payload);
+    
+    this.getMatch(parseInt(matchId));
+    
   }
 
-  componentWillUnmount() {
-
+ 
+  getMatch =(matchId)=>{
+    this.state.contract.methods.getMatch(matchId).call({from: this.state.account})
+    .then(response => {
+      if(response){
+        console.log('getMatch', response);
+        
+        APICall(response.matchResultLink).then(result=>{
+          console.log('match details', result);
+          if(result){
+            let match = result.api.fixtures[0];
+            
+            this.setState({match: match})
+          }
+        }).catch(error=>{
+          console.log(error);
+        })
+      }
+    }).catch(error => {
+      console.log('getMatch error', error);
+    });
   }
 
   setLoadingClose(value){
@@ -81,13 +114,13 @@ class MatchesShow extends Component {
   }
 
   render() {
-    if (!this.state.match || !this.state.apiData) {
+    if (!this.state.match) {
       return <Preloader />;
     }
   
-    if (this.state.match.admin === this.state.account) {
-      history.push(`/matches/${this.state.match.id}/admin`);
-    }
+    // if (this.state.match.creator === this.state.account) {
+    //   history.push(`/matches/${this.state.match.matchId}/admin`);
+    // }
     
     return (
       <Grid style={{ height: "100%" }} container spacing={2}>
@@ -229,23 +262,39 @@ class MatchesShow extends Component {
     this.setLoading(false);
   }
 
-  getImageSection = (team) => {
-    const opp = this.state.apiData.opponents[team].opponent;
+  getImageSection = (teamIndex) => {
+    let team = null;
+
+    if(teamIndex === 0){
+      team = this.state.match.homeTeam;
+    }
+    if(teamIndex === 1){
+      team = this.state.match.awayTeam;
+    } 
+
     const colors = ["#ff2e2e", "#3877ff"];
     const avatarStyle = {
       width: "196px",
       height: "196px",
-      backgroundColor: colors[team],
+      backgroundColor: colors[teamIndex],
       fontSize: "72px",
       color: "#ffffff",
       cursor: "pointer",
     };
 
-    const teams = [this.state.match.teamA, this.state.match.teamB];
+    const teams = [this.state.match.homeTeam, this.state.match.awayTeam];
+
+    if(this.state.match.goalsHomeTeam > this.state.match.goalsAwayTeam){
+      this.setState({winTeamIndex: 0});
+    }else if(this.state.match.goalsHomeTeam < this.state.match.goalsAwayTeam){
+      this.setState({winTeamIndex: 1});
+    }else{
+      this.setState({winTeamIndex: 2});
+    }
 
     let winTag = {
-      height: this.state.match.winner === teams[team] ? "5vw" : "0vw",
-      width: this.state.match.winner === teams[team] ? "5vw" : "0vw",
+      height: this.state.winTeamIndex === teamIndex ? "5vw" : "0vw",
+      width: this.state.winTeamIndex === teamIndex ? "5vw" : "0vw",
       position: "absolute",
       zIndex: "100000",
       bottom: "0px",
@@ -255,25 +304,27 @@ class MatchesShow extends Component {
 
     const borderStyle = this.state.match.ended
       ? {
-          padding: this.state.match.winner === teams[team] ? "10px" : "15px",
-          border: this.state.match.winner === teams[team] ? `5px #FFD700 solid` : "none",
+          padding: this.state.winTeamIndex === teamIndex ? "10px" : "15px",
+          border: this.state.winTeamIndex === teamIndex ? `5px #FFD700 solid` : "none",
         }
       : {
-          padding: this.state.teamSelected === team ? "5px" : "10px",
-          border: this.state.teamSelected === team ? `5px ${colors[team]} dashed` : "none",
+          padding: this.state.teamSelected === teamIndex ? "5px" : "10px",
+          border: this.state.teamSelected === teamIndex ? `5px ${colors[teamIndex]} dashed` : "none",
         };
+
     const handleSelection = () => {
-      this.setTeamSelected(team);
+      this.setTeamSelected(teamIndex);
     };
+
     let avatar;
-    if (!opp.image_url) {
+    if (!team.logo) {
       avatar = (
         <div onClick={handleSelection} style={{ ...borderStyle }}>
           <Avatar
             variant="rounded"
             style={{ ...avatarStyle, position: "relative" }}
           >
-            {this.state.match.ended && this.state.match.winner === teams[team] ? (
+            {this.state.match.ended && this.state.winTeamIndex === teamIndex ? (
               <img
                 src={process.env.PUBLIC_URL + "/images/winnerTag.png"}
                 style={winTag}
@@ -281,18 +332,18 @@ class MatchesShow extends Component {
             ) : (
               <></>
             )}
-            {opp.name[0]}
+            {team.name[0]}
           </Avatar>
         </div>
       );
     } else {
       avatar = (
         <div onClick={handleSelection} style={borderStyle}>
-          {this.state.match.ended && this.state.match.winner === teams[team] ? (
+          {this.state.match.ended && this.state.winTeamIndex === teamIndex ? (
             <CusAvatar
               variant="rounded"
               style={{ ...avatarStyle, position: "relative" }}
-              src={opp.image_url}
+              src={team.logo}
               otherChild={
                 <img
                   src={process.env.PUBLIC_URL + "/images/winnerTag.png"}
@@ -304,7 +355,7 @@ class MatchesShow extends Component {
             <Avatar
               variant="rounded"
               style={{ ...avatarStyle, position: "relative" }}
-              src={opp.image_url}
+              src={team.logo}
             ></Avatar>
           )}
         </div>
@@ -323,9 +374,9 @@ class MatchesShow extends Component {
             marginTop: "20px",
           }}
         >
-          <span style={{ fontSize: "18px" }}>{opp.name}</span>
+          <span style={{ fontSize: "18px" }}>{team.name}</span>
           <span style={{ fontSize: "21px", fontWeight: "bold" }}>
-            {team === 0 ? this.state.match.oddsA / 100 : this.state.match.oddsB / 100}
+            {teamIndex === 0 ? this.state.match.oddsA / 100 : this.state.match.oddsB / 100}
           </span>
         </div>
       </React.Fragment>
@@ -340,11 +391,11 @@ class MatchesShow extends Component {
             <TableCell style={{ fontWeight: "bold" }}>Team</TableCell>
             <TableCell style={{ fontWeight: "bold" }}>Odds</TableCell>
             <TableCell style={{ fontWeight: "bold" }}>
-              {this.state.network === 42 ? "ETH" : "MATIC"}
+              {/* {this.state.network === 42 ? "ETH" : "MATIC"} */}
             </TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        {/* <TableBody>
           {Object.keys(this.state.betsA).map((key, index) => (
             <TableRow key={index}>
               <TableCell>{this.state.apiData.opponents[0].opponent.name}</TableCell>
@@ -359,7 +410,7 @@ class MatchesShow extends Component {
               <TableCell>{(this.state.betsB[key] / 10 ** 18).toFixed(2)}</TableCell>
             </TableRow>
           ))}
-        </TableBody>
+        </TableBody> */}
       </Table>
     );
   }

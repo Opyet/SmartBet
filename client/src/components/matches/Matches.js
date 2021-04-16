@@ -3,6 +3,8 @@ import Grid from "@material-ui/core/Grid";
 import MatchCard from "./MatchCard";
 import Preloader from "../layout/Preloader";
 import React, { Component } from 'react';
+import CalendarToday from "@material-ui/icons/CalendarToday";
+import APICall from '../../utils/APICall';
 
 
 
@@ -35,7 +37,40 @@ class Matches extends Component {
   }
 
   getContractMatches =()=>{
-    
+    let now = Date.now() / 1000;
+    let today = now - (now % 86400);
+
+    this.state.contract.getPastEvents('MatchCreatedEvent', {
+      filter: {createdOn: today},  
+      fromBlock: 0,
+      toBlock: 'latest'
+      }, (error, events) => {       
+        if(!error && events && events.length > 0){
+          let contractMatches = [];
+          events.forEach(event => {
+            let apiMatchId = event.returnValues.apiMatchId;
+            
+            //TODO: get match details
+            let url = `fixtures/id/${apiMatchId}`;
+            APICall(url).then(result=>{
+              console.log('match details', result);
+              if(result){
+                let match = result.api.fixtures[0];
+                match.creator = event.returnValues.creator;
+                match.matchId = event.returnValues.matchId;
+                match.oddsA = event.returnValues.oddsA;
+                match.oddsB = event.returnValues.oddsB;
+                match.oddsDraw = event.returnValues.oddsDraw;
+                contractMatches.push(match);
+                this.setState({matches: contractMatches})
+              }
+            }).catch(error=>{
+              console.log(error);
+            })
+            
+          });          
+        }
+    });    
   }
 
   render() {
@@ -52,7 +87,7 @@ class Matches extends Component {
             this.state.matches.map((match, index) => (
               <Grid key={index} item xs={12} sm={6}>
                 <Paper className={"match-paper"} elevation={2}>
-                  <MatchCard match={match} />
+                  <MatchCard match={match} contract={this.state.contract} account={this.state.account} />
                 </Paper>
               </Grid>
             ))

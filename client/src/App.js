@@ -25,7 +25,7 @@ class App extends Component {
       web3: null, 
       accounts: null, 
       contract: null,
-      isAdmin: false
+      isAdmin: true
     }
   }
 
@@ -96,7 +96,7 @@ class App extends Component {
               <Route exact path="/warning" render={props => {return <Warning {...props} baseAppState={this.state} /> }} />
               
               {/* only admin */}
-              <Route exact path="/upcoming" render={props => {return(!this.state.isAdmin ? <Upcoming {...props} baseAppState={this.state} />  : <Redirect to="/matches"/> )} } />
+              <Route exact path="/upcoming" render={props => {return(this.state.isAdmin ? <Upcoming {...props} baseAppState={this.state} />  : <Redirect to="/matches"/> )} } />
               <Route exact path="/matches/:id/admin" render={props => {return(this.state.isAdmin ? <MatchesShowAdmin {...props} baseAppState={this.state} />  : <Redirect to="/matches"/> )} } />              
 
               {/* <Route exact path="/*" component={Matches} /> */}
