@@ -459,10 +459,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     function isAdmin() public view returns(bool) {
         return msg.sender == owner;
     }
-<<<<<<< HEAD
-=======
 
     receive() external payable {}
->>>>>>> ajibigad-dev
     
 }
