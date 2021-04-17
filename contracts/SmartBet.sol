@@ -5,6 +5,8 @@ import "@chainlink/contracts/src/v0.7/ChainlinkClient.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 // import "@openzeppelin/contracts/math/SafeMath.sol";
+import "./BEP20.sol";
+import "./SmartExchange.sol";
 
 // import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/token/ERC721/ERC721.sol";
 // import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/utils/Counters.sol";
@@ -13,7 +15,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 /*
  * @notice SmartBet core smart contract. Handles matches, bets and farming
  */
-contract SmartBet is ERC721, ChainlinkClient {
+contract SmartBet is ERC721 {
 
     using Counters for Counters.Counter;
     // using SafeMath for uint256;
@@ -81,6 +83,15 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     mapping(bytes32 => uint256) matchResultRequestIds;
 
+    address public constant wBNB = 0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd; //underlying asset: wBNB
+    address public constant BUSD = 0x8301F2213c0eeD49a7E28Ae4c3e91722919B8B47; //underlying asset: BUSD
+    address public constant pROUTER = 0xD99D1c33F9fC3444f8101754aBC46c52416550D1; // Pancakeswap Router (BSC Testnet)
+
+    // ExchangeInterface private smartExchange;
+    BEP20 private wBNBToken;
+    BEP20 private bUSDToken;
+    HelperPancakeSwapROUTER private router;
+
 
     ////////////////////////////////////////
     //                                    //
@@ -90,6 +101,12 @@ contract SmartBet is ERC721, ChainlinkClient {
 
     constructor() ERC721("SmartBet", "SMBT") {
         owner = msg.sender;
+        // smartExchange = new SmartExchange();
+        // bUSDToken = BEP20(smartExchange.BUSD());
+        bUSDToken = BEP20(BUSD);
+        wBNBToken = BEP20(wBNB);     // get a handle for the wBNB asset
+        bUSDToken = BEP20(BUSD);     // get a handle for the wBNB asset
+        router = HelperPancakeSwapROUTER(pROUTER);     // get a handle for the exchange router
     }
 
     ////////////////////////////////////////
@@ -238,6 +255,20 @@ contract SmartBet is ERC721, ChainlinkClient {
         return matchId;
     }
 
+    function swapBNBForBUSD() internal returns(uint) {
+        wBNBToken.deposit{value: msg.value}(); // deposit native BNB
+        wBNBToken.approve(pROUTER, msg.value); // allow pancakeswap router to access wBNB
+
+        uint deadline = block.timestamp + 10 minutes; // addition 10 mins
+        
+        address[] memory path = new address[](2);
+        path[0] = wBNB;
+        path[1] = BUSD;
+        uint[] memory amounts = router.swapExactTokensForTokens(msg.value, 0, path, address(this), deadline);
+        
+        return amounts[1];
+    }
+
 
     /*
     *  @notice  New bet creation. Mint NFT to bettor
@@ -262,8 +293,11 @@ contract SmartBet is ERC721, ChainlinkClient {
         }
 
         address bettor = msg.sender;
-        uint256 amountBet = msg.value;
         uint256 assetValue = 0;
+
+        // uint[] memory amounts = smartExchange.swap(msg.value, address(this));
+        uint256 amountBet = swapBNBForBUSD();
+
         MatchResult matchResultBetOn = MatchResult(_resultBetOn);
         
         //update team's total payout
@@ -386,10 +420,12 @@ contract SmartBet is ERC721, ChainlinkClient {
         
         require(matches[smartAsset.matchId].state == MatchState.FINISHED, "Cannot liquidate asset until match is finished");
         
-        require (address(this).balance >= smartAsset.initialValue, "Contract has insufficient funds");
+        require (bUSDToken.balanceOf(address(this)) >= smartAsset.initialValue, "Contract has insufficient funds");
+        // require (address(this).balance >= smartAsset.initialValue, "Contract has insufficient funds");
         
         invalidateAsset(_smartAssetId);
-        msg.sender.transfer(smartAsset.initialValue);
+        bUSDToken.transfer(msg.sender, smartAsset.initialValue);
+        // msg.sender.transfer(smartAsset.initialValue);
 
         emit AssetLiquidatedEvent(msg.sender, smartAsset.matchId, smartAsset.initialValue, block.timestamp);
         return true;

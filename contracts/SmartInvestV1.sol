@@ -1,7 +1,7 @@
 pragma solidity ^0.7.0;
 pragma experimental ABIEncoderV2;
 
-import "./Bep20.sol";
+import "./BEP20.sol";
 import "./VToken.sol";
 
 /*
@@ -15,7 +15,7 @@ contract SmartInvestV1 {
     
     function invest(uint256 amount) public {
         
-        Bep20 underlying = Bep20(BASE_BEP20);     // get a handle for the underlying asset
+        BEP20 underlying = BEP20(BASE_BEP20);     // get a handle for the underlying asset
         VToken vToken = VToken(vTOKEN_ADDRESS);   // get a handle for the corresponding vToken Contract
         underlying.approve(address(vToken), 0);     // security: reset allowance
         underlying.approve(address(vToken), amount); // approve the transfer
