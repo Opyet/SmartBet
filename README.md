@@ -10,9 +10,13 @@
 ## Table of Contents
 
 - [Description](#description)
+- [User Story](#user-story)
+- [Integrations](#integrations)
+- [Advantages](#Advantages)
 - [How To Use](#how-to-use)
+- [Installation](#installation)
 - [References](#references)
-- [Contributors](#contributors)
+- [Contributions](#contributions)
 - [License](#license)
 
 
@@ -129,7 +133,7 @@ https://rapidapi.com/api-sports/api/api-football?endpoint=apiendpoint_5c14c3d5-6
 [Back To The Top](#SmartBet)
 
 ---
-## Contributors
+## Contributions
 
 - Opeyemi Olabode: Blockchain and Frontend
 - Damilola Ajiboye: Blockchain
