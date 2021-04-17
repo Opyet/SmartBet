@@ -7,12 +7,16 @@
 
 ---
 
-### Table of Contents
+## Table of Contents
 
 - [Description](#description)
+- [User Story](#user-story)
+- [Integrations](#integrations)
+- [Advantages](#Advantages)
 - [How To Use](#how-to-use)
+- [Installation](#installation)
 - [References](#references)
-- [Contributors](#contributors)
+- [Contributions](#contributions)
 - [License](#license)
 
 
@@ -20,25 +24,17 @@
 
 ## Description
 
-SmartBet is a betting platform that besically allow users to place bets using crypto, and provide incentives as interests to winners who decide to keep their funds in the platform. These reserved funds are traded with by the platform on a DeFi lending protocol.
-When users place bets on live matches using exchanged stablecoins (BUSD), they are issues NFTs (ERC721) which both serve as the value of their bets as well as keep track of all accrued interests.
-Users can withdraw at will.
+SmartBet is a betting platform that allows users to place bets using cryptocurrency. It also provides incentives as interests to winners who decide to keep their wins on the platform. These reserved funds are traded with by the platform on a DeFi lending protocol. When users place bets on matches using native coin(BNB) which is swapped for stablecoins (BUSD), they are issued NFTs (ERC721) which serve as both the value of their bets as well as keep track of all accrued interests. Users can liquidate their wins at will.
 
-Kindly read the FULL DOCUMENTATION ![SmartBet](https://app.gitbook.com/@bamuska/s/smartbet/@archived)
+Kindly read the documentation [here.](https://smartbet.gitbook.io/smartbet/)
 
-### User Story
+---
+## User Story
 
 A bettor comes to the platform to place 100BUSD bet on a match whose odds is 4/1. He will be issued an NFT that represents his bet. If this bet wins, his NFT will remain valid and valued at `4 * 100BUSD = 400BUSD`. He can then decide to withdraw immediately or defer his withdraw till a later time. If he keeps his funds in the SmartBet platform, they will be traded with on a lending protocol and the user will receive dividends of the investment when withdrawals are made.
 
-### Betting Odds and Probability
-
-Betting odds represent the probability of an event to happen and therefore enable you to work out how much money you will win if your bet wins. As an example, with the odds of `4/1`, for every £1 you bet, you will win £4. There is a 20% chance of this happening, calculated by `1 / (4 + 1) = 1/5 = 0.20`.
-
-Calculating the probability of staker winning and/or platform losing money:
-`% = den / (den + num)`
-
-
-### Integrations
+---
+## Integrations
 
 - PancakeSwap: Decentralized Exchange platform for swapping user funds into BUSD stablecoins.
 - Metamask Wallet: User wallet
@@ -47,7 +43,8 @@ Calculating the probability of staker winning and/or platform losing money:
 - [RapidAPI](https://rapidapi.com/api-sports/api/api-football) - Live data for matches, odds and margins
 - Chainlink - Sport Oracles for live scores (available for mainnet deployment).
 
-### Advantages
+---
+## Advantages
 
 - Anonymous betting
 - User-centered design
@@ -56,43 +53,26 @@ Calculating the probability of staker winning and/or platform losing money:
 - Bettors can earn more funds by supplying BUSD liquidity in the pool. Liquidity providers all get 60% of the interest.
 - No auto-liquidation: Limitless incentives for NFT holding bettors.
 
-### Key Calculations 
+---
+## How To Use
+### User
+- Visits the app
+- Connects your wallet to the app
+- View upcoming games/matches created
+- Place bet on a match
+- View your slips (NFT) and its value in BUSD
+- Withdraw payout on each slip(NFT) after the match ends
 
-#### Safe Bet
-Smart Contract ensures that bets can only be placed when there's enough funds to pay out for that bet winning.
-
-`TotalPayOut_TeamA/B/Draw = TotalPayOut_TeamA/B/Draw + (betAmount * odds)`
-
-`Match_TotalCollectedFunds > TotalPayOut_TeamA/B/Draw`
-
-#### Investment Returns
-
-Team share = 10% of InvestmentReturn
-Back to Reserve = 30% of InvestmentReturn
-Farmers' share = 60% of InvestmentReturn
-
-`Incentive (Bettor RoI) = (initialValue / totalReserveOfPreviousCycle) * farmersShare`
-
-`Accrued Interest = (incentive / initialValue) * 100`
-
-`BettorNFTValue = initialValue + ((accruedInterest / 100) * initialValue)`
-
-[Back To The Top](#SmartBet)
+### Admin
+- Visit the app
+- Create an upcoming match, set it's odds and start time
+- Start the match when it starts
+- Close the match and set it's result when it's over
 
 ---
+## Installation
 
-## How To Use
-
-- Useer opens the app
-- There is a prompt to connect user wallet to the app
-- User can view upcoming games/matches admin ha created
-- User can select a game to be on
-- User can view his/her slips (NFT) and its value in BUSD
-- User can withdraw payout on each slip(NFT)
-
-### Installation
-
-#### SMART CONTRACTS
+### Smart Contracts
 At the project folder root,
 
 Install Dependencies
@@ -110,9 +90,8 @@ Deploy on BSC Testnet
 Deploy on local network (ganache-cli)
 > `> ganache-cli`
 > `> truffle migrate --network ganache`
-
-
-#### FRONTEND
+---
+### Client
 At the project folder root,
 
 Navigate into the `client` folder
@@ -151,31 +130,28 @@ Fixtures by ID: https://rapidapi.com/api-sports/api/api-football?endpoint=apiend
 Upcoming games By Date (Filter by timestamp to get match status):
 https://rapidapi.com/api-sports/api/api-football?endpoint=apiendpoint_5c14c3d5-6bbd-46be-a7c4-cf01ec58372e
 
+[Back To The Top](#SmartBet)
 
+---
+## Contributions
 
+- Opeyemi Olabode: Blockchain and Frontend
+- Damilola Ajiboye: Blockchain
+- Idris Musa Usman: Product Development and Documentation
+- Patrick Asu: Product Development and Frontend 
+- Mekuleyi Michael: Product Development
+- Oyemade Hezekiah: Product Development
+- Ponsakorn Thammathanik: Project Management
 
 [Back To The Top](#SmartBet)
 
 ---
 
-## Contributors
-
-- Opeyemi Olabode: Team Lead
-- Damilola: Smart Contract
-- Idris Musa Usman: Documentation
-- Patrick Asu: Frontend
-- Mekuleyi Michael
-- Oyemade
-
-[Back To The Top](#SmartBet)
-
-----
-
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2018 Truffle
+Copyright (c) 2021 SmartBet
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -12,13 +12,19 @@ module.exports = {
   contracts_build_directory: path.join(__dirname, "client/src/contracts"),
   compilers: {
     solc: {
-      version: "^0.7.0"
+      version: "^0.7.0",
+      settings: {
+        optimizer: {
+            enabled: true,
+            runs: 200
+        }
+    }
     }
   },
   networks: {
     ganache: {
       host: "localhost",
-      port: 8545,
+      port: 7545,
       // gas: 5000000,
       network_id: "*"
     },

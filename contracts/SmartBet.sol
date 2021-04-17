@@ -4,7 +4,7 @@ pragma experimental ABIEncoderV2;
 import "@chainlink/contracts/src/v0.7/ChainlinkClient.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
-// import "@openzeppelin/contracts/math/SafeMath.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 import "./BEP20.sol";
 import "./SmartExchange.sol";
 
@@ -18,7 +18,7 @@ import "./SmartExchange.sol";
 contract SmartBet is ERC721 {
 
     using Counters for Counters.Counter;
-    // using SafeMath for uint256;
+    using SafeMath for uint256;
 
     ////////////////////////////////////////
     //                                    //
@@ -297,23 +297,24 @@ contract SmartBet is ERC721 {
 
         // uint[] memory amounts = smartExchange.swap(msg.value, address(this));
         uint256 amountBet = swapBNBForBUSD();
+        // uint256 amountBet = msg.value;
 
         MatchResult matchResultBetOn = MatchResult(_resultBetOn);
         
         //update team's total payout
         if (matchResultBetOn == MatchResult.TEAM_A_WON) {
-            assetValue = amountBet * matches[_matchId].oddsTeamA;
-            matches[_matchId].totalPayoutTeamA += assetValue;
+            assetValue = amountBet.mul(matches[_matchId].oddsTeamA);
+            matches[_matchId].totalPayoutTeamA = matches[_matchId].totalPayoutTeamA.add(assetValue);
         } else if(matchResultBetOn == MatchResult.TEAM_B_WON) {
-            assetValue = amountBet * matches[_matchId].oddsTeamB;
-            matches[_matchId].totalPayoutTeamB += assetValue;
+            assetValue = amountBet.mul(matches[_matchId].oddsTeamB);
+            matches[_matchId].totalPayoutTeamB = matches[_matchId].totalPayoutTeamB.add(assetValue);
         } else {
-            assetValue = amountBet * matches[_matchId].oddsDraw;
-            matches[_matchId].totalPayoutDraw += assetValue;
+            assetValue = amountBet.mul(matches[_matchId].oddsDraw);
+            matches[_matchId].totalPayoutDraw = matches[_matchId].totalPayoutDraw.add(assetValue);
         }
 
         //increase totalCollected on the match
-        matches[_matchId].totalCollected += amountBet;
+        matches[_matchId].totalCollected = matches[_matchId].totalCollected.add(amountBet);
 
         uint256 smartAssetId = awardSmartAsset(bettor, assetValue, _matchId, matchResultBetOn);
         
@@ -336,7 +337,7 @@ contract SmartBet is ERC721 {
         
         smartAssets[smartAssetId] = SmartAsset(msg.sender, _matchId, _matchResultBetOn, assetValue, 0);
 
-        emit SmartAssetAwardedEvent(bettor, smartAssetId, block.timestamp);
+        emit SmartAssetAwardedEvent(bettor, _matchId, smartAssetId, block.timestamp);
 
         return smartAssetId;
     }

@@ -445,13 +445,12 @@ contract("SmartBet", async (accounts) => {
             await smartBetInstance.closeMatch(1, SmartBet.enums.MatchResult.TEAM_A_WON);
     
             let bettor1BalanceBefore = await web3.eth.getBalance(bettor);
-            let expectedBalanceAfter = new BN(bettor1BalanceBefore).add(new BN(smartAssetValue));
     
             result = await smartBetInstance.liquidateAsset(bettor1SmartAssetId, {from: bettor});
             let gasUsed = getGasUsedFromResult(result);
             let gasPrice = await web3.eth.getGasPrice();
             let totalGasCost = new BN(gasUsed).mul(new BN(gasPrice));
-            expectedBalanceAfter = expectedBalanceAfter.sub(totalGasCost);
+            let expectedBalanceAfter = new BN(bettor1BalanceBefore).add(new BN(smartAssetValue)).sub(totalGasCost);
     
             let bettor1BalanceAfter = await web3.eth.getBalance(bettor);
     
