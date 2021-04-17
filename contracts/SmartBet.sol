@@ -45,9 +45,9 @@ contract SmartBet is ERC721 {
 
     struct Match {
         address creator;
-        uint8 oddsTeamA;
-        uint8 oddsTeamB;
-        uint8 oddsDraw;
+        uint32 oddsTeamA;
+        uint32 oddsTeamB;
+        uint32 oddsDraw;
         string matchResultLink;
         uint256 totalPayoutTeamA;
         uint256 totalPayoutTeamB;
@@ -116,10 +116,10 @@ contract SmartBet is ERC721 {
     ////////////////////////////////////////
 
     //Can be used by the clients to get all matches in a particular time
-    event MatchCreatedEvent(address indexed creator, uint256 matchId, uint256 indexed startAt, uint256 indexed createdOn);
+    event MatchCreatedEvent(address creator, uint256 indexed matchId, uint256 indexed apiMatchId, uint256 startAt, uint256 indexed createdOn, uint32 oddsA, uint32 oddsB, uint32 oddsDraw);
     //Can be used by the clients to get all bets placed by a better in a particular time
     event BetPlacedEvent(address indexed bettor, uint256 indexed matchId, uint256 amount, uint256 indexed betPlacedAt);
-    event SmartAssetAwardedEvent(address indexed awardee, uint256 smartAssetId, uint256 awardedAt);
+    event SmartAssetAwardedEvent(address indexed awardee, uint256 indexed matchId, uint256 smartAssetId, uint256 awardedAt);
     event MatchClosedEvent(address indexed by, uint256 indexed matchId, uint256 closedAt);
     event MatchResultSetEvent(uint256 indexed matchId, MatchResult result, uint256 setAt);
     event AssetLiquidatedEvent(address indexed by, uint256 indexed matchId, uint256 amount, uint256 liquidatedAt);
@@ -239,7 +239,7 @@ contract SmartBet is ERC721 {
     *  @param   
     *  @return  match Id
     */
-    function createMatch(uint256 _apiMatchId, string calldata _matchResultLink, uint8 _oddsTeamA, uint8 _oddsTeamB, uint8 _oddsDraw, uint256 _startAt)
+    function createMatch(uint256 _apiMatchId, string calldata _matchResultLink, uint32 _oddsTeamA, uint32 _oddsTeamB, uint32 _oddsDraw, uint256 _startAt)
         public 
         isNewAPIMatch(_apiMatchId)
         onlyOwner
@@ -249,7 +249,8 @@ contract SmartBet is ERC721 {
         uint256 matchId = matchIds.current();
         matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _oddsDraw, _matchResultLink, 0, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, _startAt, true); 
         apiMatches[_apiMatchId] = matchId;
-        emit MatchCreatedEvent(msg.sender, matchId, _startAt, block.timestamp);
+        uint256 createdOnDay = block.timestamp - (block.timestamp % 86400);
+        emit MatchCreatedEvent(msg.sender, matchId, _apiMatchId, _startAt, createdOnDay, _oddsTeamA, _oddsTeamB, _oddsDraw);
 
         return matchId;
     }

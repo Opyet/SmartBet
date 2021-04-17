@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SmartBetContract from "./contracts/SmartBet.json";
+import PriceConsumerV3 from "./contracts/PriceConsumerV3.json";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Upcoming from "./components/matches/Upcoming";
@@ -11,7 +12,7 @@ import LandingPage from "./pages/LandingPage";
 import history from "./history";
 import ContainerMain from "./components/layout/ContainerMain";
 import Warning from "./components/NetworkWarning";
-
+import Preloader from "./components/layout/Preloader";
 import "./App.css";
 import getWeb3 from "./getWeb3";
 
@@ -25,7 +26,7 @@ class App extends Component {
       web3: null, 
       accounts: null, 
       contract: null,
-      isAdmin: false
+      isAdmin: true
     }
   }
 
@@ -38,22 +39,27 @@ class App extends Component {
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
 
-      const smartBetAddress = ''; // address of deployed contract
+      const smartBetAddress = '0x3809c8Eec0A5c444204B2759c64D9D346916b188'; // address of deployed contract
+      const priceContractAddress = '0xbA58fe54c9F2dd7882BF51B40F1A499F92DB3DC3'; // address of deployed contract
       
       // Get local deployment
-      const deployedNetwork = SmartBetContract.networks[networkId];
-      const instance = new web3.eth.Contract(
-        SmartBetContract.abi,
-        deployedNetwork && deployedNetwork.address,
-      );      
+      // const deployedNetwork = SmartBetContract.networks[networkId];
+      // const instance = new web3.eth.Contract(
+      //   SmartBetContract.abi,
+      //   deployedNetwork && deployedNetwork.address,
+      // );      
 
       // Get deployed contract instance.
-      // const instance = new web3.eth.Contract(SmartBetContract.abi,
-      //   smartBetAddress);        
+      const instance = new web3.eth.Contract(SmartBetContract.abi,
+        smartBetAddress);     
+      
+      // Get deployed contract instance.
+      const priceFeedInstance = new web3.eth.Contract(PriceConsumerV3.abi,
+        priceContractAddress);     
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance });
+      this.setState({ web3, accounts, contract: instance, priceContract: priceFeedInstance });
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -82,7 +88,7 @@ class App extends Component {
 
   render() {
     if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
+      return <Preloader />;
     }
     return (
       <div className="App">
@@ -96,7 +102,7 @@ class App extends Component {
               <Route exact path="/warning" render={props => {return <Warning {...props} baseAppState={this.state} /> }} />
               
               {/* only admin */}
-              <Route exact path="/upcoming" render={props => {return(!this.state.isAdmin ? <Upcoming {...props} baseAppState={this.state} />  : <Redirect to="/matches"/> )} } />
+              <Route exact path="/upcoming" render={props => {return(this.state.isAdmin ? <Upcoming {...props} baseAppState={this.state} />  : <Redirect to="/matches"/> )} } />
               <Route exact path="/matches/:id/admin" render={props => {return(this.state.isAdmin ? <MatchesShowAdmin {...props} baseAppState={this.state} />  : <Redirect to="/matches"/> )} } />              
 
               {/* <Route exact path="/*" component={Matches} /> */}

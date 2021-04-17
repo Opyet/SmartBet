@@ -69,7 +69,7 @@ const Navbar = ({ account }) => {
                 src={process.env.PUBLIC_URL + "/images/brand.svg"}
               />
               <Link style={{ color: "white" }} to="/">
-                DREAM ARENA
+                SmartBET
               </Link>
             </Typography>
             <Link to="/matches">

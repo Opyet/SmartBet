@@ -15,47 +15,67 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
   const [loading, setLoading] = useState(false);
   const [oddsA, setOddsA] = useState();
   const [oddsB, setOddsB] = useState();
+  const [oddsDraw, setOddsDraw] = useState();
   const [margin, setMargin] = useState();
 
   const createMatch = async () => {
-    const opp1 = match.opponents[0].opponent;
-    const opp2 = match.opponents[1].opponent;
-    const url = `https://api.pandascore.co/matches/${match.slug}?token=4AUFMvQbjLwRnnuM5NLQqVwj8WPu-wQgNssRZjpV9WDDjnvNI68`;
+    const opp2 = match.awayTeam.team_name;
+    const matchUrl = `fixtures/id/${match.fixture_id}`;
 
     try {
       setLoading(true);
-      await contract.methods
-        .createMatch(
-          opp1.id,
-          opp2.id,
+      // console.log('match details', JSON.stringify(match));
+      if(!match.fixture_id || !matchUrl || !oddsA || !oddsDraw || !oddsB || !match.firstHalfStart){
+        alert('incomplete match details');
+      }
+      if(!match.firstHalfStart) {match.firstHalfStart = Date.now() + (8*3600);}
+      console.log('add new match', parseInt(match.fixture_id),
+        matchUrl,
+        parseInt(oddsA * 100),
+        parseInt(oddsB * 100),
+        parseInt(oddsDraw * 100),
+        parseInt(match.firstHalfStart));
+
+      await contract.methods.createMatch(
+          parseInt(match.fixture_id),
+          matchUrl,
           parseInt(oddsA * 100),
           parseInt(oddsB * 100),
-          url
+          parseInt(oddsDraw * 100),
+          parseInt(match.firstHalfStart)
         )
         .send({
-          value: parseInt(margin * 10 ** 18),
-          from: account,
+          value: 0,
+          from: account
         });
       setLoading(false);
       history.push("/matches");
       setCreateModalOpen(false);
     } catch (err) {
+      console.log(err);
       alert(err.message);
     }
     setLoading(false);
   };
 
-  const getImage = (team) => {
-    const opp = match.opponents[team].opponent;
+  const getImage = (teamIndex) => {
+    let team = null;
+
+    if(teamIndex === 0){
+      team = match.homeTeam;
+    }
+    if(teamIndex === 1){
+      team = match.awayTeam;
+    }
 
     return (
       <div>
-        {opp.image_url ? (
-          <Avt link={opp.image_url} letter={null} index={team} />
+        {team.logo ? (
+          <Avt link={team.logo} letter={null} index={teamIndex} />
         ) : (
-          <Avt link={null} letter={opp.name[0]} index={team} />
+          <Avt link={null} letter={team.team_name} index={teamIndex} />
         )}
-        <span style={{ fontSize: "15px", fontWeight: "bold" }}>{opp.name}</span>
+        <span style={{ fontSize: "15px", fontWeight: "bold" }}>{team.team_name}</span>
       </div>
     );
   };
@@ -98,7 +118,7 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
             <Grid item xs={5}>
               {getImage(1)}
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={4}>
               <TextField
                 value={oddsA}
                 onChange={(e) => setOddsA(e.target.value)}
@@ -107,7 +127,16 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
                 label="Odds Team A"
               />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={4}>
+              <TextField
+                value={oddsDraw}
+                onChange={(e) => setOddsDraw(e.target.value)}
+                variant="outlined"
+                fullWidth
+                label="Odds Draw"
+              />
+            </Grid>
+            <Grid item xs={4}>
               <TextField
                 value={oddsB}
                 onChange={(e) => setOddsB(e.target.value)}
@@ -116,7 +145,7 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
                 label="Odds Team B"
               />
             </Grid>
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <TextField
                 value={margin}
                 onChange={(e) => setMargin(e.target.value)}
@@ -124,7 +153,7 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
                 fullWidth
                 label="Initial Margin"
               />
-            </Grid>
+            </Grid> */}
             <Grid item xs={12}>
               <Button
                 style={{ fontWeight: "bold" }}
