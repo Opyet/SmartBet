@@ -540,12 +540,24 @@ contract("SmartBet", async (accounts) => {
     });
 
     context("when is admin is called", function() {
-        it("#isAdmin() should return true if the msg.sender is the contract owner and false it's not", async() => {
+        it("should return true if the msg.sender is the contract owner and false it's not", async() => {
             let result = await smartBetInstance.isAdmin({from: owner});
             expect(result).to.be.true;
     
             result = await smartBetInstance.isAdmin({from: bettor});
             expect(result).to.be.false;
+        });
+    });
+
+    context("when change owner is called", function() {
+        it("should only allow owner change owner", async() => {
+            await catchCustomError(smartBetInstance.changeOwner(accounts[1], {from: accounts[2]}), "caller is not owner");
+        });
+
+        it("should change owner correctly", async() => {
+            await smartBetInstance.changeOwner(bettor, {from: owner});
+            result = await smartBetInstance.isAdmin({from: bettor});
+            expect(result).to.be.true;
         });
     });
 
