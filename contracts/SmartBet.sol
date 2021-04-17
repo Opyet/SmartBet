@@ -275,7 +275,7 @@ contract SmartBet is ERC721 {
     *  @param  
     *  @return  token id
     */
-    function placeBet(uint128 _matchId, uint8 _resultBetOn)
+    function placeBet(uint256 _matchId, uint8 _resultBetOn)
         public 
         payable
         isCircuitBreakOff
@@ -340,7 +340,7 @@ contract SmartBet is ERC721 {
         return smartAssetId;
     }
     
-    function startMatch(uint128 _matchId) 
+    function startMatch(uint256 _matchId) 
         public
         onlyOwner
         matchExists(_matchId) 
@@ -358,7 +358,7 @@ contract SmartBet is ERC721 {
     *  @param  
     *  @return  success success status
     */
-    function closeMatch(uint128 _matchId, uint8 _matchResult)
+    function closeMatch(uint256 _matchId, uint8 _matchResult)
         public 
         onlyOwner
         matchExists(_matchId) 
@@ -407,7 +407,7 @@ contract SmartBet is ERC721 {
     *  @param   _smartAssetId smart asset id
     *  @return  success status
     */
-    function liquidateAsset(uint128 _smartAssetId)
+    function liquidateAsset(uint256 _smartAssetId)
         public 
         payable
         isCircuitBreakOff
