@@ -53,6 +53,7 @@ contract SmartBet is ERC721, ChainlinkClient {
         uint256 totalCollected;
         MatchResult result;
         MatchState state;
+        uint256 startsAt;
         bool exists;
     }
 
@@ -229,7 +230,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     {
         matchIds.increment();
         uint256 matchId = matchIds.current();
-        matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _oddsDraw, _matchResultLink, 0, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, true); 
+        matches[matchId] = Match(msg.sender, _oddsTeamA, _oddsTeamB, _oddsDraw, _matchResultLink, 0, 0, 0, 0, MatchResult.NOT_DETERMINED, MatchState.NOT_STARTED, _startAt, true); 
         apiMatches[_apiMatchId] = matchId;
         uint256 createdOnDay = block.timestamp - (block.timestamp % 86400);
         emit MatchCreatedEvent(msg.sender, matchId, _apiMatchId, _startAt, createdOnDay, _oddsTeamA, _oddsTeamB, _oddsDraw);
@@ -244,7 +245,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @param  
     *  @return  token id
     */
-    function placeBet(uint128 _matchId, uint8 _resultBetOn)
+    function placeBet(uint256 _matchId, uint8 _resultBetOn)
         public 
         payable
         isCircuitBreakOff
@@ -255,6 +256,10 @@ contract SmartBet is ERC721, ChainlinkClient {
         returns(uint256)
     {
         require(msg.value != 0, "Invalid amount bet");
+        if (matches[_matchId].startsAt < block.timestamp) {
+            matches[_matchId].state = MatchState.STARTED;
+            return 0;
+        }
 
         address bettor = msg.sender;
         uint256 amountBet = msg.value;
@@ -302,7 +307,7 @@ contract SmartBet is ERC721, ChainlinkClient {
         return smartAssetId;
     }
     
-    function startMatch(uint128 _matchId) 
+    function startMatch(uint256 _matchId) 
         public
         onlyOwner
         matchExists(_matchId) 
@@ -320,7 +325,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @param  
     *  @return  success success status
     */
-    function closeMatch(uint128 _matchId, uint8 _matchResult)
+    function closeMatch(uint256 _matchId, uint8 _matchResult)
         public 
         onlyOwner
         matchExists(_matchId) 
@@ -369,7 +374,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     *  @param   _smartAssetId smart asset id
     *  @return  success status
     */
-    function liquidateAsset(uint128 _smartAssetId)
+    function liquidateAsset(uint256 _smartAssetId)
         public 
         payable
         isCircuitBreakOff
@@ -433,5 +438,16 @@ contract SmartBet is ERC721, ChainlinkClient {
     {
         return smartAssets[_smartAssetId];
     }
+
+    /*
+    *  @notice  Tells of the msg.sender is the admin
+    *  @dev
+    *  @return  true if msg.sender is admin else false
+    */
+    function isAdmin() public view returns(bool) {
+        return msg.sender == owner;
+    }
+
+    receive() external payable {}
     
 }
