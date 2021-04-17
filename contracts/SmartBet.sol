@@ -337,7 +337,7 @@ contract SmartBet is ERC721 {
         
         smartAssets[smartAssetId] = SmartAsset(msg.sender, _matchId, _matchResultBetOn, assetValue, 0);
 
-        emit SmartAssetAwardedEvent(bettor, smartAssetId, block.timestamp);
+        emit SmartAssetAwardedEvent(bettor, _matchId, smartAssetId, block.timestamp);
 
         return smartAssetId;
     }
