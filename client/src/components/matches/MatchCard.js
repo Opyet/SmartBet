@@ -81,7 +81,7 @@ export const MatchCard = ({ match, contract, account }) => {
             elevation={0}
           >
             <div style={{ display: "flex", justifyContent: "center" }}>
-              {match.statusShort === 'FT'  ? (
+              { match.ended ? ( //match.statusShort === 'FT'
                 <span style={{ color: "red", fontWeight: "bold" }}>CLOSED</span>
               ) : (
                 <>
@@ -139,22 +139,23 @@ export const MatchCard = ({ match, contract, account }) => {
           </Paper>
         </Grid>
         
-        {myBet && myBet.length > 0 ?
-          <Grid item xs={12}>
-            <Link to={`/matches/${btoa(match.matchId)}`}>
-              <Button
-                style={{
-                  backgroundColor: "#357a38",
-                  color: "#ffffff",
-                  fontWeight: "bold",
-                }}
-                variant="contained"
-                fullWidth
-              >
-                VIEW BET
-              </Button>
-            </Link>
-          </Grid>
+        {match.ended || match.started ? null
+        // {myBet && myBet.length > 0 ?
+          // <Grid item xs={12}>
+          //   <Link to={`/matches/${btoa(match.matchId)}`}>
+          //     <Button
+          //       style={{
+          //         backgroundColor: "#357a38",
+          //         color: "#ffffff",
+          //         fontWeight: "bold",
+          //       }}
+          //       variant="contained"
+          //       fullWidth
+          //     >
+          //       VIEW BET
+          //     </Button>
+          //   </Link>
+          // </Grid>
         :
         <Grid item xs={12}>
           <Link to={`/matches/${btoa(match.matchId)}`}>

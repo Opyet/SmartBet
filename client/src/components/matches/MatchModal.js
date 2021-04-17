@@ -28,7 +28,7 @@ export const MatchModal = ({ open, setCreateModalOpen, match, contract, account 
       if(!match.fixture_id || !matchUrl || !oddsA || !oddsDraw || !oddsB || !match.firstHalfStart){
         alert('incomplete match details');
       }
-      if(!match.firstHalfStart) {match.firstHalfStart=1618169907;}
+      if(!match.firstHalfStart) {match.firstHalfStart = Date.now() + (8*3600);}
       console.log('add new match', parseInt(match.fixture_id),
         matchUrl,
         parseInt(oddsA * 100),

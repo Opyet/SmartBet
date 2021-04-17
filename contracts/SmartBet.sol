@@ -101,7 +101,7 @@ contract SmartBet is ERC721, ChainlinkClient {
     event MatchCreatedEvent(address creator, uint256 indexed matchId, uint256 indexed apiMatchId, uint256 startAt, uint256 indexed createdOn, uint32 oddsA, uint32 oddsB, uint32 oddsDraw);
     //Can be used by the clients to get all bets placed by a better in a particular time
     event BetPlacedEvent(address indexed bettor, uint256 indexed matchId, uint256 amount, uint256 indexed betPlacedAt);
-    event SmartAssetAwardedEvent(address indexed awardee, uint256 smartAssetId, uint256 awardedAt);
+    event SmartAssetAwardedEvent(address indexed awardee, uint256 indexed matchId, uint256 smartAssetId, uint256 awardedAt);
     event MatchClosedEvent(address indexed by, uint256 indexed matchId, uint256 closedAt);
     event MatchResultSetEvent(uint256 indexed matchId, MatchResult result, uint256 setAt);
     event AssetLiquidatedEvent(address indexed by, uint256 indexed matchId, uint256 amount, uint256 liquidatedAt);

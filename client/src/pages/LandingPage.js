@@ -17,11 +17,11 @@ const LandingPage = () => {
         >
           <div style={{ marginLeft: "20px", marginBottom: "35px" }}>
             <h1 style={{ margin: "0px" }}>
-              E-SPORTS BETTING PLATFORM ON ETHEREUM
+              THE SMART WAY TO BET AND EARN MORE
             </h1>
             <p style={{ fontWeight: "lighter" }}>
-              Bet on outcome of E-sports events from all around the globe. Click
-              on start betting to head over to the on-going matches.
+              Bet on outcome of live matches from all around the globe.
+              By hodling your NFTs, you can earn more.
             </p>
             <Link style={{ textDecoration: "none" }} to="/matches">
               <Button

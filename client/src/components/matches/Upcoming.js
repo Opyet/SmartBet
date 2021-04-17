@@ -58,7 +58,7 @@ class Upcoming extends Component {
   }
 
   render() {
-    if (this.state.loading || this.state.matches === null) {
+    if (!this.state.contract || this.state.loading || this.state.matches === null) {
       return <Preloader />;
     }
 

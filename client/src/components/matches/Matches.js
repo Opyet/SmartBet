@@ -7,7 +7,6 @@ import CalendarToday from "@material-ui/icons/CalendarToday";
 import APICall from '../../utils/APICall';
 
 
-
 class Matches extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +48,7 @@ class Matches extends Component {
           let contractMatches = [];
           events.forEach(event => {
             let apiMatchId = event.returnValues.apiMatchId;
-            
+
             //TODO: get match details
             let url = `fixtures/id/${apiMatchId}`;
             APICall(url).then(result=>{
@@ -61,8 +60,24 @@ class Matches extends Component {
                 match.oddsA = event.returnValues.oddsA;
                 match.oddsB = event.returnValues.oddsB;
                 match.oddsDraw = event.returnValues.oddsDraw;
-                contractMatches.push(match);
-                this.setState({matches: contractMatches})
+
+                this.state.contract.methods.getMatch(match.matchId).call({from: this.state.account})
+                .then(contractMatch => {
+                  if(contractMatch){
+                    console.log(contractMatch);
+                    match.state = contractMatch.state;
+                    if(match.state === 1){
+                      match.started = true;
+                    }else if(match.state === 2){
+                      match.ended = true;
+                    }else{}
+                    contractMatches.push(match);
+                    this.setState({matches: contractMatches})
+                  }
+                }).catch(error => {
+                  console.log('getMatch error', error);
+                });
+               
               }
             }).catch(error=>{
               console.log(error);
@@ -73,6 +88,7 @@ class Matches extends Component {
     });    
   }
 
+
   render() {
     if (this.state.loading) {
       return <Preloader />;
@@ -82,7 +98,8 @@ class Matches extends Component {
       <div className={"page-wrapper"}>
         <Grid container spacing={3}>
           {this.state.matches.length === 0 ? (
-            <p className="center">No Current Matches to show....</p>
+            <p className="center">No Current Matches to show.... <Preloader /></p>
+            
           ) : (
             this.state.matches.map((match, index) => (
               <Grid key={index} item xs={12} sm={6}>

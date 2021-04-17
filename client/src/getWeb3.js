@@ -1,4 +1,5 @@
 import Web3 from "web3";
+import {Biconomy} from "@biconomy/mexa";
 
 const getWeb3 = () =>
   new Promise((resolve, reject) => {
@@ -7,6 +8,17 @@ const getWeb3 = () =>
       // Modern dapp browsers...
       if (window.ethereum) {
         const web3 = new Web3(window.ethereum);
+
+        // const biconomy = new Biconomy(window.ethereum, 
+        //     {apiKey: process.env.REACT_APP_BICONOMY_KEY_BSC_TESTNET, debug: true});
+        // web3 = new Web3(biconomy);
+
+        // biconomy.onEvent(biconomy.READY, () => {
+        //   // Initialize your dapp here like getting user accounts etc
+        // }).onEvent(biconomy.ERROR, (error, message) => {
+        //   // Handle error while initializing mexa
+        // });
+
         try {
           // Request account access if needed
           await window.ethereum.enable();
