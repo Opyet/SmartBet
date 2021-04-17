@@ -1,31 +1,65 @@
 import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import SmartBetContract from "./contracts/SmartBet.json";
+import PriceConsumerV3 from "./contracts/PriceConsumerV3.json";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import Navbar from "./components/layout/Navbar";
+import Upcoming from "./components/matches/Upcoming";
+import MatchesShow from "./components/matches/MatchesShow";
+import MatchesShowAdmin from "./components/matches/MatchesShowAdmin";
+import Matches from "./components/matches/Matches";
+import LandingPage from "./pages/LandingPage";
+// import store from "./store";
+import history from "./history";
+import ContainerMain from "./components/layout/ContainerMain";
+import Warning from "./components/NetworkWarning";
+import Preloader from "./components/layout/Preloader";
+import "./App.css";
 import getWeb3 from "./getWeb3";
 
-import "./App.css";
+
 
 class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null };
+
+  constructor(props){
+    super(props);
+    this.state = {
+      web3: null, 
+      accounts: null, 
+      contract: null,
+      isAdmin: true
+    }
+  }
 
   componentDidMount = async () => {
     try {
       // Get network provider and web3 instance.
       const web3 = await getWeb3();
-
       // Use web3 to get the user's accounts.
       const accounts = await web3.eth.getAccounts();
-
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
-      const deployedNetwork = SimpleStorageContract.networks[networkId];
-      const instance = new web3.eth.Contract(
-        SimpleStorageContract.abi,
-        deployedNetwork && deployedNetwork.address,
-      );
+
+      const smartBetAddress = '0x3809c8Eec0A5c444204B2759c64D9D346916b188'; // address of deployed contract
+      const priceContractAddress = '0xbA58fe54c9F2dd7882BF51B40F1A499F92DB3DC3'; // address of deployed contract
+      
+      // Get local deployment
+      // const deployedNetwork = SmartBetContract.networks[networkId];
+      // const instance = new web3.eth.Contract(
+      //   SmartBetContract.abi,
+      //   deployedNetwork && deployedNetwork.address,
+      // );      
+
+      // Get deployed contract instance.
+      const instance = new web3.eth.Contract(SmartBetContract.abi,
+        smartBetAddress);     
+      
+      // Get deployed contract instance.
+      const priceFeedInstance = new web3.eth.Contract(PriceConsumerV3.abi,
+        priceContractAddress);     
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance }, this.runExample);
+      this.setState({ web3, accounts, contract: instance, priceContract: priceFeedInstance });
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -35,36 +69,47 @@ class App extends Component {
     }
   };
 
-  runExample = async () => {
-    const { accounts, contract } = this.state;
+  // runExample = async () => {
+  //   const { accounts, contract } = this.state;
 
-    // Stores a given value, 5 by default.
-    await contract.methods.set(5).send({ from: accounts[0] });
+  //   // Stores a given value, 5 by default.
+  //   await contract.methods.set(5).send({ from: accounts[0] });
 
-    // Get the value from the contract to prove it worked.
-    const response = await contract.methods.get().call();
+  //   // Get the value from the contract to prove it worked.
+  //   const response = await contract.methods.get().call();
 
-    // Update state with the result.
-    this.setState({ storageValue: response });
-  };
+  //   // Update state with the result.
+  //   this.setState({ storageValue: response });
+  // };
+
+  resolveAdmin =()=>{
+
+  }
 
   render() {
     if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
+      return <Preloader />;
     }
     return (
       <div className="App">
-        <h1>Good to Go!</h1>
-        <p>Your Truffle Box is installed and ready.</p>
-        <h2>Smart Contract Example</h2>
-        <p>
-          If your contracts compiled and migrated successfully, below will show
-          a stored value of 5 (by default).
-        </p>
-        <p>
-          Try changing the value stored on <strong>line 40</strong> of App.js.
-        </p>
-        <div>The stored value is: {this.state.storageValue}</div>
+        <Router forceRefresh history={history}>
+          <Navbar account={this.state.accounts[0]} />
+          <Route exact path="/" component={LandingPage} />
+          <ContainerMain>
+            <Switch>
+              <Route exact path="/matches" render={props => {return <Matches {...props} baseAppState={this.state} /> }} />
+              <Route exact path="/matches/:id" render={props => {return <MatchesShow {...props} baseAppState={this.state} /> }} />
+              <Route exact path="/warning" render={props => {return <Warning {...props} baseAppState={this.state} /> }} />
+              
+              {/* only admin */}
+              <Route exact path="/upcoming" render={props => {return(this.state.isAdmin ? <Upcoming {...props} baseAppState={this.state} />  : <Redirect to="/matches"/> )} } />
+              <Route exact path="/matches/:id/admin" render={props => {return(this.state.isAdmin ? <MatchesShowAdmin {...props} baseAppState={this.state} />  : <Redirect to="/matches"/> )} } />              
+
+              {/* <Route exact path="/*" component={Matches} /> */}
+
+            </Switch>
+          </ContainerMain>
+        </Router>
       </div>
     );
   }
