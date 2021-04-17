@@ -1,7 +1,7 @@
 # SmartBet
 
 
-![Project Image](project-image-url)
+[Project Image](project-image-url)
 
 > A decentralized betting and farming platform
 
@@ -42,9 +42,9 @@ Calculating the probability of staker winning and/or platform losing money:
 
 - PancakeSwap: Decentralized Exchange platform for swapping user funds into BUSD stablecoins.
 - Metamask Wallet: User wallet
-- ![Venus](https://github.com/VenusProtocol/venus-protocol): Farming/Lending Aggregator for BUSD stablecoins
-- ![Biconomy](https://docs.biconomy.io/): Gasless transactions and better user experience. Also serves as incentive in user onboarding
-- ![RapidAPI](https://rapidapi.com/api-sports/api/api-football) - Live data for matches, odds and margins
+- [Venus](https://github.com/VenusProtocol/venus-protocol): Farming/Lending Aggregator for BUSD stablecoins
+- [Biconomy](https://docs.biconomy.io/): Gasless transactions and better user experience. Also serves as incentive in user onboarding
+- [RapidAPI](https://rapidapi.com/api-sports/api/api-football) - Live data for matches, odds and margins
 - Chainlink - Sport Oracles for live scores (available for mainnet deployment).
 
 ### Advantages
@@ -198,4 +198,3 @@ SOFTWARE.
 [Back To The Top](#SmartBet)
 
 ---
-hb
