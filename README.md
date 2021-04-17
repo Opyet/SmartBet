@@ -22,7 +22,7 @@
 
 SmartBet is a betting platform that allows users to place bets using cryptocurrency. It also provides incentives as interests to winners who decide to keep their wins on the platform. These reserved funds are traded with by the platform on a DeFi lending protocol. When users place bets on matches using native coin(BNB) which is swapped for stablecoins (BUSD), they are issued NFTs (ERC721) which serve as both the value of their bets as well as keep track of all accrued interests. Users can liquidate their wins at will.
 
-Kindly read the FULL DOCUMENTATION ![SmartBet](https://smartbet.gitbook.io/smartbet/)
+Kindly read the documentation [here.](https://smartbet.gitbook.io/smartbet/)
 
 ---
 ## User Story
