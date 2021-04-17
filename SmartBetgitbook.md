@@ -11,6 +11,8 @@
 
 - [Description](#description)
 - [How To Use](#how-to-use)
+- [Common Attacks Avoided](#common-attacks-avoided)
+- [Design Patterns](#design-patterns)
 - [References](#references)
 - [Contributors](#contributors)
 - [License](#license)
@@ -24,7 +26,6 @@ SmartBet is a betting platform that besically allow users to place bets using cr
 When users place bets on live matches using exchanged stablecoins (BUSD), they are issues NFTs (ERC721) which both serve as the value of their bets as well as keep track of all accrued interests.
 Users can withdraw at will.
 
-Kindly read the FULL DOCUMENTATION ![SmartBet](https://app.gitbook.com/@bamuska/s/smartbet/@archived)
 
 ### User Story
 
@@ -77,9 +78,16 @@ Farmers' share = 60% of InvestmentReturn
 
 `BettorNFTValue = initialValue + ((accruedInterest / 100) * initialValue)`
 
+#### System Architecture
+
+![Project Image](https://cdn.discordapp.com/attachments/819947742972477475/830452762496073758/system.png)
+
+
 [Back To The Top](#SmartBet)
 
 ---
+
+
 
 ## How To Use
 
@@ -133,6 +141,21 @@ To Start App on Development Server
 
 ---
 
+## Common Attacks Avoided
+
+
+
+[Back To The Top](#SmartBet)
+
+---
+
+## Design Patterns
+
+
+
+[Back To The Top](#SmartBet)
+
+---
 
 ## References
 
@@ -198,4 +221,4 @@ SOFTWARE.
 [Back To The Top](#SmartBet)
 
 ---
-hb
+
