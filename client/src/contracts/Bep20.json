@@ -88,6 +88,7 @@
     }
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
   "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/Bep20.sol\":\"Bep20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/Bep20.sol\":{\"keccak256\":\"0x193b23d6594f93f686dd9dd66269f1c3bb8cc2bc333c30e6551cd28e98750409\",\"urls\":[\"bzz-raw://27cea4a0a15831002f1e82417bc9396b2d2fae967f2839c0e31af948fdc1b15f\",\"dweb:/ipfs/QmQk9xS1WG3YsgBtrf8PapKeyD5EvKZFwyPErLRqyCsJYw\"]}},\"version\":1}",
   "bytecode": "0x608060405234801561001057600080fd5b506101bb806100206000396000f3fe6080604052600436106100295760003560e01c8063095ea7b31461002e578063d0e30db01461006b575b600080fd5b34801561003a57600080fd5b50610055600480360381019061005091906100a9565b610075565b60405161006291906100f4565b60405180910390f35b61007361007d565b005b600092915050565b565b60008135905061008e81610157565b92915050565b6000813590506100a38161016e565b92915050565b600080604083850312156100bc57600080fd5b60006100ca8582860161007f565b92505060206100db85828601610094565b9150509250929050565b6100ee81610121565b82525050565b600060208201905061010960008301846100e5565b92915050565b600061011a8261012d565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6101608161010f565b811461016b57600080fd5b50565b6101778161014d565b811461018257600080fd5b5056fea264697066735822122081c2b05891da899f32110609394111c72c4d4f679d2e5f6883ae1e5bd37689d564736f6c63430007060033",
   "deployedBytecode": "0x6080604052600436106100295760003560e01c8063095ea7b31461002e578063d0e30db01461006b575b600080fd5b34801561003a57600080fd5b50610055600480360381019061005091906100a9565b610075565b60405161006291906100f4565b60405180910390f35b61007361007d565b005b600092915050565b565b60008135905061008e81610157565b92915050565b6000813590506100a38161016e565b92915050565b600080604083850312156100bc57600080fd5b60006100ca8582860161007f565b92505060206100db85828601610094565b9150509250929050565b6100ee81610121565b82525050565b600060208201905061010960008301846100e5565b92915050565b600061011a8261012d565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b6101608161010f565b811461016b57600080fd5b50565b6101778161014d565b811461018257600080fd5b5056fea264697066735822122081c2b05891da899f32110609394111c72c4d4f679d2e5f6883ae1e5bd37689d564736f6c63430007060033",
@@ -100,6 +101,15 @@
   "bytecode": "0x608060405234801561001057600080fd5b506102be806100206000396000f3fe60806040526004361061003f5760003560e01c8063095ea7b31461004457806370a0823114610081578063a9059cbb146100be578063d0e30db0146100fb575b600080fd5b34801561005057600080fd5b5061006b60048036038101906100669190610182565b610105565b60405161007891906101dc565b60405180910390f35b34801561008d57600080fd5b506100a860048036038101906100a39190610159565b61010d565b6040516100b591906101f7565b60405180910390f35b3480156100ca57600080fd5b506100e560048036038101906100e09190610182565b610125565b6040516100f291906101dc565b60405180910390f35b61010361012d565b005b600092915050565b60006020528060005260406000206000915090505481565b600092915050565b565b60008135905061013e8161025a565b92915050565b60008135905061015381610271565b92915050565b60006020828403121561016b57600080fd5b60006101798482850161012f565b91505092915050565b6000806040838503121561019557600080fd5b60006101a38582860161012f565b92505060206101b485828601610144565b9150509250929050565b6101c781610224565b82525050565b6101d681610250565b82525050565b60006020820190506101f160008301846101be565b92915050565b600060208201905061020c60008301846101cd565b92915050565b600061021d82610230565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b61026381610212565b811461026e57600080fd5b50565b61027a81610250565b811461028557600080fd5b5056fea2646970667358221220543f911cfe052dbac30a21992d3765615eeebb1abe4754f76812efc4170e49f864736f6c63430007060033",
   "deployedBytecode": "0x60806040526004361061003f5760003560e01c8063095ea7b31461004457806370a0823114610081578063a9059cbb146100be578063d0e30db0146100fb575b600080fd5b34801561005057600080fd5b5061006b60048036038101906100669190610182565b610105565b60405161007891906101dc565b60405180910390f35b34801561008d57600080fd5b506100a860048036038101906100a39190610159565b61010d565b6040516100b591906101f7565b60405180910390f35b3480156100ca57600080fd5b506100e560048036038101906100e09190610182565b610125565b6040516100f291906101dc565b60405180910390f35b61010361012d565b005b600092915050565b60006020528060005260406000206000915090505481565b600092915050565b565b60008135905061013e8161025a565b92915050565b60008135905061015381610271565b92915050565b60006020828403121561016b57600080fd5b60006101798482850161012f565b91505092915050565b6000806040838503121561019557600080fd5b60006101a38582860161012f565b92505060206101b485828601610144565b9150509250929050565b6101c781610224565b82525050565b6101d681610250565b82525050565b60006020820190506101f160008301846101be565b92915050565b600060208201905061020c60008301846101cd565b92915050565b600061021d82610230565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b61026381610212565b811461026e57600080fd5b50565b61027a81610250565b811461028557600080fd5b5056fea2646970667358221220543f911cfe052dbac30a21992d3765615eeebb1abe4754f76812efc4170e49f864736f6c63430007060033",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ajibigad/crytoproject/SmartBet/contracts/BEP20.sol\":\"BEP20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ajibigad/crytoproject/SmartBet/contracts/BEP20.sol\":{\"keccak256\":\"0x30e126be87a8e17047281d5fcfef18aa4a8e6f0c9b5cd50a8fb9c91a323cfe99\",\"urls\":[\"bzz-raw://4a545c3e5af6376fe310b86205cff67cc994d07100166c801cd5575450d74a49\",\"dweb:/ipfs/QmPt52YwN1F2QWTQf6VWWbi69wFKWF44UivDTRgnQ51Uih\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102be806100206000396000f3fe60806040526004361061003f5760003560e01c8063095ea7b31461004457806370a0823114610081578063a9059cbb146100be578063d0e30db0146100fb575b600080fd5b34801561005057600080fd5b5061006b60048036038101906100669190610182565b610105565b60405161007891906101dc565b60405180910390f35b34801561008d57600080fd5b506100a860048036038101906100a39190610159565b61010d565b6040516100b591906101f7565b60405180910390f35b3480156100ca57600080fd5b506100e560048036038101906100e09190610182565b610125565b6040516100f291906101dc565b60405180910390f35b61010361012d565b005b600092915050565b60006020528060005260406000206000915090505481565b600092915050565b565b60008135905061013e8161025a565b92915050565b60008135905061015381610271565b92915050565b60006020828403121561016b57600080fd5b60006101798482850161012f565b91505092915050565b6000806040838503121561019557600080fd5b60006101a38582860161012f565b92505060206101b485828601610144565b9150509250929050565b6101c781610224565b82525050565b6101d681610250565b82525050565b60006020820190506101f160008301846101be565b92915050565b600060208201905061020c60008301846101cd565b92915050565b600061021d82610230565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b61026381610212565b811461026e57600080fd5b50565b61027a81610250565b811461028557600080fd5b5056fea2646970667358221220543f911cfe052dbac30a21992d3765615eeebb1abe4754f76812efc4170e49f864736f6c63430007060033",
+  "deployedBytecode": "0x60806040526004361061003f5760003560e01c8063095ea7b31461004457806370a0823114610081578063a9059cbb146100be578063d0e30db0146100fb575b600080fd5b34801561005057600080fd5b5061006b60048036038101906100669190610182565b610105565b60405161007891906101dc565b60405180910390f35b34801561008d57600080fd5b506100a860048036038101906100a39190610159565b61010d565b6040516100b591906101f7565b60405180910390f35b3480156100ca57600080fd5b506100e560048036038101906100e09190610182565b610125565b6040516100f291906101dc565b60405180910390f35b61010361012d565b005b600092915050565b60006020528060005260406000206000915090505481565b600092915050565b565b60008135905061013e8161025a565b92915050565b60008135905061015381610271565b92915050565b60006020828403121561016b57600080fd5b60006101798482850161012f565b91505092915050565b6000806040838503121561019557600080fd5b60006101a38582860161012f565b92505060206101b485828601610144565b9150509250929050565b6101c781610224565b82525050565b6101d681610250565b82525050565b60006020820190506101f160008301846101be565b92915050565b600060208201905061020c60008301846101cd565b92915050565b600061021d82610230565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b61026381610212565b811461026e57600080fd5b50565b61027a81610250565b811461028557600080fd5b5056fea2646970667358221220543f911cfe052dbac30a21992d3765615eeebb1abe4754f76812efc4170e49f864736f6c63430007060033",
+=======
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dst\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ajibigad/crytoproject/SmartBet/contracts/Bep20.sol\":\"BEP20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ajibigad/crytoproject/SmartBet/contracts/Bep20.sol\":{\"keccak256\":\"0x30e126be87a8e17047281d5fcfef18aa4a8e6f0c9b5cd50a8fb9c91a323cfe99\",\"urls\":[\"bzz-raw://4a545c3e5af6376fe310b86205cff67cc994d07100166c801cd5575450d74a49\",\"dweb:/ipfs/QmPt52YwN1F2QWTQf6VWWbi69wFKWF44UivDTRgnQ51Uih\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102be806100206000396000f3fe60806040526004361061003f5760003560e01c8063095ea7b31461004457806370a0823114610081578063a9059cbb146100be578063d0e30db0146100fb575b600080fd5b34801561005057600080fd5b5061006b60048036038101906100669190610182565b610105565b60405161007891906101dc565b60405180910390f35b34801561008d57600080fd5b506100a860048036038101906100a39190610159565b61010d565b6040516100b591906101f7565b60405180910390f35b3480156100ca57600080fd5b506100e560048036038101906100e09190610182565b610125565b6040516100f291906101dc565b60405180910390f35b61010361012d565b005b600092915050565b60006020528060005260406000206000915090505481565b600092915050565b565b60008135905061013e8161025a565b92915050565b60008135905061015381610271565b92915050565b60006020828403121561016b57600080fd5b60006101798482850161012f565b91505092915050565b6000806040838503121561019557600080fd5b60006101a38582860161012f565b92505060206101b485828601610144565b9150509250929050565b6101c781610224565b82525050565b6101d681610250565b82525050565b60006020820190506101f160008301846101be565b92915050565b600060208201905061020c60008301846101cd565b92915050565b600061021d82610230565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b61026381610212565b811461026e57600080fd5b50565b61027a81610250565b811461028557600080fd5b5056fea2646970667358221220df1736b9b8dd7dfa3ff8780c2e032deade3922b83be831193af3622a7e94165864736f6c63430007060033",
+  "deployedBytecode": "0x60806040526004361061003f5760003560e01c8063095ea7b31461004457806370a0823114610081578063a9059cbb146100be578063d0e30db0146100fb575b600080fd5b34801561005057600080fd5b5061006b60048036038101906100669190610182565b610105565b60405161007891906101dc565b60405180910390f35b34801561008d57600080fd5b506100a860048036038101906100a39190610159565b61010d565b6040516100b591906101f7565b60405180910390f35b3480156100ca57600080fd5b506100e560048036038101906100e09190610182565b610125565b6040516100f291906101dc565b60405180910390f35b61010361012d565b005b600092915050565b60006020528060005260406000206000915090505481565b600092915050565b565b60008135905061013e8161025a565b92915050565b60008135905061015381610271565b92915050565b60006020828403121561016b57600080fd5b60006101798482850161012f565b91505092915050565b6000806040838503121561019557600080fd5b60006101a38582860161012f565b92505060206101b485828601610144565b9150509250929050565b6101c781610224565b82525050565b6101d681610250565b82525050565b60006020820190506101f160008301846101be565b92915050565b600060208201905061020c60008301846101cd565b92915050565b600061021d82610230565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b61026381610212565b811461026e57600080fd5b50565b61027a81610250565b811461028557600080fd5b5056fea2646970667358221220df1736b9b8dd7dfa3ff8780c2e032deade3922b83be831193af3622a7e94165864736f6c63430007060033",
+>>>>>>> origin/ajibigad/token-swap
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [
@@ -107,16 +117,23 @@
       "ast": {
         "nodeType": "YulBlock",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "src": "0:1707:2",
 ||||||| merged common ancestors
         "src": "0:1707:29",
 =======
         "src": "0:2327:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "src": "0:2327:32",
+=======
+        "src": "0:2327:33",
+>>>>>>> origin/ajibigad/token-swap
         "statements": [
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "59:87:2",
 ||||||| merged common ancestors
@@ -124,9 +141,15 @@
 =======
               "src": "59:87:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "59:87:32",
+=======
+              "src": "59:87:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "nodeType": "YulAssignment",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "69:29:2",
 ||||||| merged common ancestors
@@ -134,11 +157,17 @@
 =======
                   "src": "69:29:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "69:29:32",
+=======
+                  "src": "69:29:33",
+>>>>>>> origin/ajibigad/token-swap
                   "value": {
                     "arguments": [
                       {
                         "name": "offset",
                         "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "91:6:2"
 ||||||| merged common ancestors
@@ -146,11 +175,17 @@
 =======
                         "src": "91:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "91:6:32"
+=======
+                        "src": "91:6:33"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
                     "functionName": {
                       "name": "calldataload",
                       "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "78:12:2"
 ||||||| merged common ancestors
@@ -158,8 +193,14 @@
 =======
                       "src": "78:12:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "78:12:32"
+=======
+                      "src": "78:12:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "78:20:2"
 ||||||| merged common ancestors
@@ -167,17 +208,28 @@
 =======
                     "src": "78:20:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "78:20:32"
+=======
+                    "src": "78:20:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "variableNames": [
                     {
                       "name": "value",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "69:5:2"
 ||||||| merged common ancestors
                       "src": "69:5:29"
 =======
                       "src": "69:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "69:5:32"
+=======
+                      "src": "69:5:33"
 >>>>>>> origin/ajibigad/token-swap
                     }
                   ]
@@ -189,11 +241,17 @@
                         "name": "value",
                         "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "src": "134:5:2"
 ||||||| merged common ancestors
                         "src": "134:5:29"
 =======
                         "src": "134:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "134:5:32"
+=======
+                        "src": "134:5:33"
 >>>>>>> origin/ajibigad/token-swap
                       }
                     ],
@@ -201,14 +259,21 @@
                       "name": "validator_revert_t_address",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "107:26:2"
 ||||||| merged common ancestors
                       "src": "107:26:29"
 =======
                       "src": "107:26:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "107:26:32"
+=======
+                      "src": "107:26:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "107:33:2"
 ||||||| merged common ancestors
@@ -216,14 +281,25 @@
 =======
                     "src": "107:33:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "107:33:32"
+=======
+                    "src": "107:33:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "nodeType": "YulExpressionStatement",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "107:33:2"
 ||||||| merged common ancestors
                   "src": "107:33:29"
 =======
                   "src": "107:33:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "107:33:32"
+=======
+                  "src": "107:33:33"
 >>>>>>> origin/ajibigad/token-swap
                 }
               ]
@@ -235,11 +311,17 @@
                 "name": "offset",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "37:6:2",
 ||||||| merged common ancestors
                 "src": "37:6:29",
 =======
                 "src": "37:6:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "37:6:32",
+=======
+                "src": "37:6:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               },
@@ -247,11 +329,17 @@
                 "name": "end",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "45:3:2",
 ||||||| merged common ancestors
                 "src": "45:3:29",
 =======
                 "src": "45:3:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "45:3:32",
+=======
+                "src": "45:3:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
@@ -261,15 +349,22 @@
                 "name": "value",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "53:5:2",
 ||||||| merged common ancestors
                 "src": "53:5:29",
 =======
                 "src": "53:5:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "53:5:32",
+=======
+                "src": "53:5:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "7:139:2"
 ||||||| merged common ancestors
@@ -277,10 +372,16 @@
 =======
             "src": "7:139:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "7:139:32"
+=======
+            "src": "7:139:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "204:87:2",
 ||||||| merged common ancestors
@@ -288,9 +389,15 @@
 =======
               "src": "204:87:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "204:87:32",
+=======
+              "src": "204:87:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "nodeType": "YulAssignment",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "214:29:2",
 ||||||| merged common ancestors
@@ -298,11 +405,17 @@
 =======
                   "src": "214:29:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "214:29:32",
+=======
+                  "src": "214:29:33",
+>>>>>>> origin/ajibigad/token-swap
                   "value": {
                     "arguments": [
                       {
                         "name": "offset",
                         "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "236:6:2"
 ||||||| merged common ancestors
@@ -310,11 +423,17 @@
 =======
                         "src": "236:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "236:6:32"
+=======
+                        "src": "236:6:33"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
                     "functionName": {
                       "name": "calldataload",
                       "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "223:12:2"
 ||||||| merged common ancestors
@@ -322,8 +441,14 @@
 =======
                       "src": "223:12:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "223:12:32"
+=======
+                      "src": "223:12:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "223:20:2"
 ||||||| merged common ancestors
@@ -331,17 +456,28 @@
 =======
                     "src": "223:20:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "223:20:32"
+=======
+                    "src": "223:20:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "variableNames": [
                     {
                       "name": "value",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "214:5:2"
 ||||||| merged common ancestors
                       "src": "214:5:29"
 =======
                       "src": "214:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "214:5:32"
+=======
+                      "src": "214:5:33"
 >>>>>>> origin/ajibigad/token-swap
                     }
                   ]
@@ -353,11 +489,17 @@
                         "name": "value",
                         "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "src": "279:5:2"
 ||||||| merged common ancestors
                         "src": "279:5:29"
 =======
                         "src": "279:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "279:5:32"
+=======
+                        "src": "279:5:33"
 >>>>>>> origin/ajibigad/token-swap
                       }
                     ],
@@ -365,14 +507,21 @@
                       "name": "validator_revert_t_uint256",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "252:26:2"
 ||||||| merged common ancestors
                       "src": "252:26:29"
 =======
                       "src": "252:26:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "252:26:32"
+=======
+                      "src": "252:26:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "252:33:2"
 ||||||| merged common ancestors
@@ -380,14 +529,25 @@
 =======
                     "src": "252:33:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "252:33:32"
+=======
+                    "src": "252:33:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "nodeType": "YulExpressionStatement",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "252:33:2"
 ||||||| merged common ancestors
                   "src": "252:33:29"
 =======
                   "src": "252:33:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "252:33:32"
+=======
+                  "src": "252:33:33"
 >>>>>>> origin/ajibigad/token-swap
                 }
               ]
@@ -399,11 +559,17 @@
                 "name": "offset",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "182:6:2",
 ||||||| merged common ancestors
                 "src": "182:6:29",
 =======
                 "src": "182:6:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "182:6:32",
+=======
+                "src": "182:6:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               },
@@ -411,11 +577,17 @@
                 "name": "end",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "190:3:2",
 ||||||| merged common ancestors
                 "src": "190:3:29",
 =======
                 "src": "190:3:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "190:3:32",
+=======
+                "src": "190:3:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
@@ -425,25 +597,31 @@
                 "name": "value",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "198:5:2",
 ||||||| merged common ancestors
                 "src": "198:5:29",
 =======
                 "src": "198:5:32",
+||||||| merged common ancestors
+                "src": "198:5:32",
+=======
+                "src": "198:5:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
-            "src": "152:139:32"
+            "src": "152:139:33"
           },
           {
             "body": {
               "nodeType": "YulBlock",
-              "src": "363:196:32",
+              "src": "363:196:33",
               "statements": [
                 {
                   "body": {
                     "nodeType": "YulBlock",
-                    "src": "409:16:32",
+                    "src": "409:16:33",
                     "statements": [
                       {
                         "expression": {
@@ -451,14 +629,14 @@
                             {
                               "kind": "number",
                               "nodeType": "YulLiteral",
-                              "src": "418:1:32",
+                              "src": "418:1:33",
                               "type": "",
                               "value": "0"
                             },
                             {
                               "kind": "number",
                               "nodeType": "YulLiteral",
-                              "src": "421:1:32",
+                              "src": "421:1:33",
                               "type": "",
                               "value": "0"
                             }
@@ -466,13 +644,13 @@
                           "functionName": {
                             "name": "revert",
                             "nodeType": "YulIdentifier",
-                            "src": "411:6:32"
+                            "src": "411:6:33"
                           },
                           "nodeType": "YulFunctionCall",
-                          "src": "411:12:32"
+                          "src": "411:12:33"
                         },
                         "nodeType": "YulExpressionStatement",
-                        "src": "411:12:32"
+                        "src": "411:12:33"
                       }
                     ]
                   },
@@ -483,26 +661,26 @@
                           {
                             "name": "dataEnd",
                             "nodeType": "YulIdentifier",
-                            "src": "384:7:32"
+                            "src": "384:7:33"
                           },
                           {
                             "name": "headStart",
                             "nodeType": "YulIdentifier",
-                            "src": "393:9:32"
+                            "src": "393:9:33"
                           }
                         ],
                         "functionName": {
                           "name": "sub",
                           "nodeType": "YulIdentifier",
-                          "src": "380:3:32"
+                          "src": "380:3:33"
                         },
                         "nodeType": "YulFunctionCall",
-                        "src": "380:23:32"
+                        "src": "380:23:33"
                       },
                       {
                         "kind": "number",
                         "nodeType": "YulLiteral",
-                        "src": "405:2:32",
+                        "src": "405:2:33",
                         "type": "",
                         "value": "32"
                       }
@@ -510,25 +688,25 @@
                     "functionName": {
                       "name": "slt",
                       "nodeType": "YulIdentifier",
-                      "src": "376:3:32"
+                      "src": "376:3:33"
                     },
                     "nodeType": "YulFunctionCall",
-                    "src": "376:32:32"
+                    "src": "376:32:33"
                   },
                   "nodeType": "YulIf",
-                  "src": "373:2:32"
+                  "src": "373:2:33"
                 },
                 {
                   "nodeType": "YulBlock",
-                  "src": "435:117:32",
+                  "src": "435:117:33",
                   "statements": [
                     {
                       "nodeType": "YulVariableDeclaration",
-                      "src": "450:15:32",
+                      "src": "450:15:33",
                       "value": {
                         "kind": "number",
                         "nodeType": "YulLiteral",
-                        "src": "464:1:32",
+                        "src": "464:1:33",
                         "type": "",
                         "value": "0"
                       },
@@ -536,14 +714,14 @@
                         {
                           "name": "offset",
                           "nodeType": "YulTypedName",
-                          "src": "454:6:32",
+                          "src": "454:6:33",
                           "type": ""
                         }
                       ]
                     },
                     {
                       "nodeType": "YulAssignment",
-                      "src": "479:63:32",
+                      "src": "479:63:33",
                       "value": {
                         "arguments": [
                           {
@@ -551,41 +729,41 @@
                               {
                                 "name": "headStart",
                                 "nodeType": "YulIdentifier",
-                                "src": "514:9:32"
+                                "src": "514:9:33"
                               },
                               {
                                 "name": "offset",
                                 "nodeType": "YulIdentifier",
-                                "src": "525:6:32"
+                                "src": "525:6:33"
                               }
                             ],
                             "functionName": {
                               "name": "add",
                               "nodeType": "YulIdentifier",
-                              "src": "510:3:32"
+                              "src": "510:3:33"
                             },
                             "nodeType": "YulFunctionCall",
-                            "src": "510:22:32"
+                            "src": "510:22:33"
                           },
                           {
                             "name": "dataEnd",
                             "nodeType": "YulIdentifier",
-                            "src": "534:7:32"
+                            "src": "534:7:33"
                           }
                         ],
                         "functionName": {
                           "name": "abi_decode_t_address",
                           "nodeType": "YulIdentifier",
-                          "src": "489:20:32"
+                          "src": "489:20:33"
                         },
                         "nodeType": "YulFunctionCall",
-                        "src": "489:53:32"
+                        "src": "489:53:33"
                       },
                       "variableNames": [
                         {
                           "name": "value0",
                           "nodeType": "YulIdentifier",
-                          "src": "479:6:32"
+                          "src": "479:6:33"
                         }
                       ]
                     }
@@ -599,13 +777,13 @@
               {
                 "name": "headStart",
                 "nodeType": "YulTypedName",
-                "src": "333:9:32",
+                "src": "333:9:33",
                 "type": ""
               },
               {
                 "name": "dataEnd",
                 "nodeType": "YulTypedName",
-                "src": "344:7:32",
+                "src": "344:7:33",
                 "type": ""
               }
             ],
@@ -613,11 +791,18 @@
               {
                 "name": "value0",
                 "nodeType": "YulTypedName",
+<<<<<<< HEAD
                 "src": "356:6:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "356:6:32",
+=======
+                "src": "356:6:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "152:139:2"
 ||||||| merged common ancestors
@@ -625,10 +810,16 @@
 =======
             "src": "297:262:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "297:262:32"
+=======
+            "src": "297:262:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "380:324:2",
 ||||||| merged common ancestors
@@ -636,16 +827,27 @@
 =======
               "src": "648:324:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "648:324:32",
+=======
+              "src": "648:324:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "body": {
                     "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "426:16:2",
 ||||||| merged common ancestors
                     "src": "426:16:29",
 =======
                     "src": "694:16:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "694:16:32",
+=======
+                    "src": "694:16:33",
 >>>>>>> origin/ajibigad/token-swap
                     "statements": [
                       {
@@ -655,11 +857,17 @@
                               "kind": "number",
                               "nodeType": "YulLiteral",
 <<<<<<< HEAD
+<<<<<<< HEAD
                               "src": "435:1:2",
 ||||||| merged common ancestors
                               "src": "435:1:29",
 =======
                               "src": "703:1:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "703:1:32",
+=======
+                              "src": "703:1:33",
 >>>>>>> origin/ajibigad/token-swap
                               "type": "",
                               "value": "0"
@@ -668,11 +876,17 @@
                               "kind": "number",
                               "nodeType": "YulLiteral",
 <<<<<<< HEAD
+<<<<<<< HEAD
                               "src": "438:1:2",
 ||||||| merged common ancestors
                               "src": "438:1:29",
 =======
                               "src": "706:1:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "706:1:32",
+=======
+                              "src": "706:1:33",
 >>>>>>> origin/ajibigad/token-swap
                               "type": "",
                               "value": "0"
@@ -682,14 +896,21 @@
                             "name": "revert",
                             "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "src": "428:6:2"
 ||||||| merged common ancestors
                             "src": "428:6:29"
 =======
                             "src": "696:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "696:6:32"
+=======
+                            "src": "696:6:33"
+>>>>>>> origin/ajibigad/token-swap
                           },
                           "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                           "src": "428:12:2"
 ||||||| merged common ancestors
@@ -697,14 +918,25 @@
 =======
                           "src": "696:12:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "696:12:32"
+=======
+                          "src": "696:12:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulExpressionStatement",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "428:12:2"
 ||||||| merged common ancestors
                         "src": "428:12:29"
 =======
                         "src": "696:12:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "696:12:32"
+=======
+                        "src": "696:12:33"
 >>>>>>> origin/ajibigad/token-swap
                       }
                     ]
@@ -717,16 +949,23 @@
                             "name": "dataEnd",
                             "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "src": "401:7:2"
 ||||||| merged common ancestors
                             "src": "401:7:29"
 =======
                             "src": "669:7:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "669:7:32"
+=======
+                            "src": "669:7:33"
+>>>>>>> origin/ajibigad/token-swap
                           },
                           {
                             "name": "headStart",
                             "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "410:9:2"
 ||||||| merged common ancestors
@@ -734,11 +973,17 @@
 =======
                             "src": "678:9:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "678:9:32"
+=======
+                            "src": "678:9:33"
+>>>>>>> origin/ajibigad/token-swap
                           }
                         ],
                         "functionName": {
                           "name": "sub",
                           "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                           "src": "397:3:2"
 ||||||| merged common ancestors
@@ -746,8 +991,14 @@
 =======
                           "src": "665:3:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "665:3:32"
+=======
+                          "src": "665:3:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "397:23:2"
 ||||||| merged common ancestors
@@ -755,16 +1006,27 @@
 =======
                         "src": "665:23:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "665:23:32"
+=======
+                        "src": "665:23:33"
+>>>>>>> origin/ajibigad/token-swap
                       },
                       {
                         "kind": "number",
                         "nodeType": "YulLiteral",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "422:2:2",
 ||||||| merged common ancestors
                         "src": "422:2:29",
 =======
                         "src": "690:2:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "690:2:32",
+=======
+                        "src": "690:2:33",
 >>>>>>> origin/ajibigad/token-swap
                         "type": "",
                         "value": "64"
@@ -774,14 +1036,21 @@
                       "name": "slt",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "393:3:2"
 ||||||| merged common ancestors
                       "src": "393:3:29"
 =======
                       "src": "661:3:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "661:3:32"
+=======
+                      "src": "661:3:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "393:32:2"
 ||||||| merged common ancestors
@@ -789,8 +1058,14 @@
 =======
                     "src": "661:32:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "661:32:32"
+=======
+                    "src": "661:32:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "nodeType": "YulIf",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "390:2:2"
 ||||||| merged common ancestors
@@ -798,9 +1073,15 @@
 =======
                   "src": "658:2:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "658:2:32"
+=======
+                  "src": "658:2:33"
+>>>>>>> origin/ajibigad/token-swap
                 },
                 {
                   "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "452:117:2",
 ||||||| merged common ancestors
@@ -808,9 +1089,15 @@
 =======
                   "src": "720:117:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "720:117:32",
+=======
+                  "src": "720:117:33",
+>>>>>>> origin/ajibigad/token-swap
                   "statements": [
                     {
                       "nodeType": "YulVariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "467:15:2",
 ||||||| merged common ancestors
@@ -818,15 +1105,26 @@
 =======
                       "src": "735:15:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "735:15:32",
+=======
+                      "src": "735:15:33",
+>>>>>>> origin/ajibigad/token-swap
                       "value": {
                         "kind": "number",
                         "nodeType": "YulLiteral",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "481:1:2",
 ||||||| merged common ancestors
                         "src": "481:1:29",
 =======
                         "src": "749:1:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "749:1:32",
+=======
+                        "src": "749:1:33",
 >>>>>>> origin/ajibigad/token-swap
                         "type": "",
                         "value": "0"
@@ -836,11 +1134,17 @@
                           "name": "offset",
                           "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                           "src": "471:6:2",
 ||||||| merged common ancestors
                           "src": "471:6:29",
 =======
                           "src": "739:6:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "739:6:32",
+=======
+                          "src": "739:6:33",
 >>>>>>> origin/ajibigad/token-swap
                           "type": ""
                         }
@@ -849,11 +1153,17 @@
                     {
                       "nodeType": "YulAssignment",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "496:63:2",
 ||||||| merged common ancestors
                       "src": "496:63:29",
 =======
                       "src": "764:63:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "764:63:32",
+=======
+                      "src": "764:63:33",
 >>>>>>> origin/ajibigad/token-swap
                       "value": {
                         "arguments": [
@@ -863,16 +1173,23 @@
                                 "name": "headStart",
                                 "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 "src": "531:9:2"
 ||||||| merged common ancestors
                                 "src": "531:9:29"
 =======
                                 "src": "799:9:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                                "src": "799:9:32"
+=======
+                                "src": "799:9:33"
+>>>>>>> origin/ajibigad/token-swap
                               },
                               {
                                 "name": "offset",
                                 "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 "src": "542:6:2"
 ||||||| merged common ancestors
@@ -880,11 +1197,17 @@
 =======
                                 "src": "810:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                                "src": "810:6:32"
+=======
+                                "src": "810:6:33"
+>>>>>>> origin/ajibigad/token-swap
                               }
                             ],
                             "functionName": {
                               "name": "add",
                               "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                               "src": "527:3:2"
 ||||||| merged common ancestors
@@ -892,8 +1215,14 @@
 =======
                               "src": "795:3:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "795:3:32"
+=======
+                              "src": "795:3:33"
+>>>>>>> origin/ajibigad/token-swap
                             },
                             "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "527:22:2"
 ||||||| merged common ancestors
@@ -901,10 +1230,16 @@
 =======
                             "src": "795:22:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "795:22:32"
+=======
+                            "src": "795:22:33"
+>>>>>>> origin/ajibigad/token-swap
                           },
                           {
                             "name": "dataEnd",
                             "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "551:7:2"
 ||||||| merged common ancestors
@@ -912,11 +1247,17 @@
 =======
                             "src": "819:7:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "819:7:32"
+=======
+                            "src": "819:7:33"
+>>>>>>> origin/ajibigad/token-swap
                           }
                         ],
                         "functionName": {
                           "name": "abi_decode_t_address",
                           "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                           "src": "506:20:2"
 ||||||| merged common ancestors
@@ -924,8 +1265,14 @@
 =======
                           "src": "774:20:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "774:20:32"
+=======
+                          "src": "774:20:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "506:53:2"
 ||||||| merged common ancestors
@@ -933,17 +1280,28 @@
 =======
                         "src": "774:53:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "774:53:32"
+=======
+                        "src": "774:53:33"
+>>>>>>> origin/ajibigad/token-swap
                       },
                       "variableNames": [
                         {
                           "name": "value0",
                           "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                           "src": "496:6:2"
 ||||||| merged common ancestors
                           "src": "496:6:29"
 =======
                           "src": "764:6:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "764:6:32"
+=======
+                          "src": "764:6:33"
 >>>>>>> origin/ajibigad/token-swap
                         }
                       ]
@@ -953,15 +1311,22 @@
                 {
                   "nodeType": "YulBlock",
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "src": "579:118:2",
 ||||||| merged common ancestors
                   "src": "579:118:29",
 =======
                   "src": "847:118:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "847:118:32",
+=======
+                  "src": "847:118:33",
+>>>>>>> origin/ajibigad/token-swap
                   "statements": [
                     {
                       "nodeType": "YulVariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "594:16:2",
 ||||||| merged common ancestors
@@ -969,15 +1334,26 @@
 =======
                       "src": "862:16:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "862:16:32",
+=======
+                      "src": "862:16:33",
+>>>>>>> origin/ajibigad/token-swap
                       "value": {
                         "kind": "number",
                         "nodeType": "YulLiteral",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "608:2:2",
 ||||||| merged common ancestors
                         "src": "608:2:29",
 =======
                         "src": "876:2:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "876:2:32",
+=======
+                        "src": "876:2:33",
 >>>>>>> origin/ajibigad/token-swap
                         "type": "",
                         "value": "32"
@@ -987,11 +1363,17 @@
                           "name": "offset",
                           "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                           "src": "598:6:2",
 ||||||| merged common ancestors
                           "src": "598:6:29",
 =======
                           "src": "866:6:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "866:6:32",
+=======
+                          "src": "866:6:33",
 >>>>>>> origin/ajibigad/token-swap
                           "type": ""
                         }
@@ -1000,11 +1382,17 @@
                     {
                       "nodeType": "YulAssignment",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "624:63:2",
 ||||||| merged common ancestors
                       "src": "624:63:29",
 =======
                       "src": "892:63:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "892:63:32",
+=======
+                      "src": "892:63:33",
 >>>>>>> origin/ajibigad/token-swap
                       "value": {
                         "arguments": [
@@ -1014,16 +1402,23 @@
                                 "name": "headStart",
                                 "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 "src": "659:9:2"
 ||||||| merged common ancestors
                                 "src": "659:9:29"
 =======
                                 "src": "927:9:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                                "src": "927:9:32"
+=======
+                                "src": "927:9:33"
+>>>>>>> origin/ajibigad/token-swap
                               },
                               {
                                 "name": "offset",
                                 "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 "src": "670:6:2"
 ||||||| merged common ancestors
@@ -1031,11 +1426,17 @@
 =======
                                 "src": "938:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                                "src": "938:6:32"
+=======
+                                "src": "938:6:33"
+>>>>>>> origin/ajibigad/token-swap
                               }
                             ],
                             "functionName": {
                               "name": "add",
                               "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                               "src": "655:3:2"
 ||||||| merged common ancestors
@@ -1043,8 +1444,14 @@
 =======
                               "src": "923:3:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "923:3:32"
+=======
+                              "src": "923:3:33"
+>>>>>>> origin/ajibigad/token-swap
                             },
                             "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "655:22:2"
 ||||||| merged common ancestors
@@ -1052,10 +1459,16 @@
 =======
                             "src": "923:22:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "923:22:32"
+=======
+                            "src": "923:22:33"
+>>>>>>> origin/ajibigad/token-swap
                           },
                           {
                             "name": "dataEnd",
                             "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "679:7:2"
 ||||||| merged common ancestors
@@ -1063,11 +1476,17 @@
 =======
                             "src": "947:7:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "947:7:32"
+=======
+                            "src": "947:7:33"
+>>>>>>> origin/ajibigad/token-swap
                           }
                         ],
                         "functionName": {
                           "name": "abi_decode_t_uint256",
                           "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                           "src": "634:20:2"
 ||||||| merged common ancestors
@@ -1075,8 +1494,14 @@
 =======
                           "src": "902:20:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "902:20:32"
+=======
+                          "src": "902:20:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "634:53:2"
 ||||||| merged common ancestors
@@ -1084,17 +1509,28 @@
 =======
                         "src": "902:53:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "902:53:32"
+=======
+                        "src": "902:53:33"
+>>>>>>> origin/ajibigad/token-swap
                       },
                       "variableNames": [
                         {
                           "name": "value1",
                           "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                           "src": "624:6:2"
 ||||||| merged common ancestors
                           "src": "624:6:29"
 =======
                           "src": "892:6:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "892:6:32"
+=======
+                          "src": "892:6:33"
 >>>>>>> origin/ajibigad/token-swap
                         }
                       ]
@@ -1110,11 +1546,17 @@
                 "name": "headStart",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "342:9:2",
 ||||||| merged common ancestors
                 "src": "342:9:29",
 =======
                 "src": "610:9:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "610:9:32",
+=======
+                "src": "610:9:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               },
@@ -1122,11 +1564,17 @@
                 "name": "dataEnd",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "353:7:2",
 ||||||| merged common ancestors
                 "src": "353:7:29",
 =======
                 "src": "621:7:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "621:7:32",
+=======
+                "src": "621:7:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
@@ -1136,11 +1584,17 @@
                 "name": "value0",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "365:6:2",
 ||||||| merged common ancestors
                 "src": "365:6:29",
 =======
                 "src": "633:6:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "633:6:32",
+=======
+                "src": "633:6:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               },
@@ -1148,15 +1602,22 @@
                 "name": "value1",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "373:6:2",
 ||||||| merged common ancestors
                 "src": "373:6:29",
 =======
                 "src": "641:6:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "641:6:32",
+=======
+                "src": "641:6:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "297:407:2"
 ||||||| merged common ancestors
@@ -1164,16 +1625,27 @@
 =======
             "src": "565:407:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "565:407:32"
+=======
+            "src": "565:407:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "769:50:2",
 ||||||| merged common ancestors
               "src": "769:50:29",
 =======
               "src": "1037:50:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "1037:50:32",
+=======
+              "src": "1037:50:33",
 >>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
@@ -1183,11 +1655,17 @@
                         "name": "pos",
                         "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "src": "786:3:2"
 ||||||| merged common ancestors
                         "src": "786:3:29"
 =======
                         "src": "1054:3:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "1054:3:32"
+=======
+                        "src": "1054:3:33"
 >>>>>>> origin/ajibigad/token-swap
                       },
                       {
@@ -1196,11 +1674,17 @@
                             "name": "value",
                             "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "src": "806:5:2"
 ||||||| merged common ancestors
                             "src": "806:5:29"
 =======
                             "src": "1074:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "1074:5:32"
+=======
+                            "src": "1074:5:33"
 >>>>>>> origin/ajibigad/token-swap
                           }
                         ],
@@ -1208,14 +1692,21 @@
                           "name": "cleanup_t_bool",
                           "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                           "src": "791:14:2"
 ||||||| merged common ancestors
                           "src": "791:14:29"
 =======
                           "src": "1059:14:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "1059:14:32"
+=======
+                          "src": "1059:14:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "791:21:2"
 ||||||| merged common ancestors
@@ -1223,11 +1714,17 @@
 =======
                         "src": "1059:21:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "1059:21:32"
+=======
+                        "src": "1059:21:33"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
                     "functionName": {
                       "name": "mstore",
                       "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "779:6:2"
 ||||||| merged common ancestors
@@ -1235,8 +1732,14 @@
 =======
                       "src": "1047:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1047:6:32"
+=======
+                      "src": "1047:6:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "779:34:2"
 ||||||| merged common ancestors
@@ -1244,14 +1747,25 @@
 =======
                     "src": "1047:34:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "1047:34:32"
+=======
+                    "src": "1047:34:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "nodeType": "YulExpressionStatement",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "779:34:2"
 ||||||| merged common ancestors
                   "src": "779:34:29"
 =======
                   "src": "1047:34:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "1047:34:32"
+=======
+                  "src": "1047:34:33"
 >>>>>>> origin/ajibigad/token-swap
                 }
               ]
@@ -1263,26 +1777,32 @@
                 "name": "value",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "757:5:2",
 ||||||| merged common ancestors
                 "src": "757:5:29",
 =======
                 "src": "1025:5:32",
+||||||| merged common ancestors
+                "src": "1025:5:32",
+=======
+                "src": "1025:5:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               },
               {
                 "name": "pos",
                 "nodeType": "YulTypedName",
-                "src": "1032:3:32",
+                "src": "1032:3:33",
                 "type": ""
               }
             ],
-            "src": "978:109:32"
+            "src": "978:109:33"
           },
           {
             "body": {
               "nodeType": "YulBlock",
-              "src": "1158:53:32",
+              "src": "1158:53:33",
               "statements": [
                 {
                   "expression": {
@@ -1290,35 +1810,35 @@
                       {
                         "name": "pos",
                         "nodeType": "YulIdentifier",
-                        "src": "1175:3:32"
+                        "src": "1175:3:33"
                       },
                       {
                         "arguments": [
                           {
                             "name": "value",
                             "nodeType": "YulIdentifier",
-                            "src": "1198:5:32"
+                            "src": "1198:5:33"
                           }
                         ],
                         "functionName": {
                           "name": "cleanup_t_uint256",
                           "nodeType": "YulIdentifier",
-                          "src": "1180:17:32"
+                          "src": "1180:17:33"
                         },
                         "nodeType": "YulFunctionCall",
-                        "src": "1180:24:32"
+                        "src": "1180:24:33"
                       }
                     ],
                     "functionName": {
                       "name": "mstore",
                       "nodeType": "YulIdentifier",
-                      "src": "1168:6:32"
+                      "src": "1168:6:33"
                     },
                     "nodeType": "YulFunctionCall",
-                    "src": "1168:37:32"
+                    "src": "1168:37:33"
                   },
                   "nodeType": "YulExpressionStatement",
-                  "src": "1168:37:32"
+                  "src": "1168:37:33"
                 }
               ]
             },
@@ -1328,7 +1848,13 @@
               {
                 "name": "value",
                 "nodeType": "YulTypedName",
+<<<<<<< HEAD
                 "src": "1146:5:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1146:5:32",
+=======
+                "src": "1146:5:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               },
@@ -1336,15 +1862,22 @@
                 "name": "pos",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "764:3:2",
 ||||||| merged common ancestors
                 "src": "764:3:29",
 =======
                 "src": "1153:3:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1153:3:32",
+=======
+                "src": "1153:3:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "710:109:2"
 ||||||| merged common ancestors
@@ -1352,10 +1885,16 @@
 =======
             "src": "1093:118:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "1093:118:32"
+=======
+            "src": "1093:118:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "917:118:2",
 ||||||| merged common ancestors
@@ -1363,9 +1902,15 @@
 =======
               "src": "1309:118:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "1309:118:32",
+=======
+              "src": "1309:118:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "nodeType": "YulAssignment",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "927:26:2",
 ||||||| merged common ancestors
@@ -1373,11 +1918,17 @@
 =======
                   "src": "1319:26:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "1319:26:32",
+=======
+                  "src": "1319:26:33",
+>>>>>>> origin/ajibigad/token-swap
                   "value": {
                     "arguments": [
                       {
                         "name": "headStart",
                         "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "939:9:2"
 ||||||| merged common ancestors
@@ -1385,16 +1936,27 @@
 =======
                         "src": "1331:9:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "1331:9:32"
+=======
+                        "src": "1331:9:33"
+>>>>>>> origin/ajibigad/token-swap
                       },
                       {
                         "kind": "number",
                         "nodeType": "YulLiteral",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "950:2:2",
 ||||||| merged common ancestors
                         "src": "950:2:29",
 =======
                         "src": "1342:2:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "1342:2:32",
+=======
+                        "src": "1342:2:33",
 >>>>>>> origin/ajibigad/token-swap
                         "type": "",
                         "value": "32"
@@ -1404,14 +1966,21 @@
                       "name": "add",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "935:3:2"
 ||||||| merged common ancestors
                       "src": "935:3:29"
 =======
                       "src": "1327:3:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1327:3:32"
+=======
+                      "src": "1327:3:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "935:18:2"
 ||||||| merged common ancestors
@@ -1419,17 +1988,28 @@
 =======
                     "src": "1327:18:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "1327:18:32"
+=======
+                    "src": "1327:18:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "variableNames": [
                     {
                       "name": "tail",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "927:4:2"
 ||||||| merged common ancestors
                       "src": "927:4:29"
 =======
                       "src": "1319:4:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1319:4:32"
+=======
+                      "src": "1319:4:33"
 >>>>>>> origin/ajibigad/token-swap
                     }
                   ]
@@ -1441,11 +2021,17 @@
                         "name": "value0",
                         "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "src": "1001:6:2"
 ||||||| merged common ancestors
                         "src": "1001:6:29"
 =======
                         "src": "1393:6:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "1393:6:32"
+=======
+                        "src": "1393:6:33"
 >>>>>>> origin/ajibigad/token-swap
                       },
                       {
@@ -1454,22 +2040,34 @@
                             "name": "headStart",
                             "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "src": "1014:9:2"
 ||||||| merged common ancestors
                             "src": "1014:9:29"
 =======
                             "src": "1406:9:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "1406:9:32"
+=======
+                            "src": "1406:9:33"
+>>>>>>> origin/ajibigad/token-swap
                           },
                           {
                             "kind": "number",
                             "nodeType": "YulLiteral",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "1025:1:2",
 ||||||| merged common ancestors
                             "src": "1025:1:29",
 =======
                             "src": "1417:1:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "1417:1:32",
+=======
+                            "src": "1417:1:33",
 >>>>>>> origin/ajibigad/token-swap
                             "type": "",
                             "value": "0"
@@ -1479,14 +2077,21 @@
                           "name": "add",
                           "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                           "src": "1010:3:2"
 ||||||| merged common ancestors
                           "src": "1010:3:29"
 =======
                           "src": "1402:3:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "1402:3:32"
+=======
+                          "src": "1402:3:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "1010:17:2"
 ||||||| merged common ancestors
@@ -1494,11 +2099,17 @@
 =======
                         "src": "1402:17:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "1402:17:32"
+=======
+                        "src": "1402:17:33"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
                     "functionName": {
                       "name": "abi_encode_t_bool_to_t_bool_fromStack",
                       "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "963:37:2"
 ||||||| merged common ancestors
@@ -1506,8 +2117,14 @@
 =======
                       "src": "1355:37:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1355:37:32"
+=======
+                      "src": "1355:37:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "963:65:2"
 ||||||| merged common ancestors
@@ -1515,14 +2132,25 @@
 =======
                     "src": "1355:65:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "1355:65:32"
+=======
+                    "src": "1355:65:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "nodeType": "YulExpressionStatement",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "963:65:2"
 ||||||| merged common ancestors
                   "src": "963:65:29"
 =======
                   "src": "1355:65:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "1355:65:32"
+=======
+                  "src": "1355:65:33"
 >>>>>>> origin/ajibigad/token-swap
                 }
               ]
@@ -1534,11 +2162,17 @@
                 "name": "headStart",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "889:9:2",
 ||||||| merged common ancestors
                 "src": "889:9:29",
 =======
                 "src": "1281:9:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1281:9:32",
+=======
+                "src": "1281:9:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               },
@@ -1546,11 +2180,17 @@
                 "name": "value0",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "901:6:2",
 ||||||| merged common ancestors
                 "src": "901:6:29",
 =======
                 "src": "1293:6:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1293:6:32",
+=======
+                "src": "1293:6:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
@@ -1560,15 +2200,22 @@
                 "name": "tail",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "912:4:2",
 ||||||| merged common ancestors
                 "src": "912:4:29",
 =======
                 "src": "1304:4:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1304:4:32",
+=======
+                "src": "1304:4:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "825:210:2"
 ||||||| merged common ancestors
@@ -1576,10 +2223,16 @@
 =======
             "src": "1217:210:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "1217:210:32"
+=======
+            "src": "1217:210:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "1086:51:2",
 ||||||| merged common ancestors
@@ -1587,9 +2240,15 @@
 =======
               "src": "1531:124:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "1531:124:32",
+=======
+              "src": "1531:124:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "nodeType": "YulAssignment",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "1096:35:2",
 ||||||| merged common ancestors
@@ -1597,22 +2256,33 @@
 =======
                   "src": "1541:26:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "1541:26:32",
+=======
+                  "src": "1541:26:33",
+>>>>>>> origin/ajibigad/token-swap
                   "value": {
                     "arguments": [
                       {
                         "name": "headStart",
                         "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "src": "1125:5:2"
 ||||||| merged common ancestors
                         "src": "1125:5:29"
 =======
                         "src": "1553:9:32"
+||||||| merged common ancestors
+                        "src": "1553:9:32"
+=======
+                        "src": "1553:9:33"
+>>>>>>> origin/ajibigad/token-swap
                       },
                       {
                         "kind": "number",
                         "nodeType": "YulLiteral",
-                        "src": "1564:2:32",
+                        "src": "1564:2:33",
                         "type": "",
                         "value": "32"
 >>>>>>> origin/ajibigad/token-swap
@@ -1622,14 +2292,21 @@
                       "name": "add",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "1107:17:2"
 ||||||| merged common ancestors
                       "src": "1107:17:29"
 =======
                       "src": "1549:3:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1549:3:32"
+=======
+                      "src": "1549:3:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "1107:24:2"
 ||||||| merged common ancestors
@@ -1637,17 +2314,28 @@
 =======
                     "src": "1549:18:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "1549:18:32"
+=======
+                    "src": "1549:18:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "variableNames": [
                     {
                       "name": "tail",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "1096:7:2"
 ||||||| merged common ancestors
                       "src": "1096:7:29"
 =======
                       "src": "1541:4:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1541:4:32"
+=======
+                      "src": "1541:4:33"
 >>>>>>> origin/ajibigad/token-swap
                     }
                   ]
@@ -1658,19 +2346,19 @@
                       {
                         "name": "value0",
                         "nodeType": "YulIdentifier",
-                        "src": "1621:6:32"
+                        "src": "1621:6:33"
                       },
                       {
                         "arguments": [
                           {
                             "name": "headStart",
                             "nodeType": "YulIdentifier",
-                            "src": "1634:9:32"
+                            "src": "1634:9:33"
                           },
                           {
                             "kind": "number",
                             "nodeType": "YulLiteral",
-                            "src": "1645:1:32",
+                            "src": "1645:1:33",
                             "type": "",
                             "value": "0"
                           }
@@ -1678,22 +2366,22 @@
                         "functionName": {
                           "name": "add",
                           "nodeType": "YulIdentifier",
-                          "src": "1630:3:32"
+                          "src": "1630:3:33"
                         },
                         "nodeType": "YulFunctionCall",
-                        "src": "1630:17:32"
+                        "src": "1630:17:33"
                       }
                     ],
                     "functionName": {
                       "name": "abi_encode_t_uint256_to_t_uint256_fromStack",
                       "nodeType": "YulIdentifier",
-                      "src": "1577:43:32"
+                      "src": "1577:43:33"
                     },
                     "nodeType": "YulFunctionCall",
-                    "src": "1577:71:32"
+                    "src": "1577:71:33"
                   },
                   "nodeType": "YulExpressionStatement",
-                  "src": "1577:71:32"
+                  "src": "1577:71:33"
                 }
               ]
             },
@@ -1703,13 +2391,13 @@
               {
                 "name": "headStart",
                 "nodeType": "YulTypedName",
-                "src": "1503:9:32",
+                "src": "1503:9:33",
                 "type": ""
               },
               {
                 "name": "value0",
                 "nodeType": "YulTypedName",
-                "src": "1515:6:32",
+                "src": "1515:6:33",
                 "type": ""
               }
             ],
@@ -1717,41 +2405,41 @@
               {
                 "name": "tail",
                 "nodeType": "YulTypedName",
-                "src": "1526:4:32",
+                "src": "1526:4:33",
                 "type": ""
               }
             ],
-            "src": "1433:222:32"
+            "src": "1433:222:33"
           },
           {
             "body": {
               "nodeType": "YulBlock",
-              "src": "1706:51:32",
+              "src": "1706:51:33",
               "statements": [
                 {
                   "nodeType": "YulAssignment",
-                  "src": "1716:35:32",
+                  "src": "1716:35:33",
                   "value": {
                     "arguments": [
                       {
                         "name": "value",
                         "nodeType": "YulIdentifier",
-                        "src": "1745:5:32"
+                        "src": "1745:5:33"
                       }
                     ],
                     "functionName": {
                       "name": "cleanup_t_uint160",
                       "nodeType": "YulIdentifier",
-                      "src": "1727:17:32"
+                      "src": "1727:17:33"
                     },
                     "nodeType": "YulFunctionCall",
-                    "src": "1727:24:32"
+                    "src": "1727:24:33"
                   },
                   "variableNames": [
                     {
                       "name": "cleaned",
                       "nodeType": "YulIdentifier",
-                      "src": "1716:7:32"
+                      "src": "1716:7:33"
                     }
                   ]
                 }
@@ -1764,11 +2452,17 @@
                 "name": "value",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1068:5:2",
 ||||||| merged common ancestors
                 "src": "1068:5:29",
 =======
                 "src": "1688:5:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1688:5:32",
+=======
+                "src": "1688:5:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
@@ -1778,15 +2472,22 @@
                 "name": "cleaned",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1078:7:2",
 ||||||| merged common ancestors
                 "src": "1078:7:29",
 =======
                 "src": "1698:7:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1698:7:32",
+=======
+                "src": "1698:7:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "1041:96:2"
 ||||||| merged common ancestors
@@ -1794,10 +2495,16 @@
 =======
             "src": "1661:96:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "1661:96:32"
+=======
+            "src": "1661:96:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "1185:48:2",
 ||||||| merged common ancestors
@@ -1805,15 +2512,26 @@
 =======
               "src": "1805:48:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "1805:48:32",
+=======
+              "src": "1805:48:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "nodeType": "YulAssignment",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "1195:32:2",
 ||||||| merged common ancestors
                   "src": "1195:32:29",
 =======
                   "src": "1815:32:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "1815:32:32",
+=======
+                  "src": "1815:32:33",
 >>>>>>> origin/ajibigad/token-swap
                   "value": {
                     "arguments": [
@@ -1823,11 +2541,17 @@
                             "name": "value",
                             "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "src": "1220:5:2"
 ||||||| merged common ancestors
                             "src": "1220:5:29"
 =======
                             "src": "1840:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "1840:5:32"
+=======
+                            "src": "1840:5:33"
 >>>>>>> origin/ajibigad/token-swap
                           }
                         ],
@@ -1835,14 +2559,21 @@
                           "name": "iszero",
                           "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                           "src": "1213:6:2"
 ||||||| merged common ancestors
                           "src": "1213:6:29"
 =======
                           "src": "1833:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "1833:6:32"
+=======
+                          "src": "1833:6:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "1213:13:2"
 ||||||| merged common ancestors
@@ -1850,11 +2581,17 @@
 =======
                         "src": "1833:13:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "1833:13:32"
+=======
+                        "src": "1833:13:33"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
                     "functionName": {
                       "name": "iszero",
                       "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "1206:6:2"
 ||||||| merged common ancestors
@@ -1862,8 +2599,14 @@
 =======
                       "src": "1826:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1826:6:32"
+=======
+                      "src": "1826:6:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "1206:21:2"
 ||||||| merged common ancestors
@@ -1871,17 +2614,28 @@
 =======
                     "src": "1826:21:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "1826:21:32"
+=======
+                    "src": "1826:21:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "variableNames": [
                     {
                       "name": "cleaned",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "1195:7:2"
 ||||||| merged common ancestors
                       "src": "1195:7:29"
 =======
                       "src": "1815:7:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1815:7:32"
+=======
+                      "src": "1815:7:33"
 >>>>>>> origin/ajibigad/token-swap
                     }
                   ]
@@ -1895,11 +2649,17 @@
                 "name": "value",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1167:5:2",
 ||||||| merged common ancestors
                 "src": "1167:5:29",
 =======
                 "src": "1787:5:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1787:5:32",
+=======
+                "src": "1787:5:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
@@ -1909,15 +2669,22 @@
                 "name": "cleaned",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1177:7:2",
 ||||||| merged common ancestors
                 "src": "1177:7:29",
 =======
                 "src": "1797:7:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1797:7:32",
+=======
+                "src": "1797:7:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "1143:90:2"
 ||||||| merged common ancestors
@@ -1925,10 +2692,16 @@
 =======
             "src": "1763:90:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "1763:90:32"
+=======
+            "src": "1763:90:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "1284:81:2",
 ||||||| merged common ancestors
@@ -1936,9 +2709,15 @@
 =======
               "src": "1904:81:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "1904:81:32",
+=======
+              "src": "1904:81:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "nodeType": "YulAssignment",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "1294:65:2",
 ||||||| merged common ancestors
@@ -1946,11 +2725,17 @@
 =======
                   "src": "1914:65:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "1914:65:32",
+=======
+                  "src": "1914:65:33",
+>>>>>>> origin/ajibigad/token-swap
                   "value": {
                     "arguments": [
                       {
                         "name": "value",
                         "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "1309:5:2"
 ||||||| merged common ancestors
@@ -1958,16 +2743,27 @@
 =======
                         "src": "1929:5:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "1929:5:32"
+=======
+                        "src": "1929:5:33"
+>>>>>>> origin/ajibigad/token-swap
                       },
                       {
                         "kind": "number",
                         "nodeType": "YulLiteral",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "1316:42:2",
 ||||||| merged common ancestors
                         "src": "1316:42:29",
 =======
                         "src": "1936:42:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "1936:42:32",
+=======
+                        "src": "1936:42:33",
 >>>>>>> origin/ajibigad/token-swap
                         "type": "",
                         "value": "0xffffffffffffffffffffffffffffffffffffffff"
@@ -1977,14 +2773,21 @@
                       "name": "and",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "1305:3:2"
 ||||||| merged common ancestors
                       "src": "1305:3:29"
 =======
                       "src": "1925:3:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1925:3:32"
+=======
+                      "src": "1925:3:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "1305:54:2"
 ||||||| merged common ancestors
@@ -1992,17 +2795,28 @@
 =======
                     "src": "1925:54:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "1925:54:32"
+=======
+                    "src": "1925:54:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "variableNames": [
                     {
                       "name": "cleaned",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "1294:7:2"
 ||||||| merged common ancestors
                       "src": "1294:7:29"
 =======
                       "src": "1914:7:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "1914:7:32"
+=======
+                      "src": "1914:7:33"
 >>>>>>> origin/ajibigad/token-swap
                     }
                   ]
@@ -2016,11 +2830,17 @@
                 "name": "value",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1266:5:2",
 ||||||| merged common ancestors
                 "src": "1266:5:29",
 =======
                 "src": "1886:5:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1886:5:32",
+=======
+                "src": "1886:5:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
@@ -2030,15 +2850,22 @@
                 "name": "cleaned",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1276:7:2",
 ||||||| merged common ancestors
                 "src": "1276:7:29",
 =======
                 "src": "1896:7:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "1896:7:32",
+=======
+                "src": "1896:7:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "1239:126:2"
 ||||||| merged common ancestors
@@ -2046,10 +2873,16 @@
 =======
             "src": "1859:126:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "1859:126:32"
+=======
+            "src": "1859:126:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "1416:32:2",
 ||||||| merged common ancestors
@@ -2057,9 +2890,15 @@
 =======
               "src": "2036:32:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "2036:32:32",
+=======
+              "src": "2036:32:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "nodeType": "YulAssignment",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "1426:16:2",
 ||||||| merged common ancestors
@@ -2067,9 +2906,15 @@
 =======
                   "src": "2046:16:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "2046:16:32",
+=======
+                  "src": "2046:16:33",
+>>>>>>> origin/ajibigad/token-swap
                   "value": {
                     "name": "value",
                     "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "1437:5:2"
 ||||||| merged common ancestors
@@ -2077,17 +2922,28 @@
 =======
                     "src": "2057:5:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "2057:5:32"
+=======
+                    "src": "2057:5:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "variableNames": [
                     {
                       "name": "cleaned",
                       "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "src": "1426:7:2"
 ||||||| merged common ancestors
                       "src": "1426:7:29"
 =======
                       "src": "2046:7:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "2046:7:32"
+=======
+                      "src": "2046:7:33"
 >>>>>>> origin/ajibigad/token-swap
                     }
                   ]
@@ -2101,11 +2957,17 @@
                 "name": "value",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1398:5:2",
 ||||||| merged common ancestors
                 "src": "1398:5:29",
 =======
                 "src": "2018:5:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "2018:5:32",
+=======
+                "src": "2018:5:33",
 >>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
@@ -2115,15 +2977,22 @@
                 "name": "cleaned",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1408:7:2",
 ||||||| merged common ancestors
                 "src": "1408:7:29",
 =======
                 "src": "2028:7:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "2028:7:32",
+=======
+                "src": "2028:7:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "1371:77:2"
 ||||||| merged common ancestors
@@ -2131,10 +3000,16 @@
 =======
             "src": "1991:77:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "1991:77:32"
+=======
+            "src": "1991:77:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "1497:79:2",
 ||||||| merged common ancestors
@@ -2142,16 +3017,27 @@
 =======
               "src": "2117:79:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "2117:79:32",
+=======
+              "src": "2117:79:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "body": {
                     "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "1554:16:2",
 ||||||| merged common ancestors
                     "src": "1554:16:29",
 =======
                     "src": "2174:16:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "2174:16:32",
+=======
+                    "src": "2174:16:33",
 >>>>>>> origin/ajibigad/token-swap
                     "statements": [
                       {
@@ -2161,11 +3047,17 @@
                               "kind": "number",
                               "nodeType": "YulLiteral",
 <<<<<<< HEAD
+<<<<<<< HEAD
                               "src": "1563:1:2",
 ||||||| merged common ancestors
                               "src": "1563:1:29",
 =======
                               "src": "2183:1:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "2183:1:32",
+=======
+                              "src": "2183:1:33",
 >>>>>>> origin/ajibigad/token-swap
                               "type": "",
                               "value": "0"
@@ -2174,11 +3066,17 @@
                               "kind": "number",
                               "nodeType": "YulLiteral",
 <<<<<<< HEAD
+<<<<<<< HEAD
                               "src": "1566:1:2",
 ||||||| merged common ancestors
                               "src": "1566:1:29",
 =======
                               "src": "2186:1:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "2186:1:32",
+=======
+                              "src": "2186:1:33",
 >>>>>>> origin/ajibigad/token-swap
                               "type": "",
                               "value": "0"
@@ -2188,14 +3086,21 @@
                             "name": "revert",
                             "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "src": "1556:6:2"
 ||||||| merged common ancestors
                             "src": "1556:6:29"
 =======
                             "src": "2176:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "2176:6:32"
+=======
+                            "src": "2176:6:33"
+>>>>>>> origin/ajibigad/token-swap
                           },
                           "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                           "src": "1556:12:2"
 ||||||| merged common ancestors
@@ -2203,14 +3108,25 @@
 =======
                           "src": "2176:12:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "2176:12:32"
+=======
+                          "src": "2176:12:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulExpressionStatement",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "1556:12:2"
 ||||||| merged common ancestors
                         "src": "1556:12:29"
 =======
                         "src": "2176:12:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "2176:12:32"
+=======
+                        "src": "2176:12:33"
 >>>>>>> origin/ajibigad/token-swap
                       }
                     ]
@@ -2223,11 +3139,17 @@
                             "name": "value",
                             "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "src": "1520:5:2"
 ||||||| merged common ancestors
                             "src": "1520:5:29"
 =======
                             "src": "2140:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "2140:5:32"
+=======
+                            "src": "2140:5:33"
 >>>>>>> origin/ajibigad/token-swap
                           },
                           {
@@ -2236,11 +3158,17 @@
                                 "name": "value",
                                 "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 "src": "1545:5:2"
 ||||||| merged common ancestors
                                 "src": "1545:5:29"
 =======
                                 "src": "2165:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                                "src": "2165:5:32"
+=======
+                                "src": "2165:5:33"
 >>>>>>> origin/ajibigad/token-swap
                               }
                             ],
@@ -2248,14 +3176,21 @@
                               "name": "cleanup_t_address",
                               "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                               "src": "1527:17:2"
 ||||||| merged common ancestors
                               "src": "1527:17:29"
 =======
                               "src": "2147:17:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "2147:17:32"
+=======
+                              "src": "2147:17:33"
+>>>>>>> origin/ajibigad/token-swap
                             },
                             "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "1527:24:2"
 ||||||| merged common ancestors
@@ -2263,11 +3198,17 @@
 =======
                             "src": "2147:24:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "2147:24:32"
+=======
+                            "src": "2147:24:33"
+>>>>>>> origin/ajibigad/token-swap
                           }
                         ],
                         "functionName": {
                           "name": "eq",
                           "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                           "src": "1517:2:2"
 ||||||| merged common ancestors
@@ -2275,8 +3216,14 @@
 =======
                           "src": "2137:2:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "2137:2:32"
+=======
+                          "src": "2137:2:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "1517:35:2"
 ||||||| merged common ancestors
@@ -2284,11 +3231,17 @@
 =======
                         "src": "2137:35:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "2137:35:32"
+=======
+                        "src": "2137:35:33"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
                     "functionName": {
                       "name": "iszero",
                       "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "1510:6:2"
 ||||||| merged common ancestors
@@ -2296,8 +3249,14 @@
 =======
                       "src": "2130:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "2130:6:32"
+=======
+                      "src": "2130:6:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "1510:43:2"
 ||||||| merged common ancestors
@@ -2305,14 +3264,25 @@
 =======
                     "src": "2130:43:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "2130:43:32"
+=======
+                    "src": "2130:43:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "nodeType": "YulIf",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "1507:2:2"
 ||||||| merged common ancestors
                   "src": "1507:2:29"
 =======
                   "src": "2127:2:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "2127:2:32"
+=======
+                  "src": "2127:2:33"
 >>>>>>> origin/ajibigad/token-swap
                 }
               ]
@@ -2324,15 +3294,22 @@
                 "name": "value",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1490:5:2",
 ||||||| merged common ancestors
                 "src": "1490:5:29",
 =======
                 "src": "2110:5:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "2110:5:32",
+=======
+                "src": "2110:5:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "1454:122:2"
 ||||||| merged common ancestors
@@ -2340,10 +3317,16 @@
 =======
             "src": "2074:122:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "2074:122:32"
+=======
+            "src": "2074:122:33"
+>>>>>>> origin/ajibigad/token-swap
           },
           {
             "body": {
               "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "1625:79:2",
 ||||||| merged common ancestors
@@ -2351,16 +3334,27 @@
 =======
               "src": "2245:79:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "2245:79:32",
+=======
+              "src": "2245:79:33",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "body": {
                     "nodeType": "YulBlock",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "1682:16:2",
 ||||||| merged common ancestors
                     "src": "1682:16:29",
 =======
                     "src": "2302:16:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "2302:16:32",
+=======
+                    "src": "2302:16:33",
 >>>>>>> origin/ajibigad/token-swap
                     "statements": [
                       {
@@ -2370,11 +3364,17 @@
                               "kind": "number",
                               "nodeType": "YulLiteral",
 <<<<<<< HEAD
+<<<<<<< HEAD
                               "src": "1691:1:2",
 ||||||| merged common ancestors
                               "src": "1691:1:29",
 =======
                               "src": "2311:1:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "2311:1:32",
+=======
+                              "src": "2311:1:33",
 >>>>>>> origin/ajibigad/token-swap
                               "type": "",
                               "value": "0"
@@ -2383,11 +3383,17 @@
                               "kind": "number",
                               "nodeType": "YulLiteral",
 <<<<<<< HEAD
+<<<<<<< HEAD
                               "src": "1694:1:2",
 ||||||| merged common ancestors
                               "src": "1694:1:29",
 =======
                               "src": "2314:1:32",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "2314:1:32",
+=======
+                              "src": "2314:1:33",
 >>>>>>> origin/ajibigad/token-swap
                               "type": "",
                               "value": "0"
@@ -2397,14 +3403,21 @@
                             "name": "revert",
                             "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "src": "1684:6:2"
 ||||||| merged common ancestors
                             "src": "1684:6:29"
 =======
                             "src": "2304:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "2304:6:32"
+=======
+                            "src": "2304:6:33"
+>>>>>>> origin/ajibigad/token-swap
                           },
                           "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                           "src": "1684:12:2"
 ||||||| merged common ancestors
@@ -2412,14 +3425,25 @@
 =======
                           "src": "2304:12:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "2304:12:32"
+=======
+                          "src": "2304:12:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulExpressionStatement",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "1684:12:2"
 ||||||| merged common ancestors
                         "src": "1684:12:29"
 =======
                         "src": "2304:12:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "2304:12:32"
+=======
+                        "src": "2304:12:33"
 >>>>>>> origin/ajibigad/token-swap
                       }
                     ]
@@ -2432,11 +3456,17 @@
                             "name": "value",
                             "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "src": "1648:5:2"
 ||||||| merged common ancestors
                             "src": "1648:5:29"
 =======
                             "src": "2268:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "2268:5:32"
+=======
+                            "src": "2268:5:33"
 >>>>>>> origin/ajibigad/token-swap
                           },
                           {
@@ -2445,11 +3475,17 @@
                                 "name": "value",
                                 "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 "src": "1673:5:2"
 ||||||| merged common ancestors
                                 "src": "1673:5:29"
 =======
                                 "src": "2293:5:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                                "src": "2293:5:32"
+=======
+                                "src": "2293:5:33"
 >>>>>>> origin/ajibigad/token-swap
                               }
                             ],
@@ -2457,14 +3493,21 @@
                               "name": "cleanup_t_uint256",
                               "nodeType": "YulIdentifier",
 <<<<<<< HEAD
+<<<<<<< HEAD
                               "src": "1655:17:2"
 ||||||| merged common ancestors
                               "src": "1655:17:29"
 =======
                               "src": "2275:17:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                              "src": "2275:17:32"
+=======
+                              "src": "2275:17:33"
+>>>>>>> origin/ajibigad/token-swap
                             },
                             "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "1655:24:2"
 ||||||| merged common ancestors
@@ -2472,11 +3515,17 @@
 =======
                             "src": "2275:24:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "2275:24:32"
+=======
+                            "src": "2275:24:33"
+>>>>>>> origin/ajibigad/token-swap
                           }
                         ],
                         "functionName": {
                           "name": "eq",
                           "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                           "src": "1645:2:2"
 ||||||| merged common ancestors
@@ -2484,8 +3533,14 @@
 =======
                           "src": "2265:2:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                          "src": "2265:2:32"
+=======
+                          "src": "2265:2:33"
+>>>>>>> origin/ajibigad/token-swap
                         },
                         "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "1645:35:2"
 ||||||| merged common ancestors
@@ -2493,11 +3548,17 @@
 =======
                         "src": "2265:35:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "2265:35:32"
+=======
+                        "src": "2265:35:33"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
                     "functionName": {
                       "name": "iszero",
                       "nodeType": "YulIdentifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "1638:6:2"
 ||||||| merged common ancestors
@@ -2505,8 +3566,14 @@
 =======
                       "src": "2258:6:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "2258:6:32"
+=======
+                      "src": "2258:6:33"
+>>>>>>> origin/ajibigad/token-swap
                     },
                     "nodeType": "YulFunctionCall",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "1638:43:2"
 ||||||| merged common ancestors
@@ -2514,14 +3581,25 @@
 =======
                     "src": "2258:43:32"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "2258:43:32"
+=======
+                    "src": "2258:43:33"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   "nodeType": "YulIf",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "1635:2:2"
 ||||||| merged common ancestors
                   "src": "1635:2:29"
 =======
                   "src": "2255:2:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "2255:2:32"
+=======
+                  "src": "2255:2:33"
 >>>>>>> origin/ajibigad/token-swap
                 }
               ]
@@ -2533,21 +3611,33 @@
                 "name": "value",
                 "nodeType": "YulTypedName",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "src": "1618:5:2",
 ||||||| merged common ancestors
                 "src": "1618:5:29",
 =======
                 "src": "2238:5:32",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "2238:5:32",
+=======
+                "src": "2238:5:33",
+>>>>>>> origin/ajibigad/token-swap
                 "type": ""
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "1582:122:2"
 ||||||| merged common ancestors
             "src": "1582:122:29"
 =======
             "src": "2202:122:32"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "2202:122:32"
+=======
+            "src": "2202:122:33"
 >>>>>>> origin/ajibigad/token-swap
           }
         ]
@@ -2560,12 +3650,19 @@
       "id": 29,
 =======
       "contents": "{\n\n    function abi_decode_t_address(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_address(value)\n    }\n\n    function abi_decode_t_uint256(offset, end) -> value {\n        value := calldataload(offset)\n        validator_revert_t_uint256(value)\n    }\n\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0 {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_decode_tuple_t_addresst_uint256(headStart, dataEnd) -> value0, value1 {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n\n        {\n\n            let offset := 0\n\n            value0 := abi_decode_t_address(add(headStart, offset), dataEnd)\n        }\n\n        {\n\n            let offset := 32\n\n            value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)\n        }\n\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {\n        mstore(pos, cleanup_t_uint256(value))\n    }\n\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function cleanup_t_bool(value) -> cleaned {\n        cleaned := iszero(iszero(value))\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_uint256(value) -> cleaned {\n        cleaned := value\n    }\n\n    function validator_revert_t_address(value) {\n        if iszero(eq(value, cleanup_t_address(value))) { revert(0, 0) }\n    }\n\n    function validator_revert_t_uint256(value) {\n        if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }\n    }\n\n}\n",
+<<<<<<< HEAD
       "id": 32,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+      "id": 32,
+=======
+      "id": 33,
 >>>>>>> origin/ajibigad/token-swap
       "language": "Yul",
       "name": "#utility.yul"
     }
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
   "sourceMap": "62:825:0:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "62:825:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;732:74;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;848:36;;;:::i;:::-;;732:74;798:4;732:74;;;;:::o;848:36::-;:::o;7:139:2:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:139::-;;236:6;223:20;214:29;;252:33;279:5;252:33;:::i;:::-;204:87;;;;:::o;297:407::-;;;422:2;410:9;401:7;397:23;393:32;390:2;;;438:1;435;428:12;390:2;481:1;506:53;551:7;542:6;531:9;527:22;506:53;:::i;:::-;496:63;;452:117;608:2;634:53;679:7;670:6;659:9;655:22;634:53;:::i;:::-;624:63;;579:118;380:324;;;;;:::o;710:109::-;791:21;806:5;791:21;:::i;:::-;786:3;779:34;769:50;;:::o;825:210::-;;950:2;939:9;935:18;927:26;;963:65;1025:1;1014:9;1010:17;1001:6;963:65;:::i;:::-;917:118;;;;:::o;1041:96::-;;1107:24;1125:5;1107:24;:::i;:::-;1096:35;;1086:51;;;:::o;1143:90::-;;1220:5;1213:13;1206:21;1195:32;;1185:48;;;:::o;1239:126::-;;1316:42;1309:5;1305:54;1294:65;;1284:81;;;:::o;1371:77::-;;1437:5;1426:16;;1416:32;;;:::o;1454:122::-;1527:24;1545:5;1527:24;:::i;:::-;1520:5;1517:35;1507:2;;1566:1;1563;1556:12;1507:2;1497:79;:::o;1582:122::-;1655:24;1673:5;1655:24;:::i;:::-;1648:5;1645:35;1635:2;;1694:1;1691;1684:12;1635:2;1625:79;:::o",
@@ -2579,16 +3676,35 @@
 =======
   "sourceMap": "59:930:0:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "59:930:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;764:74;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;81:43;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;919:68;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;877:36;;;:::i;:::-;;764:74;830:4;764:74;;;;:::o;81:43::-;;;;;;;;;;;;;;;;;:::o;919:68::-;979:4;919:68;;;;:::o;877:36::-;:::o;7:139:32:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:139::-;;236:6;223:20;214:29;;252:33;279:5;252:33;:::i;:::-;204:87;;;;:::o;297:262::-;;405:2;393:9;384:7;380:23;376:32;373:2;;;421:1;418;411:12;373:2;464:1;489:53;534:7;525:6;514:9;510:22;489:53;:::i;:::-;479:63;;435:117;363:196;;;;:::o;565:407::-;;;690:2;678:9;669:7;665:23;661:32;658:2;;;706:1;703;696:12;658:2;749:1;774:53;819:7;810:6;799:9;795:22;774:53;:::i;:::-;764:63;;720:117;876:2;902:53;947:7;938:6;927:9;923:22;902:53;:::i;:::-;892:63;;847:118;648:324;;;;;:::o;978:109::-;1059:21;1074:5;1059:21;:::i;:::-;1054:3;1047:34;1037:50;;:::o;1093:118::-;1180:24;1198:5;1180:24;:::i;:::-;1175:3;1168:37;1158:53;;:::o;1217:210::-;;1342:2;1331:9;1327:18;1319:26;;1355:65;1417:1;1406:9;1402:17;1393:6;1355:65;:::i;:::-;1309:118;;;;:::o;1433:222::-;;1564:2;1553:9;1549:18;1541:26;;1577:71;1645:1;1634:9;1630:17;1621:6;1577:71;:::i;:::-;1531:124;;;;:::o;1661:96::-;;1727:24;1745:5;1727:24;:::i;:::-;1716:35;;1706:51;;;:::o;1763:90::-;;1840:5;1833:13;1826:21;1815:32;;1805:48;;;:::o;1859:126::-;;1936:42;1929:5;1925:54;1914:65;;1904:81;;;:::o;1991:77::-;;2057:5;2046:16;;2036:32;;;:::o;2074:122::-;2147:24;2165:5;2147:24;:::i;:::-;2140:5;2137:35;2127:2;;2186:1;2183;2176:12;2127:2;2117:79;:::o;2202:122::-;2275:24;2293:5;2275:24;:::i;:::-;2268:5;2265:35;2255:2;;2314:1;2311;2304:12;2255:2;2245:79;:::o",
+||||||| merged common ancestors
+  "sourceMap": "59:930:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "59:930:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;764:74;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;81:43;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;919:68;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;877:36;;;:::i;:::-;;764:74;830:4;764:74;;;;:::o;81:43::-;;;;;;;;;;;;;;;;;:::o;919:68::-;979:4;919:68;;;;:::o;877:36::-;:::o;7:139:32:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:139::-;;236:6;223:20;214:29;;252:33;279:5;252:33;:::i;:::-;204:87;;;;:::o;297:262::-;;405:2;393:9;384:7;380:23;376:32;373:2;;;421:1;418;411:12;373:2;464:1;489:53;534:7;525:6;514:9;510:22;489:53;:::i;:::-;479:63;;435:117;363:196;;;;:::o;565:407::-;;;690:2;678:9;669:7;665:23;661:32;658:2;;;706:1;703;696:12;658:2;749:1;774:53;819:7;810:6;799:9;795:22;774:53;:::i;:::-;764:63;;720:117;876:2;902:53;947:7;938:6;927:9;923:22;902:53;:::i;:::-;892:63;;847:118;648:324;;;;;:::o;978:109::-;1059:21;1074:5;1059:21;:::i;:::-;1054:3;1047:34;1037:50;;:::o;1093:118::-;1180:24;1198:5;1180:24;:::i;:::-;1175:3;1168:37;1158:53;;:::o;1217:210::-;;1342:2;1331:9;1327:18;1319:26;;1355:65;1417:1;1406:9;1402:17;1393:6;1355:65;:::i;:::-;1309:118;;;;:::o;1433:222::-;;1564:2;1553:9;1549:18;1541:26;;1577:71;1645:1;1634:9;1630:17;1621:6;1577:71;:::i;:::-;1531:124;;;;:::o;1661:96::-;;1727:24;1745:5;1727:24;:::i;:::-;1716:35;;1706:51;;;:::o;1763:90::-;;1840:5;1833:13;1826:21;1815:32;;1805:48;;;:::o;1859:126::-;;1936:42;1929:5;1925:54;1914:65;;1904:81;;;:::o;1991:77::-;;2057:5;2046:16;;2036:32;;;:::o;2074:122::-;2147:24;2165:5;2147:24;:::i;:::-;2140:5;2137:35;2127:2;;2186:1;2183;2176:12;2127:2;2117:79;:::o;2202:122::-;2275:24;2293:5;2275:24;:::i;:::-;2268:5;2265:35;2255:2;;2314:1;2311;2304:12;2255:2;2245:79;:::o",
+=======
+  "sourceMap": "59:930:1:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "59:930:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;764:74;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;81:43;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;919:68;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;877:36;;;:::i;:::-;;764:74;830:4;764:74;;;;:::o;81:43::-;;;;;;;;;;;;;;;;;:::o;919:68::-;979:4;919:68;;;;:::o;877:36::-;:::o;7:139:33:-;;91:6;78:20;69:29;;107:33;134:5;107:33;:::i;:::-;59:87;;;;:::o;152:139::-;;236:6;223:20;214:29;;252:33;279:5;252:33;:::i;:::-;204:87;;;;:::o;297:262::-;;405:2;393:9;384:7;380:23;376:32;373:2;;;421:1;418;411:12;373:2;464:1;489:53;534:7;525:6;514:9;510:22;489:53;:::i;:::-;479:63;;435:117;363:196;;;;:::o;565:407::-;;;690:2;678:9;669:7;665:23;661:32;658:2;;;706:1;703;696:12;658:2;749:1;774:53;819:7;810:6;799:9;795:22;774:53;:::i;:::-;764:63;;720:117;876:2;902:53;947:7;938:6;927:9;923:22;902:53;:::i;:::-;892:63;;847:118;648:324;;;;;:::o;978:109::-;1059:21;1074:5;1059:21;:::i;:::-;1054:3;1047:34;1037:50;;:::o;1093:118::-;1180:24;1198:5;1180:24;:::i;:::-;1175:3;1168:37;1158:53;;:::o;1217:210::-;;1342:2;1331:9;1327:18;1319:26;;1355:65;1417:1;1406:9;1402:17;1393:6;1355:65;:::i;:::-;1309:118;;;;:::o;1433:222::-;;1564:2;1553:9;1549:18;1541:26;;1577:71;1645:1;1634:9;1630:17;1621:6;1577:71;:::i;:::-;1531:124;;;;:::o;1661:96::-;;1727:24;1745:5;1727:24;:::i;:::-;1716:35;;1706:51;;;:::o;1763:90::-;;1840:5;1833:13;1826:21;1815:32;;1805:48;;;:::o;1859:126::-;;1936:42;1929:5;1925:54;1914:65;;1904:81;;;:::o;1991:77::-;;2057:5;2046:16;;2036:32;;;:::o;2074:122::-;2147:24;2165:5;2147:24;:::i;:::-;2140:5;2137:35;2127:2;;2186:1;2183;2176:12;2127:2;2117:79;:::o;2202:122::-;2275:24;2293:5;2275:24;:::i;:::-;2268:5;2265:35;2255:2;;2314:1;2311;2304:12;2255:2;2245:79;:::o",
+>>>>>>> origin/ajibigad/token-swap
   "source": "pragma solidity ^0.7.0;\npragma experimental ABIEncoderV2;\n\ncontract BEP20 {\n\n    mapping (address => uint) public  balanceOf;\n    /**\n    * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\n    *\n    * Returns a boolean value indicating whether the operation succeeded.\n    *\n    * IMPORTANT: Beware that changing an allowance with this method brings the risk\n    * that someone may use both the old and the new allowance by unfortunate\n    * transaction ordering. One possible solution to mitigate this race\n    * condition is to first reduce the spender's allowance to 0 and set the\n    * desired value afterwards:\n    * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\n    *\n    * Emits an {Approval} event.\n    */\n    function approve(address spender, uint256 amount) public returns (bool) {}\n\n    // funds goes as `msg.value`\n    function deposit() public payable {}\n\n    function transfer(address dst, uint amount) public returns (bool) {}\n}",
+<<<<<<< HEAD
   "sourcePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/BEP20.sol",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+  "sourcePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/BEP20.sol",
+=======
+  "sourcePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/Bep20.sol",
+>>>>>>> origin/ajibigad/token-swap
   "ast": {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "absolutePath": "/C/Users/USER/Desktop/BLOCKCHAIN/SmartBet/contracts/Bep20.sol",
 ||||||| merged common ancestors
     "absolutePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/SmartInvestV1.sol",
 =======
     "absolutePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/BEP20.sol",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+    "absolutePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/BEP20.sol",
+=======
+    "absolutePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/Bep20.sol",
 >>>>>>> origin/ajibigad/token-swap
     "exportedSymbols": {
 <<<<<<< HEAD
@@ -2605,10 +3721,17 @@
         1087
 =======
       "BEP20": [
+<<<<<<< HEAD
         32
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        32
+=======
+        65
 >>>>>>> origin/ajibigad/token-swap
       ]
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     "id": 19,
 ||||||| merged common ancestors
@@ -2616,10 +3739,15 @@
 =======
     "id": 33,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+    "id": 33,
+=======
+    "id": 66,
+>>>>>>> origin/ajibigad/token-swap
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 34,
         "literals": [
           "solidity",
           "^",
@@ -2627,15 +3755,16 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:23:1"
       },
       {
-        "id": 2,
+        "id": 35,
         "literals": [
           "experimental",
           "ABIEncoderV2"
         ],
         "nodeType": "PragmaDirective",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "src": "25:33:0"
       },
@@ -2946,6 +4075,11 @@
         "nodes": [
 =======
         "src": "24:33:0"
+||||||| merged common ancestors
+        "src": "24:33:0"
+=======
+        "src": "24:33:1"
+>>>>>>> origin/ajibigad/token-swap
       },
       {
         "abstract": false,
@@ -2953,9 +4087,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 32,
+        "id": 65,
         "linearizedBaseContracts": [
-          32
+          65
         ],
         "name": "BEP20",
         "nodeType": "ContractDefinition",
@@ -2963,12 +4097,12 @@
           {
             "constant": false,
             "functionSelector": "70a08231",
-            "id": 6,
+            "id": 39,
             "mutability": "mutable",
             "name": "balanceOf",
             "nodeType": "VariableDeclaration",
-            "scope": 32,
-            "src": "81:43:0",
+            "scope": 65,
+            "src": "81:43:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -2976,28 +4110,28 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 5,
+              "id": 38,
               "keyType": {
-                "id": 3,
+                "id": 36,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "90:7:0",
+                "src": "90:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "81:25:0",
+              "src": "81:25:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 4,
+                "id": 37,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "101:4:0",
+                "src": "101:4:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
@@ -3008,36 +4142,36 @@
           },
           {
             "body": {
-              "id": 16,
+              "id": 49,
               "nodeType": "Block",
-              "src": "836:2:0",
+              "src": "836:2:1",
               "statements": []
             },
             "documentation": {
-              "id": 7,
+              "id": 40,
               "nodeType": "StructuredDocumentation",
-              "src": "130:629:0",
+              "src": "130:629:1",
               "text": " @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\n Returns a boolean value indicating whether the operation succeeded.\n IMPORTANT: Beware that changing an allowance with this method brings the risk\n that someone may use both the old and the new allowance by unfortunate\n transaction ordering. One possible solution to mitigate this race\n condition is to first reduce the spender's allowance to 0 and set the\n desired value afterwards:\n https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\n Emits an {Approval} event."
             },
             "functionSelector": "095ea7b3",
-            "id": 17,
+            "id": 50,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "approve",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 12,
+              "id": 45,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9,
+                  "id": 42,
                   "mutability": "mutable",
                   "name": "spender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 17,
-                  "src": "781:15:0",
+                  "scope": 50,
+                  "src": "781:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3045,10 +4179,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 8,
+                    "id": 41,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "781:7:0",
+                    "src": "781:7:1",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3059,12 +4193,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 11,
+                  "id": 44,
                   "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 17,
-                  "src": "798:14:0",
+                  "scope": 50,
+                  "src": "798:14:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3072,10 +4206,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 10,
+                    "id": 43,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "798:7:0",
+                    "src": "798:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3084,20 +4218,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "780:33:0"
+              "src": "780:33:1"
             },
             "returnParameters": {
-              "id": 15,
+              "id": 48,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 14,
+                  "id": 47,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 17,
-                  "src": "830:4:0",
+                  "scope": 50,
+                  "src": "830:4:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3105,10 +4239,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 13,
+                    "id": 46,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "830:4:0",
+                    "src": "830:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3117,42 +4251,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "829:6:0"
+              "src": "829:6:1"
             },
-            "scope": 32,
-            "src": "764:74:0",
+            "scope": 65,
+            "src": "764:74:1",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 20,
+              "id": 53,
               "nodeType": "Block",
-              "src": "911:2:0",
+              "src": "911:2:1",
               "statements": []
             },
             "functionSelector": "d0e30db0",
-            "id": 21,
+            "id": 54,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "deposit",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18,
+              "id": 51,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "893:2:0"
+              "src": "893:2:1"
             },
             "returnParameters": {
-              "id": 19,
+              "id": 52,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "911:0:0"
+              "src": "911:0:1"
             },
-            "scope": 32,
-            "src": "877:36:0",
+            "scope": 65,
+            "src": "877:36:1",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
@@ -3161,19 +4295,31 @@
           {
             "body": {
 <<<<<<< HEAD
+<<<<<<< HEAD
               "id": 12,
 ||||||| merged common ancestors
               "id": 1097,
 =======
               "id": 30,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "id": 30,
+=======
+              "id": 63,
+>>>>>>> origin/ajibigad/token-swap
               "nodeType": "Block",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "804:2:0",
 ||||||| merged common ancestors
               "src": "2816:2:4",
 =======
               "src": "985:2:0",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "985:2:0",
+=======
+              "src": "985:2:1",
 >>>>>>> origin/ajibigad/token-swap
               "statements": []
             },
@@ -3197,7 +4343,13 @@
             "id": 1098,
 =======
             "functionSelector": "a9059cbb",
+<<<<<<< HEAD
             "id": 31,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "id": 31,
+=======
+            "id": 64,
 >>>>>>> origin/ajibigad/token-swap
             "implemented": true,
             "kind": "function",
@@ -3206,16 +4358,23 @@
             "nodeType": "FunctionDefinition",
             "parameters": {
 <<<<<<< HEAD
+<<<<<<< HEAD
               "id": 8,
 ||||||| merged common ancestors
               "id": 1093,
 =======
               "id": 26,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "id": 26,
+=======
+              "id": 59,
+>>>>>>> origin/ajibigad/token-swap
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "id": 5,
 ||||||| merged common ancestors
@@ -3223,9 +4382,15 @@
 =======
                   "id": 23,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "id": 23,
+=======
+                  "id": 56,
+>>>>>>> origin/ajibigad/token-swap
                   "mutability": "mutable",
                   "name": "dst",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "scope": 13,
                   "src": "749:15:0",
@@ -3236,6 +4401,13 @@
                   "scope": 31,
                   "src": "937:11:0",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "scope": 31,
+                  "src": "937:11:0",
+=======
+                  "scope": 64,
+                  "src": "937:11:1",
+>>>>>>> origin/ajibigad/token-swap
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3244,20 +4416,32 @@
                   },
                   "typeName": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "id": 4,
 ||||||| merged common ancestors
                     "id": 1089,
 =======
                     "id": 22,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 22,
+=======
+                    "id": 55,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "749:7:0",
 ||||||| merged common ancestors
                     "src": "2761:7:4",
 =======
                     "src": "937:7:0",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "937:7:0",
+=======
+                    "src": "937:7:1",
 >>>>>>> origin/ajibigad/token-swap
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
@@ -3270,15 +4454,22 @@
                 {
                   "constant": false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "id": 7,
 ||||||| merged common ancestors
                   "id": 1092,
 =======
                   "id": 25,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "id": 25,
+=======
+                  "id": 58,
+>>>>>>> origin/ajibigad/token-swap
                   "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "scope": 13,
                   "src": "766:14:0",
@@ -3289,6 +4480,13 @@
                   "scope": 31,
                   "src": "950:11:0",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "scope": 31,
+                  "src": "950:11:0",
+=======
+                  "scope": 64,
+                  "src": "950:11:1",
+>>>>>>> origin/ajibigad/token-swap
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3297,6 +4495,7 @@
                   },
                   "typeName": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "id": 6,
                     "name": "uint256",
 ||||||| merged common ancestors
@@ -3304,15 +4503,26 @@
                     "name": "uint256",
 =======
                     "id": 24,
+||||||| merged common ancestors
+                    "id": 24,
+=======
+                    "id": 57,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "uint",
 >>>>>>> origin/ajibigad/token-swap
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "766:7:0",
 ||||||| merged common ancestors
                     "src": "2778:7:4",
 =======
                     "src": "950:4:0",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "950:4:0",
+=======
+                    "src": "950:4:1",
 >>>>>>> origin/ajibigad/token-swap
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -3323,14 +4533,21 @@
                 }
               ],
 <<<<<<< HEAD
+<<<<<<< HEAD
               "src": "748:33:0"
 ||||||| merged common ancestors
               "src": "2760:33:4"
 =======
               "src": "936:26:0"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "936:26:0"
+=======
+              "src": "936:26:1"
+>>>>>>> origin/ajibigad/token-swap
             },
             "returnParameters": {
+<<<<<<< HEAD
 <<<<<<< HEAD
               "id": 11,
 ||||||| merged common ancestors
@@ -3338,10 +4555,16 @@
 =======
               "id": 29,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "id": 29,
+=======
+              "id": 62,
+>>>>>>> origin/ajibigad/token-swap
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "id": 10,
 ||||||| merged common ancestors
@@ -3349,9 +4572,15 @@
 =======
                   "id": 28,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "id": 28,
+=======
+                  "id": 61,
+>>>>>>> origin/ajibigad/token-swap
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "scope": 13,
                   "src": "798:4:0",
@@ -3362,6 +4591,13 @@
                   "scope": 31,
                   "src": "979:4:0",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "scope": 31,
+                  "src": "979:4:0",
+=======
+                  "scope": 64,
+                  "src": "979:4:1",
+>>>>>>> origin/ajibigad/token-swap
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3370,20 +4606,32 @@
                   },
                   "typeName": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "id": 9,
 ||||||| merged common ancestors
                     "id": 1094,
 =======
                     "id": 27,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 27,
+=======
+                    "id": 60,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "798:4:0",
 ||||||| merged common ancestors
                     "src": "2810:4:4",
 =======
                     "src": "979:4:0",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "979:4:0",
+=======
+                    "src": "979:4:1",
 >>>>>>> origin/ajibigad/token-swap
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -3394,13 +4642,20 @@
                 }
               ],
 <<<<<<< HEAD
+<<<<<<< HEAD
               "src": "797:6:0"
 ||||||| merged common ancestors
               "src": "2809:6:4"
 =======
               "src": "978:6:0"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "978:6:0"
+=======
+              "src": "978:6:1"
+>>>>>>> origin/ajibigad/token-swap
             },
+<<<<<<< HEAD
 <<<<<<< HEAD
             "scope": 18,
             "src": "732:74:0",
@@ -3411,9 +4666,17 @@
             "scope": 32,
             "src": "919:68:0",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "scope": 32,
+            "src": "919:68:0",
+=======
+            "scope": 65,
+            "src": "919:68:1",
+>>>>>>> origin/ajibigad/token-swap
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
+<<<<<<< HEAD
 <<<<<<< HEAD
           },
           {
@@ -5874,15 +7137,28 @@
         "scope": 33,
         "src": "59:930:0"
       }
+||||||| merged common ancestors
+          }
+        ],
+        "scope": 33,
+        "src": "59:930:0"
+      }
+=======
+          }
+        ],
+        "scope": 66,
+        "src": "59:930:1"
+      }
+>>>>>>> origin/ajibigad/token-swap
     ],
-    "src": "0:989:0"
+    "src": "0:989:1"
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/BEP20.sol",
+      "absolutePath": "/Users/ajibigad/crytoproject/SmartBet/contracts/Bep20.sol",
       "exportedSymbols": {
         "BEP20": [
-          32
+          65
         ]
       }
     },
@@ -5896,9 +7172,9 @@
             ".0"
           ]
         },
-        "id": 1,
+        "id": 34,
         "name": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:23:1"
       },
       {
         "attributes": {
@@ -5907,9 +7183,9 @@
             "ABIEncoderV2"
           ]
         },
-        "id": 2,
+        "id": 35,
         "name": "PragmaDirective",
-        "src": "24:33:0"
+        "src": "24:33:1"
       },
       {
         "attributes": {
@@ -5923,10 +7199,10 @@
           "contractKind": "contract",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            32
+            65
           ],
           "name": "BEP20",
-          "scope": 33
+          "scope": 66
         },
         "children": [
           {
@@ -5935,7 +7211,7 @@
               "functionSelector": "70a08231",
               "mutability": "mutable",
               "name": "balanceOf",
-              "scope": 32,
+              "scope": 65,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(address => uint256)",
@@ -5952,28 +7228,28 @@
                       "name": "address",
                       "type": "address"
                     },
-                    "id": 3,
+                    "id": 36,
                     "name": "ElementaryTypeName",
-                    "src": "90:7:0"
+                    "src": "90:7:1"
                   },
                   {
                     "attributes": {
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 4,
+                    "id": 37,
                     "name": "ElementaryTypeName",
-                    "src": "101:4:0"
+                    "src": "101:4:1"
                   }
                 ],
-                "id": 5,
+                "id": 38,
                 "name": "Mapping",
-                "src": "81:25:0"
+                "src": "81:25:1"
               }
             ],
-            "id": 6,
+            "id": 39,
             "name": "VariableDeclaration",
-            "src": "81:43:0"
+            "src": "81:43:1"
           },
 >>>>>>> origin/ajibigad/token-swap
           {
@@ -5993,7 +7269,13 @@
               "scope": 1185,
 =======
               "name": "approve",
+<<<<<<< HEAD
               "scope": 32,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "scope": 32,
+=======
+              "scope": 65,
 >>>>>>> origin/ajibigad/token-swap
               "stateMutability": "nonpayable",
               "virtual": false,
@@ -6015,9 +7297,9 @@
                 "attributes": {
                   "text": " @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\n Returns a boolean value indicating whether the operation succeeded.\n IMPORTANT: Beware that changing an allowance with this method brings the risk\n that someone may use both the old and the new allowance by unfortunate\n transaction ordering. One possible solution to mitigate this race\n condition is to first reduce the spender's allowance to 0 and set the\n desired value afterwards:\n https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\n Emits an {Approval} event."
                 },
-                "id": 7,
+                "id": 40,
                 "name": "StructuredDocumentation",
-                "src": "130:629:0"
+                "src": "130:629:1"
               },
               {
 >>>>>>> origin/ajibigad/token-swap
@@ -6057,7 +7339,7 @@
 ||||||| merged common ancestors
 =======
                       "name": "spender",
-                      "scope": 17,
+                      "scope": 50,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -6070,14 +7352,14 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 8,
+                        "id": 41,
                         "name": "ElementaryTypeName",
-                        "src": "781:7:0"
+                        "src": "781:7:1"
                       }
                     ],
-                    "id": 9,
+                    "id": 42,
                     "name": "VariableDeclaration",
-                    "src": "781:15:0"
+                    "src": "781:15:1"
                   },
                   {
                     "attributes": {
@@ -6086,11 +7368,17 @@
 >>>>>>> origin/ajibigad/token-swap
                       "name": "amount",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "scope": 13,
 ||||||| merged common ancestors
                       "scope": 1166,
 =======
                       "scope": 17,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "scope": 17,
+=======
+                      "scope": 50,
 >>>>>>> origin/ajibigad/token-swap
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -6104,13 +7392,20 @@
                           "type": "uint256"
                         },
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "id": 6,
 ||||||| merged common ancestors
                         "id": 1145,
 =======
                         "id": 10,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "id": 10,
+=======
+                        "id": 43,
+>>>>>>> origin/ajibigad/token-swap
                         "name": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "766:7:0"
 ||||||| merged common ancestors
@@ -6118,8 +7413,14 @@
 =======
                         "src": "798:7:0"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "798:7:0"
+=======
+                        "src": "798:7:1"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "id": 7,
 ||||||| merged common ancestors
@@ -6127,7 +7428,13 @@
 =======
                     "id": 11,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 11,
+=======
+                    "id": 44,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "766:14:0"
 ||||||| merged common ancestors
@@ -6135,8 +7442,14 @@
 =======
                     "src": "798:14:0"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "798:14:0"
+=======
+                    "src": "798:14:1"
+>>>>>>> origin/ajibigad/token-swap
                   }
                 ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "id": 8,
 ||||||| merged common ancestors
@@ -6155,13 +7468,24 @@
 =======
                 "id": 12,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 12,
+=======
+                "id": 45,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "ParameterList",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "748:33:0"
 ||||||| merged common ancestors
                 "src": "3664:0:4"
 =======
                 "src": "780:33:0"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "780:33:0"
+=======
+                "src": "780:33:1"
 >>>>>>> origin/ajibigad/token-swap
               },
               {
@@ -6185,7 +7509,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 17,
+                      "scope": 50,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -6198,6 +7522,7 @@
                           "name": "bool",
                           "type": "bool"
                         },
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "id": 9,
                         "name": "ElementaryTypeName",
@@ -6351,11 +7676,23 @@
                         "src": "3722:69:4"
 =======
                         "id": 13,
+||||||| merged common ancestors
+                        "id": 13,
+=======
+                        "id": 46,
+>>>>>>> origin/ajibigad/token-swap
                         "name": "ElementaryTypeName",
+<<<<<<< HEAD
                         "src": "830:4:0"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "830:4:0"
+=======
+                        "src": "830:4:1"
 >>>>>>> origin/ajibigad/token-swap
                       }
                     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "id": 10,
                     "name": "VariableDeclaration",
@@ -6366,11 +7703,23 @@
                     "src": "3722:69:4"
 =======
                     "id": 14,
+||||||| merged common ancestors
+                    "id": 14,
+=======
+                    "id": 47,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "VariableDeclaration",
+<<<<<<< HEAD
                     "src": "830:4:0"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "830:4:0"
+=======
+                    "src": "830:4:1"
 >>>>>>> origin/ajibigad/token-swap
                   }
                 ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "id": 11,
                 "name": "ParameterList",
@@ -6388,8 +7737,13 @@
                 "id": 1165,
 =======
                 "id": 15,
+||||||| merged common ancestors
+                "id": 15,
+=======
+                "id": 48,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "ParameterList",
-                "src": "829:6:0"
+                "src": "829:6:1"
               },
               {
                 "attributes": {
@@ -6398,9 +7752,16 @@
                   ]
                 },
                 "children": [],
+<<<<<<< HEAD
                 "id": 16,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 16,
+=======
+                "id": 49,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "Block",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "804:2:0"
 ||||||| merged common ancestors
@@ -6408,8 +7769,14 @@
 =======
                 "src": "836:2:0"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "836:2:0"
+=======
+                "src": "836:2:1"
+>>>>>>> origin/ajibigad/token-swap
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "id": 13,
 ||||||| merged common ancestors
@@ -6417,13 +7784,24 @@
 =======
             "id": 17,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "id": 17,
+=======
+            "id": 50,
+>>>>>>> origin/ajibigad/token-swap
             "name": "FunctionDefinition",
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "732:74:0"
 ||||||| merged common ancestors
             "src": "3625:173:4"
 =======
             "src": "764:74:0"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "764:74:0"
+=======
+            "src": "764:74:1"
 >>>>>>> origin/ajibigad/token-swap
           },
           {
@@ -6445,7 +7823,7 @@
               "stateMutability": "nonpayable",
 =======
               "name": "deposit",
-              "scope": 32,
+              "scope": 65,
               "stateMutability": "payable",
 >>>>>>> origin/ajibigad/token-swap
               "virtual": false,
@@ -6460,19 +7838,31 @@
                 },
                 "children": [],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "id": 14,
 ||||||| merged common ancestors
                 "id": 1167,
 =======
                 "id": 18,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 18,
+=======
+                "id": 51,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "ParameterList",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "864:2:0"
 ||||||| merged common ancestors
                 "src": "3827:2:4"
 =======
                 "src": "893:2:0"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "893:2:0"
+=======
+                "src": "893:2:1"
 >>>>>>> origin/ajibigad/token-swap
               },
               {
@@ -6483,19 +7873,31 @@
                 },
                 "children": [],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "id": 15,
 ||||||| merged common ancestors
                 "id": 1168,
 =======
                 "id": 19,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 19,
+=======
+                "id": 52,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "ParameterList",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "882:0:0"
 ||||||| merged common ancestors
                 "src": "3837:0:4"
 =======
                 "src": "911:0:0"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "911:0:0"
+=======
+                "src": "911:0:1"
 >>>>>>> origin/ajibigad/token-swap
               },
               {
@@ -6730,14 +8132,14 @@
                   ]
                 },
                 "children": [],
-                "id": 20,
+                "id": 53,
                 "name": "Block",
-                "src": "911:2:0"
+                "src": "911:2:1"
               }
             ],
-            "id": 21,
+            "id": 54,
             "name": "FunctionDefinition",
-            "src": "877:36:0"
+            "src": "877:36:1"
           },
           {
             "attributes": {
@@ -6749,7 +8151,7 @@
                 null
               ],
               "name": "transfer",
-              "scope": 32,
+              "scope": 65,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -6762,7 +8164,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "dst",
-                      "scope": 31,
+                      "scope": 64,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -6775,21 +8177,21 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 22,
+                        "id": 55,
                         "name": "ElementaryTypeName",
-                        "src": "937:7:0"
+                        "src": "937:7:1"
                       }
                     ],
-                    "id": 23,
+                    "id": 56,
                     "name": "VariableDeclaration",
-                    "src": "937:11:0"
+                    "src": "937:11:1"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
                       "name": "amount",
-                      "scope": 31,
+                      "scope": 64,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -6801,19 +8203,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 24,
+                        "id": 57,
                         "name": "ElementaryTypeName",
-                        "src": "950:4:0"
+                        "src": "950:4:1"
                       }
                     ],
-                    "id": 25,
+                    "id": 58,
                     "name": "VariableDeclaration",
-                    "src": "950:11:0"
+                    "src": "950:11:1"
                   }
                 ],
-                "id": 26,
+                "id": 59,
                 "name": "ParameterList",
-                "src": "936:26:0"
+                "src": "936:26:1"
               },
               {
                 "children": [
@@ -6822,7 +8224,7 @@
                       "constant": false,
                       "mutability": "mutable",
                       "name": "",
-                      "scope": 31,
+                      "scope": 64,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -6834,19 +8236,19 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 27,
+                        "id": 60,
                         "name": "ElementaryTypeName",
-                        "src": "979:4:0"
+                        "src": "979:4:1"
                       }
                     ],
-                    "id": 28,
+                    "id": 61,
                     "name": "VariableDeclaration",
-                    "src": "979:4:0"
+                    "src": "979:4:1"
                   }
                 ],
-                "id": 29,
+                "id": 62,
                 "name": "ParameterList",
-                "src": "978:6:0"
+                "src": "978:6:1"
               },
               {
                 "attributes": {
@@ -6855,9 +8257,16 @@
                   ]
                 },
                 "children": [],
+<<<<<<< HEAD
                 "id": 30,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 30,
+=======
+                "id": 63,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "Block",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "882:2:0"
 ||||||| merged common ancestors
@@ -6865,8 +8274,14 @@
 =======
                 "src": "985:2:0"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "985:2:0"
+=======
+                "src": "985:2:1"
+>>>>>>> origin/ajibigad/token-swap
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "id": 17,
 ||||||| merged common ancestors
@@ -6874,7 +8289,13 @@
 =======
             "id": 31,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "id": 31,
+=======
+            "id": 64,
+>>>>>>> origin/ajibigad/token-swap
             "name": "FunctionDefinition",
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "848:36:0"
 ||||||| merged common ancestors
@@ -6882,8 +8303,14 @@
 =======
             "src": "919:68:0"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "919:68:0"
+=======
+            "src": "919:68:1"
+>>>>>>> origin/ajibigad/token-swap
           }
         ],
+<<<<<<< HEAD
 <<<<<<< HEAD
         "id": 18,
 ||||||| merged common ancestors
@@ -6891,7 +8318,13 @@
 =======
         "id": 32,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "id": 32,
+=======
+        "id": 65,
+>>>>>>> origin/ajibigad/token-swap
         "name": "ContractDefinition",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "src": "62:825:0"
 ||||||| merged common ancestors
@@ -6899,8 +8332,14 @@
 =======
         "src": "59:930:0"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "src": "59:930:0"
+=======
+        "src": "59:930:1"
+>>>>>>> origin/ajibigad/token-swap
       }
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
     "id": 19,
 ||||||| merged common ancestors
@@ -6908,13 +8347,24 @@
 =======
     "id": 33,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+    "id": 33,
+=======
+    "id": 66,
+>>>>>>> origin/ajibigad/token-swap
     "name": "SourceUnit",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "src": "0:887:0"
 ||||||| merged common ancestors
     "src": "0:4729:4"
 =======
     "src": "0:989:0"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+    "src": "0:989:0"
+=======
+    "src": "0:989:1"
 >>>>>>> origin/ajibigad/token-swap
   },
   "compiler": {
@@ -6924,11 +8374,17 @@
   "networks": {},
   "schemaVersion": "3.3.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "updatedAt": "2021-04-11T19:33:47.445Z",
 ||||||| merged common ancestors
   "updatedAt": "2021-04-10T14:35:58.128Z",
 =======
   "updatedAt": "2021-04-13T08:20:22.129Z",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+  "updatedAt": "2021-04-13T08:20:22.129Z",
+=======
+  "updatedAt": "2021-04-16T17:26:22.471Z",
 >>>>>>> origin/ajibigad/token-swap
   "devdoc": {
     "kind": "dev",

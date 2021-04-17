@@ -16,14 +16,21 @@
     "exportedSymbols": {
       "Context": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         3316
 ||||||| merged common ancestors
         3100
 =======
         3400
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        3400
+=======
+        3536
+>>>>>>> origin/ajibigad/token-swap
       ]
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     "id": 3317,
 ||||||| merged common ancestors
@@ -31,16 +38,27 @@
 =======
     "id": 3401,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+    "id": 3401,
+=======
+    "id": 3537,
+>>>>>>> origin/ajibigad/token-swap
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "id": 3295,
 ||||||| merged common ancestors
         "id": 3079,
 =======
         "id": 3379,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "id": 3379,
+=======
+        "id": 3515,
 >>>>>>> origin/ajibigad/token-swap
         "literals": [
           "solidity",
@@ -50,11 +68,17 @@
         ],
         "nodeType": "PragmaDirective",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "src": "33:23:17"
 ||||||| merged common ancestors
         "src": "33:23:15"
 =======
         "src": "33:23:18"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "src": "33:23:18"
+=======
+        "src": "33:23:19"
 >>>>>>> origin/ajibigad/token-swap
       },
       {
@@ -64,19 +88,31 @@
         "contractKind": "contract",
         "fullyImplemented": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
         "id": 3316,
 ||||||| merged common ancestors
         "id": 3100,
 =======
         "id": 3400,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "id": 3400,
+=======
+        "id": 3536,
+>>>>>>> origin/ajibigad/token-swap
         "linearizedBaseContracts": [
+<<<<<<< HEAD
 <<<<<<< HEAD
           3316
 ||||||| merged common ancestors
           3100
 =======
           3400
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+          3400
+=======
+          3536
 >>>>>>> origin/ajibigad/token-swap
         ],
         "name": "Context",
@@ -85,13 +121,20 @@
           {
             "body": {
 <<<<<<< HEAD
+<<<<<<< HEAD
               "id": 3303,
 ||||||| merged common ancestors
               "id": 3087,
 =======
               "id": 3387,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "id": 3387,
+=======
+              "id": 3523,
+>>>>>>> origin/ajibigad/token-swap
               "nodeType": "Block",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "660:34:17",
 ||||||| merged common ancestors
@@ -99,10 +142,16 @@
 =======
               "src": "660:34:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "660:34:18",
+=======
+              "src": "660:34:19",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "expression": {
                     "expression": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "id": 3300,
 ||||||| merged common ancestors
@@ -110,10 +159,16 @@
 =======
                       "id": 3384,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "id": 3384,
+=======
+                      "id": 3520,
+>>>>>>> origin/ajibigad/token-swap
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 4294967281,
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "677:3:17",
 ||||||| merged common ancestors
@@ -121,17 +176,28 @@
 =======
                       "src": "677:3:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "677:3:18",
+=======
+                      "src": "677:3:19",
+>>>>>>> origin/ajibigad/token-swap
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
                         "typeString": "msg"
                       }
                     },
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "id": 3301,
 ||||||| merged common ancestors
                     "id": 3085,
 =======
                     "id": 3385,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3385,
+=======
+                    "id": 3521,
 >>>>>>> origin/ajibigad/token-swap
                     "isConstant": false,
                     "isLValue": false,
@@ -140,17 +206,24 @@
                     "memberName": "sender",
                     "nodeType": "MemberAccess",
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "src": "677:10:17",
 ||||||| merged common ancestors
                     "src": "677:10:15",
 =======
                     "src": "677:10:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "677:10:18",
+=======
+                    "src": "677:10:19",
+>>>>>>> origin/ajibigad/token-swap
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
                       "typeString": "address payable"
                     }
                   },
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "functionReturnParameters": 3299,
                   "id": 3302,
@@ -161,7 +234,15 @@
                   "functionReturnParameters": 3383,
                   "id": 3386,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "functionReturnParameters": 3383,
+                  "id": 3386,
+=======
+                  "functionReturnParameters": 3519,
+                  "id": 3522,
+>>>>>>> origin/ajibigad/token-swap
                   "nodeType": "Return",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "670:17:17"
 ||||||| merged common ancestors
@@ -169,15 +250,26 @@
 =======
                   "src": "670:17:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "670:17:18"
+=======
+                  "src": "670:17:19"
+>>>>>>> origin/ajibigad/token-swap
                 }
               ]
             },
+<<<<<<< HEAD
 <<<<<<< HEAD
             "id": 3304,
 ||||||| merged common ancestors
             "id": 3088,
 =======
             "id": 3388,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "id": 3388,
+=======
+            "id": 3524,
 >>>>>>> origin/ajibigad/token-swap
             "implemented": true,
             "kind": "function",
@@ -186,14 +278,21 @@
             "nodeType": "FunctionDefinition",
             "parameters": {
 <<<<<<< HEAD
+<<<<<<< HEAD
               "id": 3296,
 ||||||| merged common ancestors
               "id": 3080,
 =======
               "id": 3380,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "id": 3380,
+=======
+              "id": 3516,
+>>>>>>> origin/ajibigad/token-swap
               "nodeType": "ParameterList",
               "parameters": [],
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "609:2:17"
 ||||||| merged common ancestors
@@ -201,8 +300,14 @@
 =======
               "src": "609:2:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "609:2:18"
+=======
+              "src": "609:2:19"
+>>>>>>> origin/ajibigad/token-swap
             },
             "returnParameters": {
+<<<<<<< HEAD
 <<<<<<< HEAD
               "id": 3299,
 ||||||| merged common ancestors
@@ -210,10 +315,16 @@
 =======
               "id": 3383,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "id": 3383,
+=======
+              "id": 3519,
+>>>>>>> origin/ajibigad/token-swap
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "id": 3298,
 ||||||| merged common ancestors
@@ -221,9 +332,15 @@
 =======
                   "id": 3382,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "id": 3382,
+=======
+                  "id": 3518,
+>>>>>>> origin/ajibigad/token-swap
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "scope": 3304,
                   "src": "643:15:17",
@@ -234,6 +351,13 @@
                   "scope": 3388,
                   "src": "643:15:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "scope": 3388,
+                  "src": "643:15:18",
+=======
+                  "scope": 3524,
+                  "src": "643:15:19",
+>>>>>>> origin/ajibigad/token-swap
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -242,20 +366,32 @@
                   },
                   "typeName": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "id": 3297,
 ||||||| merged common ancestors
                     "id": 3081,
 =======
                     "id": 3381,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3381,
+=======
+                    "id": 3517,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "643:15:17",
 ||||||| merged common ancestors
                     "src": "643:15:15",
 =======
                     "src": "643:15:18",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "643:15:18",
+=======
+                    "src": "643:15:19",
 >>>>>>> origin/ajibigad/token-swap
                     "stateMutability": "payable",
                     "typeDescriptions": {
@@ -267,13 +403,20 @@
                 }
               ],
 <<<<<<< HEAD
+<<<<<<< HEAD
               "src": "642:17:17"
 ||||||| merged common ancestors
               "src": "642:17:15"
 =======
               "src": "642:17:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "642:17:18"
+=======
+              "src": "642:17:19"
+>>>>>>> origin/ajibigad/token-swap
             },
+<<<<<<< HEAD
 <<<<<<< HEAD
             "scope": 3316,
             "src": "590:104:17",
@@ -284,6 +427,13 @@
             "scope": 3400,
             "src": "590:104:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "scope": 3400,
+            "src": "590:104:18",
+=======
+            "scope": 3536,
+            "src": "590:104:19",
+>>>>>>> origin/ajibigad/token-swap
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
@@ -291,13 +441,20 @@
           {
             "body": {
 <<<<<<< HEAD
+<<<<<<< HEAD
               "id": 3314,
 ||||||| merged common ancestors
               "id": 3098,
 =======
               "id": 3398,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "id": 3398,
+=======
+              "id": 3534,
+>>>>>>> origin/ajibigad/token-swap
               "nodeType": "Block",
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "765:165:17",
 ||||||| merged common ancestors
@@ -305,9 +462,15 @@
 =======
               "src": "765:165:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "765:165:18",
+=======
+              "src": "765:165:19",
+>>>>>>> origin/ajibigad/token-swap
               "statements": [
                 {
                   "expression": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "id": 3309,
 ||||||| merged common ancestors
@@ -315,10 +478,16 @@
 =======
                     "id": 3393,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3393,
+=======
+                    "id": 3529,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "this",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 4294967268,
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "775:4:17",
 ||||||| merged common ancestors
@@ -326,7 +495,13 @@
 =======
                     "src": "775:4:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "775:4:18",
+=======
+                    "src": "775:4:19",
+>>>>>>> origin/ajibigad/token-swap
                     "typeDescriptions": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "typeIdentifier": "t_contract$_Context_$3316",
 ||||||| merged common ancestors
@@ -334,9 +509,15 @@
 =======
                       "typeIdentifier": "t_contract$_Context_$3400",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "typeIdentifier": "t_contract$_Context_$3400",
+=======
+                      "typeIdentifier": "t_contract$_Context_$3536",
+>>>>>>> origin/ajibigad/token-swap
                       "typeString": "contract Context"
                     }
                   },
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "id": 3310,
 ||||||| merged common ancestors
@@ -344,7 +525,13 @@
 =======
                   "id": 3394,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "id": 3394,
+=======
+                  "id": 3530,
+>>>>>>> origin/ajibigad/token-swap
                   "nodeType": "ExpressionStatement",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "775:4:17"
 ||||||| merged common ancestors
@@ -352,10 +539,16 @@
 =======
                   "src": "775:4:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "775:4:18"
+=======
+                  "src": "775:4:19"
+>>>>>>> origin/ajibigad/token-swap
                 },
                 {
                   "expression": {
                     "expression": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "id": 3311,
 ||||||| merged common ancestors
@@ -363,10 +556,16 @@
 =======
                       "id": 3395,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "id": 3395,
+=======
+                      "id": 3531,
+>>>>>>> origin/ajibigad/token-swap
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 4294967281,
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "src": "915:3:17",
 ||||||| merged common ancestors
@@ -374,17 +573,28 @@
 =======
                       "src": "915:3:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "src": "915:3:18",
+=======
+                      "src": "915:3:19",
+>>>>>>> origin/ajibigad/token-swap
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
                         "typeString": "msg"
                       }
                     },
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "id": 3312,
 ||||||| merged common ancestors
                     "id": 3096,
 =======
                     "id": 3396,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3396,
+=======
+                    "id": 3532,
 >>>>>>> origin/ajibigad/token-swap
                     "isConstant": false,
                     "isLValue": false,
@@ -393,17 +603,24 @@
                     "memberName": "data",
                     "nodeType": "MemberAccess",
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "src": "915:8:17",
 ||||||| merged common ancestors
                     "src": "915:8:15",
 =======
                     "src": "915:8:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "915:8:18",
+=======
+                    "src": "915:8:19",
+>>>>>>> origin/ajibigad/token-swap
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_calldata_ptr",
                       "typeString": "bytes calldata"
                     }
                   },
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "functionReturnParameters": 3308,
                   "id": 3313,
@@ -414,7 +631,15 @@
                   "functionReturnParameters": 3392,
                   "id": 3397,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "functionReturnParameters": 3392,
+                  "id": 3397,
+=======
+                  "functionReturnParameters": 3528,
+                  "id": 3533,
+>>>>>>> origin/ajibigad/token-swap
                   "nodeType": "Return",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "src": "908:15:17"
 ||||||| merged common ancestors
@@ -422,15 +647,26 @@
 =======
                   "src": "908:15:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "src": "908:15:18"
+=======
+                  "src": "908:15:19"
+>>>>>>> origin/ajibigad/token-swap
                 }
               ]
             },
+<<<<<<< HEAD
 <<<<<<< HEAD
             "id": 3315,
 ||||||| merged common ancestors
             "id": 3099,
 =======
             "id": 3399,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "id": 3399,
+=======
+            "id": 3535,
 >>>>>>> origin/ajibigad/token-swap
             "implemented": true,
             "kind": "function",
@@ -439,14 +675,21 @@
             "nodeType": "FunctionDefinition",
             "parameters": {
 <<<<<<< HEAD
+<<<<<<< HEAD
               "id": 3305,
 ||||||| merged common ancestors
               "id": 3089,
 =======
               "id": 3389,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "id": 3389,
+=======
+              "id": 3525,
+>>>>>>> origin/ajibigad/token-swap
               "nodeType": "ParameterList",
               "parameters": [],
+<<<<<<< HEAD
 <<<<<<< HEAD
               "src": "717:2:17"
 ||||||| merged common ancestors
@@ -454,8 +697,14 @@
 =======
               "src": "717:2:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "717:2:18"
+=======
+              "src": "717:2:19"
+>>>>>>> origin/ajibigad/token-swap
             },
             "returnParameters": {
+<<<<<<< HEAD
 <<<<<<< HEAD
               "id": 3308,
 ||||||| merged common ancestors
@@ -463,10 +712,16 @@
 =======
               "id": 3392,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "id": 3392,
+=======
+              "id": 3528,
+>>>>>>> origin/ajibigad/token-swap
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "id": 3307,
 ||||||| merged common ancestors
@@ -474,9 +729,15 @@
 =======
                   "id": 3391,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "id": 3391,
+=======
+                  "id": 3527,
+>>>>>>> origin/ajibigad/token-swap
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "scope": 3315,
                   "src": "751:12:17",
@@ -487,6 +748,13 @@
                   "scope": 3399,
                   "src": "751:12:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                  "scope": 3399,
+                  "src": "751:12:18",
+=======
+                  "scope": 3535,
+                  "src": "751:12:19",
+>>>>>>> origin/ajibigad/token-swap
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -495,20 +763,32 @@
                   },
                   "typeName": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "id": 3306,
 ||||||| merged common ancestors
                     "id": 3090,
 =======
                     "id": 3390,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3390,
+=======
+                    "id": 3526,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "751:5:17",
 ||||||| merged common ancestors
                     "src": "751:5:15",
 =======
                     "src": "751:5:18",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "751:5:18",
+=======
+                    "src": "751:5:19",
 >>>>>>> origin/ajibigad/token-swap
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
@@ -519,13 +799,20 @@
                 }
               ],
 <<<<<<< HEAD
+<<<<<<< HEAD
               "src": "750:14:17"
 ||||||| merged common ancestors
               "src": "750:14:15"
 =======
               "src": "750:14:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "src": "750:14:18"
+=======
+              "src": "750:14:19"
+>>>>>>> origin/ajibigad/token-swap
             },
+<<<<<<< HEAD
 <<<<<<< HEAD
             "scope": 3316,
             "src": "700:230:17",
@@ -536,11 +823,19 @@
             "scope": 3400,
             "src": "700:230:18",
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "scope": 3400,
+            "src": "700:230:18",
+=======
+            "scope": 3536,
+            "src": "700:230:19",
+>>>>>>> origin/ajibigad/token-swap
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           }
         ],
+<<<<<<< HEAD
 <<<<<<< HEAD
         "scope": 3317,
         "src": "558:374:17"
@@ -551,14 +846,27 @@
         "scope": 3401,
         "src": "558:374:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "scope": 3401,
+        "src": "558:374:18"
+=======
+        "scope": 3537,
+        "src": "558:374:19"
+>>>>>>> origin/ajibigad/token-swap
       }
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
     "src": "33:900:17"
 ||||||| merged common ancestors
     "src": "33:900:15"
 =======
     "src": "33:900:18"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+    "src": "33:900:18"
+=======
+    "src": "33:900:19"
 >>>>>>> origin/ajibigad/token-swap
   },
   "legacyAST": {
@@ -567,11 +875,17 @@
       "exportedSymbols": {
         "Context": [
 <<<<<<< HEAD
+<<<<<<< HEAD
           3316
 ||||||| merged common ancestors
           3100
 =======
           3400
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+          3400
+=======
+          3536
 >>>>>>> origin/ajibigad/token-swap
         ]
       },
@@ -588,19 +902,31 @@
           ]
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         "id": 3295,
 ||||||| merged common ancestors
         "id": 3079,
 =======
         "id": 3379,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "id": 3379,
+=======
+        "id": 3515,
+>>>>>>> origin/ajibigad/token-swap
         "name": "PragmaDirective",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "src": "33:23:17"
 ||||||| merged common ancestors
         "src": "33:23:15"
 =======
         "src": "33:23:18"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "src": "33:23:18"
+=======
+        "src": "33:23:19"
 >>>>>>> origin/ajibigad/token-swap
       },
       {
@@ -616,20 +942,32 @@
           "fullyImplemented": true,
           "linearizedBaseContracts": [
 <<<<<<< HEAD
+<<<<<<< HEAD
             3316
 ||||||| merged common ancestors
             3100
 =======
             3400
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            3400
+=======
+            3536
+>>>>>>> origin/ajibigad/token-swap
           ],
           "name": "Context",
+<<<<<<< HEAD
 <<<<<<< HEAD
           "scope": 3317
 ||||||| merged common ancestors
           "scope": 3101
 =======
           "scope": 3401
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+          "scope": 3401
+=======
+          "scope": 3537
 >>>>>>> origin/ajibigad/token-swap
         },
         "children": [
@@ -643,11 +981,17 @@
               ],
               "name": "_msgSender",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "scope": 3316,
 ||||||| merged common ancestors
               "scope": 3100,
 =======
               "scope": 3400,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "scope": 3400,
+=======
+              "scope": 3536,
 >>>>>>> origin/ajibigad/token-swap
               "stateMutability": "view",
               "virtual": true,
@@ -662,19 +1006,31 @@
                 },
                 "children": [],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "id": 3296,
 ||||||| merged common ancestors
                 "id": 3080,
 =======
                 "id": 3380,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 3380,
+=======
+                "id": 3516,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "ParameterList",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "609:2:17"
 ||||||| merged common ancestors
                 "src": "609:2:15"
 =======
                 "src": "609:2:18"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "609:2:18"
+=======
+                "src": "609:2:19"
 >>>>>>> origin/ajibigad/token-swap
               },
               {
@@ -685,11 +1041,17 @@
                       "mutability": "mutable",
                       "name": "",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "scope": 3304,
 ||||||| merged common ancestors
                       "scope": 3088,
 =======
                       "scope": 3388,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "scope": 3388,
+=======
+                      "scope": 3524,
 >>>>>>> origin/ajibigad/token-swap
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -704,13 +1066,20 @@
                           "type": "address payable"
                         },
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "id": 3297,
 ||||||| merged common ancestors
                         "id": 3081,
 =======
                         "id": 3381,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "id": 3381,
+=======
+                        "id": 3517,
+>>>>>>> origin/ajibigad/token-swap
                         "name": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "643:15:17"
 ||||||| merged common ancestors
@@ -718,8 +1087,14 @@
 =======
                         "src": "643:15:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "643:15:18"
+=======
+                        "src": "643:15:19"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "id": 3298,
 ||||||| merged common ancestors
@@ -727,7 +1102,13 @@
 =======
                     "id": 3382,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3382,
+=======
+                    "id": 3518,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "643:15:17"
 ||||||| merged common ancestors
@@ -735,8 +1116,14 @@
 =======
                     "src": "643:15:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "643:15:18"
+=======
+                    "src": "643:15:19"
+>>>>>>> origin/ajibigad/token-swap
                   }
                 ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "id": 3299,
 ||||||| merged common ancestors
@@ -744,7 +1131,13 @@
 =======
                 "id": 3383,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 3383,
+=======
+                "id": 3519,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "ParameterList",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "642:17:17"
 ||||||| merged common ancestors
@@ -752,17 +1145,28 @@
 =======
                 "src": "642:17:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "642:17:18"
+=======
+                "src": "642:17:19"
+>>>>>>> origin/ajibigad/token-swap
               },
               {
                 "children": [
                   {
                     "attributes": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "functionReturnParameters": 3299
 ||||||| merged common ancestors
                       "functionReturnParameters": 3083
 =======
                       "functionReturnParameters": 3383
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "functionReturnParameters": 3383
+=======
+                      "functionReturnParameters": 3519
 >>>>>>> origin/ajibigad/token-swap
                     },
                     "children": [
@@ -786,13 +1190,20 @@
                               "value": "msg"
                             },
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "id": 3300,
 ||||||| merged common ancestors
                             "id": 3084,
 =======
                             "id": 3384,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "id": 3384,
+=======
+                            "id": 3520,
+>>>>>>> origin/ajibigad/token-swap
                             "name": "Identifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "677:3:17"
 ||||||| merged common ancestors
@@ -800,8 +1211,14 @@
 =======
                             "src": "677:3:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "677:3:18"
+=======
+                            "src": "677:3:19"
+>>>>>>> origin/ajibigad/token-swap
                           }
                         ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "id": 3301,
 ||||||| merged common ancestors
@@ -809,7 +1226,13 @@
 =======
                         "id": 3385,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "id": 3385,
+=======
+                        "id": 3521,
+>>>>>>> origin/ajibigad/token-swap
                         "name": "MemberAccess",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "677:10:17"
 ||||||| merged common ancestors
@@ -817,8 +1240,14 @@
 =======
                         "src": "677:10:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "677:10:18"
+=======
+                        "src": "677:10:19"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "id": 3302,
 ||||||| merged common ancestors
@@ -826,7 +1255,13 @@
 =======
                     "id": 3386,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3386,
+=======
+                    "id": 3522,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "Return",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "670:17:17"
 ||||||| merged common ancestors
@@ -834,8 +1269,14 @@
 =======
                     "src": "670:17:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "670:17:18"
+=======
+                    "src": "670:17:19"
+>>>>>>> origin/ajibigad/token-swap
                   }
                 ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "id": 3303,
 ||||||| merged common ancestors
@@ -843,7 +1284,13 @@
 =======
                 "id": 3387,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 3387,
+=======
+                "id": 3523,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "Block",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "660:34:17"
 ||||||| merged common ancestors
@@ -851,8 +1298,14 @@
 =======
                 "src": "660:34:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "660:34:18"
+=======
+                "src": "660:34:19"
+>>>>>>> origin/ajibigad/token-swap
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "id": 3304,
 ||||||| merged common ancestors
@@ -860,13 +1313,24 @@
 =======
             "id": 3388,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "id": 3388,
+=======
+            "id": 3524,
+>>>>>>> origin/ajibigad/token-swap
             "name": "FunctionDefinition",
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "590:104:17"
 ||||||| merged common ancestors
             "src": "590:104:15"
 =======
             "src": "590:104:18"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "590:104:18"
+=======
+            "src": "590:104:19"
 >>>>>>> origin/ajibigad/token-swap
           },
           {
@@ -879,11 +1343,17 @@
               ],
               "name": "_msgData",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "scope": 3316,
 ||||||| merged common ancestors
               "scope": 3100,
 =======
               "scope": 3400,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+              "scope": 3400,
+=======
+              "scope": 3536,
 >>>>>>> origin/ajibigad/token-swap
               "stateMutability": "view",
               "virtual": true,
@@ -898,19 +1368,31 @@
                 },
                 "children": [],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "id": 3305,
 ||||||| merged common ancestors
                 "id": 3089,
 =======
                 "id": 3389,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 3389,
+=======
+                "id": 3525,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "ParameterList",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "717:2:17"
 ||||||| merged common ancestors
                 "src": "717:2:15"
 =======
                 "src": "717:2:18"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "717:2:18"
+=======
+                "src": "717:2:19"
 >>>>>>> origin/ajibigad/token-swap
               },
               {
@@ -921,11 +1403,17 @@
                       "mutability": "mutable",
                       "name": "",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "scope": 3315,
 ||||||| merged common ancestors
                       "scope": 3099,
 =======
                       "scope": 3399,
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "scope": 3399,
+=======
+                      "scope": 3535,
 >>>>>>> origin/ajibigad/token-swap
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -939,13 +1427,20 @@
                           "type": "bytes"
                         },
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "id": 3306,
 ||||||| merged common ancestors
                         "id": 3090,
 =======
                         "id": 3390,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "id": 3390,
+=======
+                        "id": 3526,
+>>>>>>> origin/ajibigad/token-swap
                         "name": "ElementaryTypeName",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "751:5:17"
 ||||||| merged common ancestors
@@ -953,8 +1448,14 @@
 =======
                         "src": "751:5:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "751:5:18"
+=======
+                        "src": "751:5:19"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "id": 3307,
 ||||||| merged common ancestors
@@ -962,7 +1463,13 @@
 =======
                     "id": 3391,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3391,
+=======
+                    "id": 3527,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "VariableDeclaration",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "751:12:17"
 ||||||| merged common ancestors
@@ -970,8 +1477,14 @@
 =======
                     "src": "751:12:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "751:12:18"
+=======
+                    "src": "751:12:19"
+>>>>>>> origin/ajibigad/token-swap
                   }
                 ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "id": 3308,
 ||||||| merged common ancestors
@@ -979,13 +1492,24 @@
 =======
                 "id": 3392,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 3392,
+=======
+                "id": 3528,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "ParameterList",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "750:14:17"
 ||||||| merged common ancestors
                 "src": "750:14:15"
 =======
                 "src": "750:14:18"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "750:14:18"
+=======
+                "src": "750:14:19"
 >>>>>>> origin/ajibigad/token-swap
               },
               {
@@ -1002,13 +1526,20 @@
                           "value": "this"
                         },
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "id": 3309,
 ||||||| merged common ancestors
                         "id": 3093,
 =======
                         "id": 3393,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "id": 3393,
+=======
+                        "id": 3529,
+>>>>>>> origin/ajibigad/token-swap
                         "name": "Identifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "775:4:17"
 ||||||| merged common ancestors
@@ -1016,8 +1547,14 @@
 =======
                         "src": "775:4:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "775:4:18"
+=======
+                        "src": "775:4:19"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "id": 3310,
 ||||||| merged common ancestors
@@ -1025,7 +1562,13 @@
 =======
                     "id": 3394,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3394,
+=======
+                    "id": 3530,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "ExpressionStatement",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "775:4:17"
 ||||||| merged common ancestors
@@ -1033,15 +1576,26 @@
 =======
                     "src": "775:4:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "775:4:18"
+=======
+                    "src": "775:4:19"
+>>>>>>> origin/ajibigad/token-swap
                   },
                   {
                     "attributes": {
+<<<<<<< HEAD
 <<<<<<< HEAD
                       "functionReturnParameters": 3308
 ||||||| merged common ancestors
                       "functionReturnParameters": 3092
 =======
                       "functionReturnParameters": 3392
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                      "functionReturnParameters": 3392
+=======
+                      "functionReturnParameters": 3528
 >>>>>>> origin/ajibigad/token-swap
                     },
                     "children": [
@@ -1065,13 +1619,20 @@
                               "value": "msg"
                             },
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "id": 3311,
 ||||||| merged common ancestors
                             "id": 3095,
 =======
                             "id": 3395,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "id": 3395,
+=======
+                            "id": 3531,
+>>>>>>> origin/ajibigad/token-swap
                             "name": "Identifier",
+<<<<<<< HEAD
 <<<<<<< HEAD
                             "src": "915:3:17"
 ||||||| merged common ancestors
@@ -1079,8 +1640,14 @@
 =======
                             "src": "915:3:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                            "src": "915:3:18"
+=======
+                            "src": "915:3:19"
+>>>>>>> origin/ajibigad/token-swap
                           }
                         ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "id": 3312,
 ||||||| merged common ancestors
@@ -1088,7 +1655,13 @@
 =======
                         "id": 3396,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "id": 3396,
+=======
+                        "id": 3532,
+>>>>>>> origin/ajibigad/token-swap
                         "name": "MemberAccess",
+<<<<<<< HEAD
 <<<<<<< HEAD
                         "src": "915:8:17"
 ||||||| merged common ancestors
@@ -1096,8 +1669,14 @@
 =======
                         "src": "915:8:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                        "src": "915:8:18"
+=======
+                        "src": "915:8:19"
+>>>>>>> origin/ajibigad/token-swap
                       }
                     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "id": 3313,
 ||||||| merged common ancestors
@@ -1105,7 +1684,13 @@
 =======
                     "id": 3397,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "id": 3397,
+=======
+                    "id": 3533,
+>>>>>>> origin/ajibigad/token-swap
                     "name": "Return",
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "src": "908:15:17"
 ||||||| merged common ancestors
@@ -1113,8 +1698,14 @@
 =======
                     "src": "908:15:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                    "src": "908:15:18"
+=======
+                    "src": "908:15:19"
+>>>>>>> origin/ajibigad/token-swap
                   }
                 ],
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "id": 3314,
 ||||||| merged common ancestors
@@ -1122,7 +1713,13 @@
 =======
                 "id": 3398,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "id": 3398,
+=======
+                "id": 3534,
+>>>>>>> origin/ajibigad/token-swap
                 "name": "Block",
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "src": "765:165:17"
 ||||||| merged common ancestors
@@ -1130,8 +1727,14 @@
 =======
                 "src": "765:165:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+                "src": "765:165:18"
+=======
+                "src": "765:165:19"
+>>>>>>> origin/ajibigad/token-swap
               }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "id": 3315,
 ||||||| merged common ancestors
@@ -1139,7 +1742,13 @@
 =======
             "id": 3399,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "id": 3399,
+=======
+            "id": 3535,
+>>>>>>> origin/ajibigad/token-swap
             "name": "FunctionDefinition",
+<<<<<<< HEAD
 <<<<<<< HEAD
             "src": "700:230:17"
 ||||||| merged common ancestors
@@ -1147,8 +1756,14 @@
 =======
             "src": "700:230:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+            "src": "700:230:18"
+=======
+            "src": "700:230:19"
+>>>>>>> origin/ajibigad/token-swap
           }
         ],
+<<<<<<< HEAD
 <<<<<<< HEAD
         "id": 3316,
 ||||||| merged common ancestors
@@ -1156,7 +1771,13 @@
 =======
         "id": 3400,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "id": 3400,
+=======
+        "id": 3536,
+>>>>>>> origin/ajibigad/token-swap
         "name": "ContractDefinition",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "src": "558:374:17"
 ||||||| merged common ancestors
@@ -1164,8 +1785,14 @@
 =======
         "src": "558:374:18"
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+        "src": "558:374:18"
+=======
+        "src": "558:374:19"
+>>>>>>> origin/ajibigad/token-swap
       }
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
     "id": 3317,
 ||||||| merged common ancestors
@@ -1173,13 +1800,24 @@
 =======
     "id": 3401,
 >>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+    "id": 3401,
+=======
+    "id": 3537,
+>>>>>>> origin/ajibigad/token-swap
     "name": "SourceUnit",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "src": "33:900:17"
 ||||||| merged common ancestors
     "src": "33:900:15"
 =======
     "src": "33:900:18"
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+    "src": "33:900:18"
+=======
+    "src": "33:900:19"
 >>>>>>> origin/ajibigad/token-swap
   },
   "compiler": {
@@ -1189,11 +1827,17 @@
   "networks": {},
   "schemaVersion": "3.3.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "updatedAt": "2021-04-11T19:32:09.926Z",
 ||||||| merged common ancestors
   "updatedAt": "2021-04-10T14:35:58.166Z",
 =======
   "updatedAt": "2021-04-13T08:20:22.222Z",
+>>>>>>> origin/ajibigad/token-swap
+||||||| merged common ancestors
+  "updatedAt": "2021-04-13T08:20:22.222Z",
+=======
+  "updatedAt": "2021-04-16T17:26:22.547Z",
 >>>>>>> origin/ajibigad/token-swap
   "devdoc": {
     "kind": "dev",
