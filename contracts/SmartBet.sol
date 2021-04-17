@@ -485,6 +485,16 @@ contract SmartBet is ERC721 {
         return msg.sender == owner;
     }
 
+    /*
+    *  @notice  Allows the current owner pass ownership to another address
+    *  @dev
+    */
+    function changeOwner(address newOwner) 
+    external 
+    onlyOwner {
+        owner = newOwner;
+    }
+
     receive() external payable {}
     
 }
