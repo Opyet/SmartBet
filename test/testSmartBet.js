@@ -113,7 +113,7 @@ contract("SmartBet", async (accounts) => {
             let oddsDraw = 4;
             let bettor1Stake = generateValue(1);
             let bettor2Stake = generateValue(2);
-            let totalExpectedPayout = bettor1Stake.mul(new BN(oddsTeamA)).add(bettor2Stake.mul(new BN(oddsTeamA)));
+            let totalExpectedPayout = bettor1Stake.mul(new BN(oddsTeamA)).add(bettor2Stake.mul(new BN(oddsTeamA))).div(new BN(100));
     
             await createTestMatch(1, oddsTeamA, oddsTeamB, oddsDraw);
             await smartBetInstance.placeBet(1, SmartBet.enums.MatchResult.TEAM_A_WON, 
@@ -126,7 +126,7 @@ contract("SmartBet", async (accounts) => {
     
             bettor1Stake = generateValue(2);
             bettor2Stake = generateValue(2);
-            totalExpectedPayout = bettor1Stake.mul(new BN(oddsTeamB)).add(bettor2Stake.mul(new BN(oddsTeamB)));
+            totalExpectedPayout = bettor1Stake.mul(new BN(oddsTeamB)).add(bettor2Stake.mul(new BN(oddsTeamB))).div(new BN(100));
             await smartBetInstance.placeBet(1, SmartBet.enums.MatchResult.TEAM_B_WON, 
                 {from: bettor, value: bettor1Stake});
             await smartBetInstance.placeBet(1, SmartBet.enums.MatchResult.TEAM_B_WON, 
@@ -137,7 +137,7 @@ contract("SmartBet", async (accounts) => {
     
             bettor1Stake = generateValue(3);
             bettor2Stake = generateValue(2);
-            totalExpectedPayout = bettor1Stake.mul(new BN(oddsDraw)).add(bettor2Stake.mul(new BN(oddsDraw)));
+            totalExpectedPayout = bettor1Stake.mul(new BN(oddsDraw)).add(bettor2Stake.mul(new BN(oddsDraw))).div(new BN(100));
             await smartBetInstance.placeBet(1, SmartBet.enums.MatchResult.DRAW, 
                 {from: bettor, value: bettor1Stake});
             await smartBetInstance.placeBet(1, SmartBet.enums.MatchResult.DRAW, 
@@ -172,7 +172,7 @@ contract("SmartBet", async (accounts) => {
         it("should issue asset with correct values when bet is placed", async() => {
             let oddsTeamA = 4;
             let bettor1Stake = generateValue(1);
-            let expectedAssetValue = bettor1Stake.mul(new BN(oddsTeamA));
+            let expectedAssetValue = bettor1Stake.mul(new BN(oddsTeamA)).div(new BN(100));
             let resultBetOn = SmartBet.enums.MatchResult.TEAM_A_WON;
     
             await createTestMatch(1, oddsTeamA);
@@ -522,7 +522,7 @@ contract("SmartBet", async (accounts) => {
             let resultBetOn = SmartBet.enums.MatchResult.TEAM_A_WON;
             let oddsTeamA = 4;
             let bettor1Stake = generateValue(1);
-            let expectedAssetValue = bettor1Stake.mul(new BN(oddsTeamA));
+            let expectedAssetValue = bettor1Stake.mul(new BN(oddsTeamA)).div(new BN(100));
     
             await createTestMatch(1, oddsTeamA);
     

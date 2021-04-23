@@ -279,7 +279,7 @@ contract SmartBet is ERC721 {
     *  @param  
     *  @return  token id
     */
-    function placeBet(uint256 _matchId, uint8 _resultBetOn, uint _minExpectedBUSD)
+    function placeBet(uint256 _matchId, uint8 _resultBetOn)
         public 
         payable
         isCircuitBreakOff
@@ -299,22 +299,19 @@ contract SmartBet is ERC721 {
         uint256 assetValue = 0;
 
         // uint[] memory amounts = smartExchange.swap(msg.value, address(this));
-        uint256 amountBet = swapBNBForBUSD(_minExpectedBUSD);
-        // uint256 amountBet = msg.value;
+        // uint256 amountBet = swapBNBForBUSD(0);
+        uint256 amountBet = msg.value;
 
         MatchResult matchResultBetOn = MatchResult(_resultBetOn);
         
         //update team's total payout
         if (matchResultBetOn == MatchResult.TEAM_A_WON) {
-            // assetValue = amountBet.mul(matches[_matchId].oddsTeamA).div(100);
             assetValue = calculateAssetValue(amountBet, matches[_matchId].oddsTeamA);
             matches[_matchId].totalPayoutTeamA = matches[_matchId].totalPayoutTeamA.add(assetValue);
         } else if(matchResultBetOn == MatchResult.TEAM_B_WON) {
-            // assetValue = amountBet.mul(matches[_matchId].oddsTeamB).div(100);
             assetValue = calculateAssetValue(amountBet, matches[_matchId].oddsTeamB);
             matches[_matchId].totalPayoutTeamB = matches[_matchId].totalPayoutTeamB.add(assetValue);
         } else {
-            // assetValue = amountBet.mul(matches[_matchId].oddsDraw).div(100);
             assetValue = calculateAssetValue(amountBet, matches[_matchId].oddsDraw);
             matches[_matchId].totalPayoutDraw = matches[_matchId].totalPayoutDraw.add(assetValue);
         }
@@ -427,12 +424,12 @@ contract SmartBet is ERC721 {
         
         require(matches[smartAsset.matchId].state == MatchState.FINISHED, "Cannot liquidate asset until match is finished");
         
-        require (bUSDToken.balanceOf(address(this)) >= smartAsset.initialValue, "Contract has insufficient funds");
-        // require (address(this).balance >= smartAsset.initialValue, "Contract has insufficient funds");
+        // require (bUSDToken.balanceOf(address(this)) >= smartAsset.initialValue, "Contract has insufficient funds");
+        require (address(this).balance >= smartAsset.initialValue, "Contract has insufficient funds");
         
         invalidateAsset(_smartAssetId);
-        bUSDToken.transfer(msg.sender, smartAsset.initialValue);
-        // msg.sender.transfer(smartAsset.initialValue);
+        // bUSDToken.transfer(msg.sender, smartAsset.initialValue);
+        msg.sender.transfer(smartAsset.initialValue);
 
         emit AssetLiquidatedEvent(msg.sender, smartAsset.matchId, smartAsset.initialValue, block.timestamp);
         return true;
