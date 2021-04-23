@@ -410,7 +410,8 @@ class MatchesShow extends Component {
         return;
       }
 
-      this.state.contract.methods.placeBet(this.state.match.id, betOn).send({
+      console.log("Bet amount", this.state.betAmount * 10 ** 18);
+      this.state.contract.methods.placeBet(this.state.match.id, betOn, 0).send({
         value: parseInt(this.state.betAmount * 10 ** 18),
         from: this.state.account,
       }).then(result=>{

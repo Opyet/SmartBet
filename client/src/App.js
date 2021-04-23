@@ -39,7 +39,7 @@ class App extends Component {
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
 
-      const smartBetAddress = '0x3809c8Eec0A5c444204B2759c64D9D346916b188'; // address of deployed contract
+      const smartBetAddress = '0x25c541238309c470b9a371419C7813aCFb24Ac16'; // address of deployed contract
       const priceContractAddress = '0xbA58fe54c9F2dd7882BF51B40F1A499F92DB3DC3'; // address of deployed contract
       
       // Get local deployment

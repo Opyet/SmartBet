@@ -1,7 +1,7 @@
 pragma solidity ^0.7.0;
 pragma experimental ABIEncoderV2;
 
-import "@chainlink/contracts/src/v0.7/ChainlinkClient.sol";
+// import "@chainlink/contracts/src/v0.7/ChainlinkClient.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
@@ -10,7 +10,7 @@ import "./SmartExchange.sol";
 
 // import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/token/ERC721/ERC721.sol";
 // import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/utils/Counters.sol";
-
+// import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/18c7efe800df6fc19554ece3b1f238e9e028a1db/contracts/math/SafeMath.sol";
 
 /*
  * @notice SmartBet core smart contract. Handles matches, bets and farming
@@ -255,7 +255,7 @@ contract SmartBet is ERC721 {
         return matchId;
     }
 
-    function swapBNBForBUSD() internal returns(uint) {
+    function swapBNBForBUSD(uint _minExpectedBUSD) internal returns(uint) {
         wBNBToken.deposit{value: msg.value}(); // deposit native BNB
         wBNBToken.approve(pROUTER, msg.value); // allow pancakeswap router to access wBNB
 
@@ -264,11 +264,14 @@ contract SmartBet is ERC721 {
         address[] memory path = new address[](2);
         path[0] = wBNB;
         path[1] = BUSD;
-        uint[] memory amounts = router.swapExactTokensForTokens(msg.value, 0, path, address(this), deadline);
+        uint[] memory amounts = router.swapExactTokensForTokens(msg.value, _minExpectedBUSD, path, address(this), deadline);
         
         return amounts[1];
     }
-
+    
+    function calculateAssetValue(uint256 amountBet, uint256 _odds) internal pure returns(uint256) {
+        return amountBet.mul(_odds).div(100);
+    }
 
     /*
     *  @notice  New bet creation. Mint NFT to bettor
@@ -276,7 +279,7 @@ contract SmartBet is ERC721 {
     *  @param  
     *  @return  token id
     */
-    function placeBet(uint256 _matchId, uint8 _resultBetOn)
+    function placeBet(uint256 _matchId, uint8 _resultBetOn, uint _minExpectedBUSD)
         public 
         payable
         isCircuitBreakOff
@@ -296,20 +299,23 @@ contract SmartBet is ERC721 {
         uint256 assetValue = 0;
 
         // uint[] memory amounts = smartExchange.swap(msg.value, address(this));
-        uint256 amountBet = swapBNBForBUSD();
+        uint256 amountBet = swapBNBForBUSD(_minExpectedBUSD);
         // uint256 amountBet = msg.value;
 
         MatchResult matchResultBetOn = MatchResult(_resultBetOn);
         
         //update team's total payout
         if (matchResultBetOn == MatchResult.TEAM_A_WON) {
-            assetValue = amountBet.mul(matches[_matchId].oddsTeamA);
+            // assetValue = amountBet.mul(matches[_matchId].oddsTeamA).div(100);
+            assetValue = calculateAssetValue(amountBet, matches[_matchId].oddsTeamA);
             matches[_matchId].totalPayoutTeamA = matches[_matchId].totalPayoutTeamA.add(assetValue);
         } else if(matchResultBetOn == MatchResult.TEAM_B_WON) {
-            assetValue = amountBet.mul(matches[_matchId].oddsTeamB);
+            // assetValue = amountBet.mul(matches[_matchId].oddsTeamB).div(100);
+            assetValue = calculateAssetValue(amountBet, matches[_matchId].oddsTeamB);
             matches[_matchId].totalPayoutTeamB = matches[_matchId].totalPayoutTeamB.add(assetValue);
         } else {
-            assetValue = amountBet.mul(matches[_matchId].oddsDraw);
+            // assetValue = amountBet.mul(matches[_matchId].oddsDraw).div(100);
+            assetValue = calculateAssetValue(amountBet, matches[_matchId].oddsDraw);
             matches[_matchId].totalPayoutDraw = matches[_matchId].totalPayoutDraw.add(assetValue);
         }
 
