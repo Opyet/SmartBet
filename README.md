@@ -37,8 +37,9 @@ A bettor comes to the platform to place 100BUSD bet on a match whose odds is 4/1
 ## Integrations
 
 - PancakeSwap: Decentralized Exchange platform for swapping user funds into BUSD stablecoins.
+- 1Inch: DEX Aggregator for swapping user asset to BUSDs for voting.
 - Metamask Wallet: User wallet
-- [Venus](https://github.com/VenusProtocol/venus-protocol): Farming/Lending Aggregator for BUSD stablecoins
+- [Venus](https://github.com/VenusProtocol/venus-protocol): Farming/Lending Protocol for BUSD stablecoins
 - [Biconomy](https://docs.biconomy.io/): Gasless transactions and better user experience. Also serves as incentive in user onboarding
 - [RapidAPI](https://rapidapi.com/api-sports/api/api-football) - Live data for matches, odds and margins
 - Chainlink - Sport Oracles for live scores (available for mainnet deployment).
@@ -66,8 +67,6 @@ A bettor comes to the platform to place 100BUSD bet on a match whose odds is 4/1
 ### Admin
 - Visit the app
 - Create an upcoming match, set it's odds and start time
-- Start the match when it starts
-- Close the match and set it's result when it's over
 
 ---
 ## Installation
